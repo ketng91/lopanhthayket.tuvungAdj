@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Từ vựng bài học- Lớp Anh thầy Kết</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+ header {
+  background-color: #ffd6ba;
+  padding: 15px 20px;
+  font-weight: bold;
+  color: #7a4e3e;
+  display: flex;
+  flex-wrap: wrap;       
+  align-items: center;
+  justify-content: space-between;  /* Left luôn bên trái, center căn giữa */
+  gap: 15px;
+}
+
+/* Left: icon + home text */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;          /* không bị co lại */
+}
+
+.header-left a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  color: #7a4e3e;
+  text-decoration: none;
+}
+
+.header-left a i {
+  font-size: 28px;
+}
+
+/* Center title */
+header {
+  position: relative;
+}
+
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  white-space: nowrap;
+}
+/* ===== TOP SELECT ===== */
+.top-bar{
+  width:85%;
+  margin:20px auto;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.top-bar select{
+  min-width:240px;
+  flex-shrink:0;
+}
+
+.top-bar audio{
+  flex:1;
+  height:42px;
+}
+
+select {
+  padding: 8px 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #a0e7e5;
+  background-color: #e3fdfd;
+}
+
+
+
+/* MEDIA QUERY cho điện thoại */
+@media (max-width: 480px) {
+
+  .header-center {
+    flex-basis: 100%;
+    order: 2;
+    text-align: center;
+    position: static;
+    transform: none;
+    margin-top: 8px;
+  }
+
+  .header-left {
+    order: 1;
+  }
+
+  /* Lesson + Audio xuống hàng trên điện thoại */
+  .top-bar{
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+  }
+
+  .top-bar select{
+    width: 100%;
+  }
+
+  .top-bar audio{
+    width: 100%;
+  }
+}
+
+  header {
+    padding: 10px 15px;
+  }
+  .header-left a {
+    font-size: 18px;
+  }
+  .header-left a i {
+    font-size: 20px;
+  }
+  .header-center {
+    font-size: 22px;
+  }
+}
+
+
+
+
+  .top-select {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 40px;
+  }
+
+  select {
+    padding: 8px 14px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #a0e7e5;
+    background-color: #e3fdfd;
+  }
+
+  /* Word list */
+  .word-list {
+    width: 85%;
+    margin: 20px auto;
+    background-color: #E0FBE2;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    font-size: 22px;
+  }
+
+.word-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px dashed #ffb3ba;
+  transition: background-color .15s ease-in-out;
+}
+.word-row:last-child { border-bottom: none; }
+
+/* Hover đổi màu */
+.word-row:hover {
+  background-color: #fffacd; /* xanh nhạt dễ thấy */
+  cursor: pointer;
+}
+
+  /* Ôn tập */
+  .review-box {
+    margin: 40px auto;
+    width: 70%;
+    background-color: #ffe5ec;
+    padding: 25px;
+    font-weight: bold;
+    color: #607274;
+    font-size: 26px;
+    border-radius: 12px;
+    position: relative;
+  }
+  .review-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+.review-buttons button {
+  background-color: #a0e7e5;
+  border: none;
+  padding: 12px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.review-buttons button:hover {
+  background-color: #ffb3ba;
+}
+
+
+  /* Bài tập */
+  .exercise {
+    width: 80%;
+    margin: 0 auto 30px auto;
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .exercise input {
+    width: 220px;
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 6px;
+  }
+
+  .exercise button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    font-size: 18px;
+    background-color: #a0e7e5;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .exercise button:hover {
+    background-color: #ffb3ba;
+  }
+
+  .result {
+    font-weight: bold;
+    color: #C5705D;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+
+.audio-box{
+  width:80%;
+  margin:40px auto;
+  padding:25px;
+  background:#e3fdfd;
+  border-radius:12px;
+  text-align:center;
+}
+
+.audio-box h2{
+  color:#7a4e3e;
+  margin-bottom:15px;
+}
+
+.audio-box audio{
+  width:100%;
+  max-width:700px;
+}
+
+.audio-note{
+  margin-top:10px;
+  color:#666;
+  font-size:18px;
+}
+
+
+  footer {
+    font-size: 22px;
+    margin-top: 40px;
+    padding: 20px;
+    color: #7a4e3e;
+    background-color: #fff0e1;
+  }
+
+.speaker-icon{
+  margin-left:10px;
+  color:#4a7c59;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.speaker-icon:hover{
+  color:#ff6b6b;
+}
+
+.word-text{
+    display:flex;
+    align-items:flex-start;
+    width:100%;
+}
+
+.en-word{
+    width:420px;      /* chỉnh tăng giảm */
+    flex-shrink:0;
+    font-weight:600;
+}
+
+.vn-word{
+    flex:1;
+}
+
+@media (max-width:768px){
+
+  .word-text{
+      display:inline;
+  }
+
+  .en-word{
+      width:auto;
+      min-width:auto;
+      display:inline;
+      font-weight:600;
+  }
+
+  .vn-word{
+      display:inline;
+  }
+
+}
+
+  .confetti {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: red;
+    opacity: .9;
+    animation: pop .9s ease-out forwards;
+  }
+  @keyframes pop {
+    0% { transform: translate(0,0) scale(1); opacity:1;}
+    50% {transform: translate(calc(var(--x)*.5),calc(var(--y)*.4)) scale(1.1);opacity:1;}
+    100% {transform: translate(var(--x),var(--y)) scale(.5);opacity:0;}
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <a href="https://ketng91.github.io/TuvungTHPTQG-homepage/">
+      <i class="fa-solid fa-house"></i> Lớp Anh thầy Kết
+    </a>
+  </div>
+  <div class="header-center">
+    Từ vựng bài học
+  </div>
+</header>
+
+<!-- Bộ chọn -->
+<!-- Bộ chọn + Audio -->
+<div class="top-bar">
+
+  <select id="wordList">
+    <option value="1">Từ vựng Adj - 1</option>
+    <option value="2">Từ vựng Adj - 2</option>
+    <option value="3">Từ vựng Adj - 3</option>
+    <option value="4">Từ vựng Adj - 4</option>
+    <option value="5">Từ vựng Adj - 5</option>
+    <option value="6">Từ vựng Adj - 6</option>
+    <option value="7">Từ vựng Adj - 7</option>
+    <option value="8">Từ vựng Adj - 8</option>
+    <option value="9">Từ vựng Adj - 9</option>
+    <option value="10">Từ vựng Adj -10</option>
+    <option value="11">Từ vựng Adj -11</option>
+    <option value="12">Từ vựng Adj -12</option>
+    <option value="13">Từ vựng Adj -13</option>
+    <option value="14">Từ vựng Adj -14</option>
+    <option value="15">Từ vựng Adj -15</option>
+    <option value="16">Từ vựng Adj -16</option>
+    <option value="17">Từ vựng Adj -17</option>
+    <option value="18">Từ vựng Adj -18</option>
+    <option value="19">Từ vựng Adj -19</option>
+    <option value="20">Từ vựng Adj -20</option>
+    <option value="21">Từ vựng Adj -21</option>
+    <option value="22">Từ vựng Adj -22</option>
+    <option value="23">Từ vựng Adj -23</option>
+    <option value="24">Từ vựng Adj -24</option>
+    <option value="25">Từ vựng Adj -25</option>
+
+
+  </select>
+
+  <audio id="lessonAudio" controls>
+    <source src="" type="audio/mpeg">
+  </audio>
+
+</div>
+
+
+<script>
+// Bắt sự kiện Enter cho tất cả các ô input trong bài tập
+document.addEventListener("DOMContentLoaded", function() {
+  const exerciseInputs = document.querySelectorAll(".exercise input");
+
+  exerciseInputs.forEach(input => {
+    input.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {      // Kiểm tra nếu nhấn Enter
+        e.preventDefault();          // Ngăn việc xuống dòng mặc định
+        const checkBtn = this.nextElementSibling; // giả định nút Check ngay sau input
+        if (checkBtn && checkBtn.tagName === "BUTTON") {
+          checkBtn.click();         // kích hoạt nút Check
+        }
+      }
+    });
+  });
+});
+</script>
+
+
+
+<!-- Danh sách từ vựng -->
+<div class="word-list" id="wordContainer"></div>
+
+<!-- Ôn tập -->
+<div class="review-box">
+<div id="progressCounter"
+     style="position:absolute; top:12px; right:18px;
+            font-size:18px; color:#7a4e3e;">
+  Đã biết 0 / 0
+</div>
+<div style="margin:15px 0;">
+
+<button id="btnVNEN"
+        onclick="setMode('vn-en')">
+
+Việt ➜ Anh
+
+</button>
+
+<button id="btnENVN"
+        onclick="setMode('en-vn')">
+
+Anh ➜ Việt
+
+</button>
+
+</div>
+
+  <div id="vietWord">Chọn hiển thị Việt Anh/Anh Việt để bắt đầu</div>
+    
+  <!-- Hiển thị đáp án -->
+<div id="answer" style="font-size:22px;color:#7a4e3e; margin-top:15px; text-align:center; min-height:40px;"></div>
+   
+  <!-- Nút bấm -->
+  <div class="review-buttons" style="margin-top:20px;">
+    <button onclick="know()">Đã biết</button>
+    <button onclick="dontKnow()">Chưa biết</button>
+    <button onclick="nextWord()">Tiếp theo</button>
+  </div>
+
+</div>
+
+<!-- Bài tập -->
+<div class="exercise" id="exercise"></div>
+
+
+
+<footer>Chúc mừng bạn đã hoàn thành bài học!</footer>
+<script>
+const selectEl = document.getElementById("wordList");
+
+function sortOptionsByNumber() {
+  const opts = Array.from(selectEl.options);
+
+  opts.sort((a, b) => {
+    return Number(a.value) - Number(b.value);
+  });
+
+  selectEl.innerHTML = "";
+  opts.forEach(o => selectEl.appendChild(o));
+}
+
+// sort ngay khi load
+sortOptionsByNumber();
+
+// sort lại khi mở dropdown
+selectEl.addEventListener("mousedown", sortOptionsByNumber);
+selectEl.addEventListener("touchstart", sortOptionsByNumber);
+</script>
+
+<script>
+/********** DATA **********/
+const data = {
+  1: [
+{ en: "afraid (adj) /əˈfreɪd/", vn: "sợ hãi, lo sợ (tính từ không đứng trước danh từ; cấu trúc: be afraid of sb/sth/V-ing)", tick: false },
+  { en: "alive (adj) /əˈlaɪv/", vn: "còn sống, sống sót (tính từ không đứng trước danh từ; trái nghĩa với dead)", tick: false },
+  { en: "amazing (adj) /əˈmeɪzɪŋ/", vn: "kinh ngạc, sửng sốt, tuyệt vời (chỉ tính chất của sự vật/sự việc)", tick: false },
+  { en: "angry (adj) /ˈæŋɡri/", vn: "tức giận, giận dữ (cấu trúc: be angry with sb about sth)", tick: false },
+  { en: "annual (adj) /ˈænjuəl/", vn: "hằng năm, thường niên (Ví dụ: annual event - sự kiện thường niên)", tick: false },
+  { en: "anxious (adj) /ˈæŋkʃəs/", vn: "lo lắng, băn khoăn (đi với giới từ about); nôn nóng, ao ước (đi với giới từ for/to V)", tick: false },
+  { en: "asleep (adj) /əˈsliːp/", vn: "đang ngủ, ngủ thiếp đi (tính từ không đứng trước danh từ; cụm: fall asleep)", tick: false },
+  { en: "automatic (adj) /ˌɔːtəˈmætɪk/", vn: "tự động (máy móc), tự phát (phản xạ) (trạng từ là automatically)", tick: false },
+  { en: "available (adj) /əˈveɪləbl/", vn: "có sẵn, sẵn có để dùng, rảnh rỗi để gặp mặt (danh từ là availability)", tick: false },
+  { en: "average (adj/n) /ˈævərɪdʒ/", vn: "trung bình, bình thường (adj); mức trung bình (n)", tick: false },
+  { en: "awake (adj) /əˈweɪk/", vn: "thức, tỉnh táo (tính từ không đứng trước danh từ; động từ là awake - đánh thức)", tick: false },
+  { en: "awful (adj) /ˈɔːfl/", vn: "kinh khủng, tồi tệ, khủng khiếp (bằng với terrible)", tick: false },
+  { en: "beautiful (adj) /ˈbjuːtɪfl/", vn: "đẹp, xinh đẹp (danh từ là beauty, trạng từ là beautifully)", tick: false },
+  { en: "blind (adj) /blaɪnd/", vn: "mù, không nhìn thấy được (cụm: the blind - người mù nói chung)", tick: false },
+  { en: "blonde (adj) /blɒnd/", vn: "vàng hoe (dùng để tả tóc của phụ nữ; nam giới viết là blond)", tick: false },
+  { en: "blue (adj/n) /bluː/", vn: "xanh da trời (adj/n); buồn bã, chán nản (nghĩa bóng bóng trong văn cảnh giao tiếp)", tick: false },
+  { en: "boring (adj) /ˈbɔːrɪŋ/", vn: "buồn chán, tẻ nhạt (chỉ tính chất của sự vật/sự việc; trái nghĩa là exciting)", tick: false },
+  { en: "brave (adj) /breɪv/", vn: "gan dạ, dũng cảm (danh từ là bravery, bằng với courageous)", tick: false },
+  { en: "bright (adj) /braɪt/", vn: "sáng, tươi sáng, sáng sủa, thông minh (trạng từ là brightly)", tick: false },
+  { en: "broad (adj) /brɔːd/", vn: "rộng, bao la, rộng rãi (Ví dụ: broad shoulders - bờ vai rộng; danh từ là breadth)", tick: false },
+  { en: "brown (adj/n) /braʊn/", vn: "màu nâu", tick: false },
+  { en: "busy (adj) /ˈbɪzi/", vn: "bận rộn, náo nhiệt (cấu trúc kinh điển: be busy with sth / be busy V-ing)", tick: false },
+  { en: "calm (adj/v/n) /kɑːm/", vn: "bình tĩnh, điềm tĩnh (adj); làm dịu đi (v); sự yên lặng (n)", tick: false },
+  { en: "careful (adj) /ˈkeəfl/", vn: "cẩn thận, cẩn trọng (cấu trúc: be careful with/about sth; trái nghĩa là careless)", tick: false },
+  { en: "central (adj) /ˈsentrəl/", vn: "trung tâm, ở giữa, chủ chốt (danh từ là centre / center)", tick: false },
+  { en: "cheap (adj) /tʃiːp/", vn: "rẻ tiền, giá rẻ, chất lượng thấp (trái nghĩa là expensive)", tick: false },
+  { en: "cheerful (adj) /ˈtʃɪəfl/", vn: "vui vẻ, phấn khởi, hớn hở (trạng từ là cheerfully)", tick: false },
+  { en: "clean (adj/v) /kliːn/", vn: "sạch sẽ (adj); lau chùi, dọn dẹp sạch sẽ (v)", tick: false },
+  { en: "clever (adj) /ˈklevə(r)/", vn: "khéo léo, thông minh, lanh lợi (bằng với smart / intelligent)", tick: false },
+  { en: "close (adj/v) /kləʊs/", vn: "gần gũi, thân thiết (adj - phát âm là /kləʊs/, đi với giới từ to); đóng lại (v - phát âm là /kləʊz/)", tick: false },
+  { en: "closed (adj) /kləʊzd/", vn: "đã đóng cửa, bị khóa (chỉ trạng thái của cửa hàng, cửa sổ, lối đi)", tick: false },
+  { en: "cloudy (adj) /ˈklaʊdi/", vn: "nhiều mây, có mây che phủ (danh từ là cloud)", tick: false },
+  { en: "cold (adj/n) /kəʊld/", vn: "lạnh, giá lạnh (adj); sự cảm lạnh, bệnh cúm nhẹ (n - cụm: catch a cold)", tick: false },
+  { en: "colorful (adj) /ˈkʌləfl/", vn: "nhiều màu sắc, sặc sỡ (tiếng Anh-Anh viết là colourful; danh từ là color/colour)", tick: false },
+  { en: "comfortable (adj) /ˈkʌmftəbl/", vn: "thoải mái, dễ chịu, tiện nghi (trái nghĩa là uncomfortable)", tick: false },
+  { en: "complete (adj/v) /kəmˈpliːt/", vn: "hoàn thành, trọn vẹn, đầy đủ (adj); hoàn thành xong (v; danh từ là completion)", tick: false },
+  { en: "cool (adj) /kuːl/", vn: "mát mẻ (thời tiết), ngầu, điềm tĩnh (phong thái)", tick: false },
+  { en: "correct (adj/v) /kəˈrekt/", vn: "chính xác, đúng đắn (adj); sửa sai (v; trái nghĩa là incorrect)", tick: false },
+  { en: "crazy (adj) /ˈkreɪzi/", vn: "điên cuồng, điên rồ, quá say mê cái gì (cụm: be crazy about sth)", tick: false },
+  { en: "cruel (adj) /ˈkruːəl/", vn: "độc ác, tàn nhẫn (luôn đi với giới từ to: cruel to sb/animals; danh từ là cruelty)", tick: false },
+  { en: "cultural (adj) /ˈkʌltʃərəl/", vn: "thuộc về văn hóa (danh từ là culture)", tick: false },
+  { en: "curious (adj) /ˈkjʊəriəs/", vn: "tò mò, hiếu kỳ (cấu trúc: be curious about sth / be curious to V; danh từ là curiosity)", tick: false },
+  { en: "current (adj/n) /ˈkʌrənt/", vn: "hiện tại, hiện hành (adj); dòng nước, dòng điện, luồng tư tưởng (n)", tick: false },
+  { en: "daily (adj/adv) /ˈdeɪli/", vn: "hằng ngày, thường nhật (Ví dụ: daily newspaper - báo hằng ngày)", tick: false },
+  { en: "dangerous (adj) /ˈdeɪndʒərəs/", vn: "nguy hiểm (danh từ là danger, trái nghĩa là safe)", tick: false },
+  { en: "dark (adj/n) /dɑːk/", vn: "tối tăm, sẫm màu (adj); bóng tối (n)", tick: false },
+  { en: "dead (adj) /ded/", vn: "đã chết, không còn sống (danh từ là death, động từ là die)", tick: false },
+  { en: "deaf (adj) /def/", vn: "điếc, khiếm thính (cụm: the deaf - người điếc nói chung)", tick: false },
+  { en: "dear (adj/n) /dɪə(r)/", vn: "thân mến, yêu quý (adj - dùng đầu thư); đắt đỏ (adj - nghĩa cổ); người thân yêu (n)", tick: false },
+  { en: "delicious (adj) /dɪˈlɪʃəs/", vn: "thơm ngon, ngon miệng (bằng với tasty)", tick: false },
+
+   ],
+
+  2: [
+  { en: "delighted (adj) /dɪˈlaɪtɪd/", vn: "vui mừng, hoan hỉ, cực kỳ hài lòng (cấu trúc: be delighted with sth / be delighted to V)", tick: false },
+  { en: "delightful (adj) /dɪˈlaɪtfl/", vn: "thú vị, đáng yêu, làm say mê (chỉ tính chất của sự vật/trải nghiệm)", tick: false },
+  { en: "dependent (adj) /dɪˈpendənt/", vn: "phụ thuộc, lệ thuộc (luôn đi với giới từ ON; động từ là depend; trái nghĩa là independent)", tick: false },
+  { en: "difficult (adj) /ˈdɪfɪkəlt/", vn: "khó khăn, phức tạp (danh từ là difficulty; trái nghĩa là easy)", tick: false },
+  { en: "dirty (adj) /ˈdɜːti/", vn: "bẩn thỉu, dơ dáy (trái nghĩa là clean)", tick: false },
+  { en: "disappointed (adj) /ˌdɪsəˈpɔɪntɪd/", vn: "thất vọng (chỉ cảm xúc của con người; cấu trúc: be disappointed with/at/about sth)", tick: false },
+  { en: "disappointing (adj) /ˌdɪsəˈpɔɪntɪŋ/", vn: "gây thất vọng, làm chán ngán (chỉ tính chất của sự vật/kết quả)", tick: false },
+  { en: "double (adj/det/v) /ˈdʌbl/", vn: "gấp đôi, hai lần (adj/det); tăng lên gấp đôi (v)", tick: false },
+  { en: "dry (adj/v) /draɪ/", vn: "khô ráo, khô cằn (adj); làm khô, sấy khô (v)", tick: false },
+  { en: "early (adj/adv) /ˈɜːli/", vn: "sớm, đầu mùa (adj/adv; trái nghĩa là late)", tick: false },
+  { en: "east (adj/adv/n) /iːst/", vn: "thuộc hướng đông (adj); về hướng đông (adv); phía đông (n)", tick: false },
+  { en: "eastern (adj) /ˈiːstən/", vn: "thuộc về phương Đông, ở phía Đông (chỉ vùng miền, khu vực)", tick: false },
+  { en: "easy (adj) /ˈiːzi/", vn: "dễ dàng, thoải mái (trạng từ là easily, danh từ là ease)", tick: false },
+  { en: "economic (adj) /ˌiːkəˈnɒmɪk/", vn: "thuộc về kinh tế (phân biệt với economical - tiết kiệm; danh từ là economics)", tick: false },
+  { en: "educational (adj) /ˌedʒuˈkeɪʃənl/", vn: "mang tính giáo dục, thuộc ngành giáo dục (danh từ là education)", tick: false },
+  { en: "electrical (adj) /ɪˈlektrɪkl/", vn: "thuộc về điện, liên quan đến điện (Ví dụ: electrical fault - sự cố về điện)", tick: false },
+  { en: "empty (adj/v) /ˈempti/", vn: "trống rỗng, trống không (adj); đổ, làm trống rỗng (v)", tick: false },
+  { en: "endless (adj) /ˈendləs/", vn: "vô tận, không bao giờ kết thúc (danh từ là end)", tick: false },
+  { en: "enormous (adj) /ɪˈnɔːməs/", vn: "to lớn, khổng lồ, khổng lồ về số lượng/kích thước (bằng với huge / gigantic)", tick: false },
+  { en: "enough (det/pron/adv) /ɪˈnʌf/", vn: "đủ (đứng trước danh từ: enough money; đứng sau tính từ/trạng từ: old enough)", tick: false },
+  { en: "entire (adj) /ɪnˈtaɪə(r)/", vn: "toàn bộ, toàn vẹn, trọn vẹn (bằng với whole; trạng từ là entirely)", tick: false },
+  { en: "environmental (adj) /ɪnˌvaɪrənˈmentl/", vn: "thuộc về môi trường (danh từ là environment)", tick: false },
+  { en: "equal (adj/v) /ˈiːkwəl/", vn: "ngang bằng, công bằng, bình đẳng (adj - đi với giới từ to; bằng với, ngang bằng với (v))", tick: false },
+  { en: "every (determiner) /ˈevri/", vn: "mọi, mỗi (luôn đi với danh từ số ít và động từ chia số ít)", tick: false },
+  { en: "everyday (adj) /ˈevrideɪ/", vn: "thông thường, hằng ngày (tính từ viết liền đứng trước danh từ để bổ nghĩa; phân biệt với cụm trạng từ every day)", tick: false },
+  { en: "evil (adj/n) /ˈiːvl/", vn: "xấu xa, độc ác, độc địa (adj); điều ác, sự xấu xa (n)", tick: false },
+  { en: "excellent (adj) /ˈeksələnt/", vn: "xuất sắc, tuyệt vời, ưu tú (danh từ là excellence)", tick: false },
+  { en: "excited (adj) /ɪkˈsaɪtɪd/", vn: "hào hứng, phấn khích (chỉ cảm xúc con người; cấu trúc: be excited about/at sth)", tick: false },
+  { en: "exciting (adj) /ɪkˈsaɪtɪŋ/", vn: "thú vị, gây cấn, kích thích (chỉ tính chất của sự vật/trải nghiệm)", tick: false },
+  { en: "expensive (adj) /ɪkˈspensɪv/", vn: "đắt đỏ, tốn kém (danh từ là expense, trái nghĩa là cheap)", tick: false },
+  { en: "experienced (adj) /ɪkˈspɪəriənst/", vn: "có kinh nghiệm, giàu kinh nghiệm, từng trải (danh từ là experience)", tick: false },
+  { en: "expert (adj/n) /ˈekspɜːt/", vn: "thông thạo, thành thạo (adj); chuyên gia, nhà chuyên môn (n)", tick: false },
+  { en: "false (adj) /fɔːls/", vn: "sai, sai lệch, giả tạo (Ví dụ: false teeth - răng giả; trái nghĩa là true)", tick: false },
+  { en: "familiar (adj) /fəˈmɪliə(r)/", vn: "quen thuộc, thông thạo (cấu trúc: sth is familiar to sb - cái gì quen thuộc với ai; hoặc sb is familiar with sth)", tick: false },
+  { en: "fantastic (adj) /fænˈtæstɪk/", vn: "tuyệt vời, không tưởng, dị thường (bằng với wonderful)", tick: false },
+  { en: "far (adj/adv) /fɑː(r)/", vn: "xa, xa xôi (so sánh hơn là farther hoặc further)", tick: false },
+  { en: "fashionable (adj) /ˈfæʃnəbl/", vn: "hợp thời trang, đúng mốt, sang trọng (danh từ là fashion)", tick: false },
+  { en: "fast (adj/adv) /fɑːst/", vn: "nhanh, mau lẹ (lưu ý vừa là tính từ vừa là trạng từ, không tồn tại từ 'fastly')", tick: false },
+  { en: "fat (adj/n) /fæt/", vn: "béo, mập, nhiều mỡ (adj); mỡ động vật, chất béo (n)", tick: false },
+  { en: "favorite (adj/n) /ˈfeɪvərɪt/", vn: "được yêu thích nhất (tiếng Anh-Anh viết là favourite)", tick: false },
+  { en: "female (adj/n) /ˈfiːmeɪl/", vn: "thuộc giống cái, nữ giới (adj); giống cái, đàn bà, phụ nữ (n; trái nghĩa là male)", tick: false },
+  { en: "financial (adj) /faɪˈnænʃl/", vn: "thuộc về tài chính, tiền tệ (danh từ là finance)", tick: false },
+  { en: "fine (adj/n/v) /faɪn/", vn: "tốt, khỏe, đẹp (adj); tiền phạt (n); phạt tiền ai đó (v)", tick: false },
+  { en: "fit (adj/v) /fɪt/", vn: "vừa vặn, khỏe mạnh, sung sức (adj); vừa, hợp với (v; danh từ là fitness)", tick: false },
+  { en: "foreign (adj) /ˈfɒrən/", vn: "thuộc nước ngoài, từ ngoài vào (danh từ chỉ người là foreigner)", tick: false },
+  { en: "formal (adj) /ˈfɔːml/", vn: "trang trọng, chính thức, theo nghi thức (trái nghĩa là informal)", tick: false },
+  { en: "fortunate (adj) /ˈfɔːtʃənət/", vn: "may mắn, có phúc (bằng với lucky; danh từ là fortune; trái nghĩa là unfortunate)", tick: false },
+  { en: "free (adj/adv/v) /friː/", vn: "tự do, miễn phí, rảnh rỗi (adj); miễn phí (adv); giải phóng (v)", tick: false },
+  { en: "freezing (adj) /ˈfriːzɪŋ/", vn: "lạnh giá, đóng băng, cực kỳ lạnh (thường dùng tả thời tiết; động từ là freeze)", tick: false },
+  { en: "frequent (adj) /ˈfriːkwənt/", vn: "thường xuyên, hay xảy ra (trạng từ là frequently, danh từ là frequency)", tick: false },
+  ],
+
+  3: [
+  { en: "fresh (adj) /freʃ/", vn: "tươi, tươi sống (đồ ăn), trong lành (không khí), mới mẻ", tick: false },
+  { en: "friendly (adj) /ˈfrendli/", vn: "thân thiện, hiếu khách (đuôi '-ly' nhưng là tính từ; cấu trúc: be friendly to sb; trái nghĩa là unfriendly)", tick: false },
+  { en: "frightened (adj) /ˈfraɪtnd/", vn: "hoảng sợ, khiếp sợ (chỉ cảm xúc con người; cấu trúc: be frightened of sb/sth/V-ing)", tick: false },
+  { en: "frightening (adj) /ˈfraɪtnɪŋ/", vn: "đáng sợ, ghê rợn, gây kinh hãi (chỉ tính chất của sự vật/hiện tượng)", tick: false },
+{ en: "frozen (adj) /ˈfrəʊzn/", vn: "đông lạnh, bị đóng băng (động từ là freeze, dạng phân từ dùng như tính từ)", tick: false },
+  { en: "full (adj) /fʊl/", vn: "đầy, no, trọn vẹn (cấu trúc bẫy giới từ: be full of sth = be filled with sth)", tick: false },
+  { en: "funny (adj) /ˈfʌni/", vn: "khôi hài, buồn cười, kỳ lạ đến mức đáng ngờ (danh từ là fun)", tick: false },
+  { en: "future (adj/n) /ˈfjuːtʃə(r)/", vn: "thuộc về tương lai (adj); tương lai, thời lai (n)", tick: false },
+  { en: "generous (adj) /ˈdʒenərəs/", vn: "rộng lượng, hào phóng (luôn đi với giới từ: be generous to sb; danh từ là generosity)", tick: false },
+  { en: "gentle (adj) /ˈdʒentl/", vn: "nhẹ nhàng, dịu dàng, hiền lành (trạng từ là gently)", tick: false },
+  { en: "glad (adj) /ɡlæd/", vn: "vui mừng, hân hoan (tính từ không đứng trước danh từ; cấu trúc: be glad to V / be glad that + clause)", tick: false },
+  { en: "gold (n/adj) /ɡəʊld/", vn: "vàng, bằng vàng (chỉ chất liệu thật hoặc màu vàng óng thực tế)", tick: false },
+  { en: "golden (adj) /ˈɡəʊldən/", vn: "bằng vàng, có màu vàng óng, quý báu (thường dùng nghĩa bóng như: golden opportunity - cơ hội vàng)", tick: false },
+  { en: "good (adj) /ɡʊd/", vn: "tốt, giỏi, hay (cấu trúc: be good at sth - giỏi cái gì; be good for sth - tốt cho cái gì)", tick: false },
+  { en: "grand (adj) /ɡrænd/", vn: "hùng vĩ, tráng lệ, hoành tráng, long trọng", tick: false },
+  { en: "grateful (adj) /ˈɡreɪtfl/", vn: "biết ơn, cảm kích (cấu trúc: be grateful to sb for sth; danh từ là gratitude)", tick: false },
+  { en: "gray (adj/n) /ɡreɪ/", vn: "màu xám (tiếng Anh-Anh thường viết là grey)", tick: false },
+  { en: "great (adj) /ɡreɪt/", vn: "to lớn, tuyệt vời, vĩ đại (trạng từ là greatly)", tick: false },
+  { en: "green (adj/n) /ɡriːn/", vn: "xanh lá cây (adj/n); thân thiện với môi trường, còn non nớt (nghĩa bóng)", tick: false },
+  { en: "guilty (adj) /ˈɡɪlti/", vn: "có tội, tội lỗi, cảm thấy tội lỗi (luôn đi với giới từ: guilty of sth; danh từ là guilt)", tick: false },
+  { en: "happy (adj) /ˈhæpi/", vn: "hạnh phúc, vui vẻ (danh từ là happiness, trái nghĩa là unhappy)", tick: false },
+  { en: "hard (adj/adv) /hɑːd/", vn: "cứng, khó khăn, chăm chỉ (lưu ý vừa là adj vừa là adv; trạng từ hardly mang nghĩa phủ định là 'hầu như không')", tick: false },
+  { en: "healthy (adj) /ˈhelθi/", vn: "khỏe mạnh, lành mạnh, có lợi cho sức khỏe (danh từ là health, trái nghĩa là unhealthy)", tick: false },
+  { en: "heavy (adj) /ˈhevi/", vn: "nặng, nặng nề, dữ dội (Ví dụ: heavy rain - mưa lớn; trạng từ là heavily)", tick: false },
+  { en: "helpful (adj) /ˈhelpfl/", vn: "có ích, giúp ích, hữu dụng (trái nghĩa là helpless)", tick: false },
+  { en: "high (adj/adv) /haɪ/", vn: "cao, ở mức độ cao (danh từ là height, phân biệt trạng từ high và highly)", tick: false },
+  { en: "historical (adj) /hɪˈstɒrɪkl/", vn: "thuộc về lịch sử, có liên quan đến lịch sử (phân biệt với historic - mang tính lịch sử, trọng đại)", tick: false },
+  { en: "honest (adj) /ˈɒnɪst/", vn: "trung thực, chân thật (âm H câm; danh từ là honesty; trái nghĩa là dishonest)", tick: false },
+  { en: "hot (adj) /hɒt/", vn: "nóng, nóng bỏng, cay nồng, đang sốt dẻo (tin tức)", tick: false },
+  { en: "huge (adj) /hjuːd/", vn: "khổng lồ, to lớn (bằng với enormous / massive)", tick: false },
+  { en: "human (adj/n) /ˈhjuːmən/", vn: "thuộc con người, mang tính người (adj); loài người, con người (n)", tick: false },
+  { en: "hungry (adj) /ˈhʌŋɡri/", vn: "đói, thèm khát (danh từ là hunger)", tick: false },
+  { en: "ill (adj) /ɪl/", vn: "ốm, đau yếu (thường làm vị ngữ sau tobe; danh từ là illness; bằng với sick)", tick: false },
+  { en: "important (adj) /ɪmˈpɔːtnt/", vn: "quan trọng, trọng yếu (cấu trúc: It is important for sb to V; danh từ là importance)", tick: false },
+  { en: "indoor (adj) /ˈɪndɔː(r)/", vn: "trong nhà, nội thất (tính từ luôn đứng trước danh từ; phân biệt với trạng từ indoors)", tick: false },
+  { en: "industrial (adj) /ɪnˈdʌstriəl/", vn: "thuộc về công nghiệp (phân biệt với industrious - cần cù, siêng năng; danh từ là industry)", tick: false },
+  { en: "innocent (adj) /ˈɪnəsnt/", vn: "ngây thơ, vô tội, trong trắng (luôn đi với giới từ: innocent of sth; danh từ là innocence)", tick: false },
+  { en: "intelligent (adj) /ɪnˈtelɪdʒənt/", vn: "thông minh, sáng suốt (danh từ là intelligence, bằng với smart)", tick: false },
+  { en: "interested (adj) /ˈɪntrəstɪd/ hoặc /ˈɪntərestɪd/", vn: "có hứng thú, quan tâm (chỉ cảm xúc người; cấu trúc: be interested in sth / V-ing)", tick: false },
+  { en: "interesting (adj) /ˈɪntrəstɪŋ/ hoặc /ˈɪntərestɪŋ/", vn: "thú vị, hấp dẫn (chỉ tính chất của sự vật/trải nghiệm)", tick: false },
+  { en: "international (adj) /ˌɪntəˈnæʃnəl/", vn: "mang tính quốc tế (danh từ là nation, trạng từ là internationally)", tick: false },
+  { en: "jealous (adj) /ˈdʒeləs/", vn: "ghen tị, ghen đố kỵ (luôn đi với giới từ: jealous of sb/sth; danh từ là jealousy)", tick: false },
+  { en: "joint (adj/n) /dʒɔɪnt/", vn: "chung, cùng chung (adj - Ví dụ: joint venture - liên doanh); khớp xương, mối nối (n)", tick: false },
+  { en: "juicy (adj) /ˈdʒuːsi/", vn: "mọng nước (trái cây), có nhiều tình tiết hấp dẫn/ly kỳ (nghĩa bóng; danh từ là juice)", tick: false },
+  { en: "junior (adj/n) /ˈdʒuːniə(r)/", vn: "cấp dưới, ít tuổi hơn, sinh viên năm ba (n); nhỏ hơn, thấp thỏi hơn (adj - đi với giới từ to)", tick: false },
+  { en: "just (adj/adv) /dʒʌst/", vn: "công bằng, chính đáng (adj); vừa mới, chỉ (adv)", tick: false },
+  { en: "keen (adj) /kiːn/", vn: "say mê, sắc bén, thính (giác quan) (cấu trúc bài thi: be keen on sth / V-ing - đam mê cái gì)", tick: false },
+  { en: "kind (adj/n) /kaɪnd/", vn: "tốt bụng, tử tế (adj - cấu trúc: be kind to sb); loại, hạng, thể loại (n - cụm: a kind of)", tick: false },
+  { en: "late (adj/adv) /leɪt/", vn: "muộn, trễ, cuối mùa (lưu ý vừa là adj vừa là adv; trạng từ lately mang nghĩa là 'dạo gần đây')", tick: false },
+  { en: "lead (adj/v/n) /liːd/ hoặc /led/", vn: "hàng đầu, chính (adj); dẫn dắt (v); chì (n - phát âm là /led/)", tick: false },
+  ],
+  4: [
+  { en: "level (adj/n/v) /ˈlevl/", vn: "bằng phẳng, ngang bằng (adj); cấp độ, mức độ (n); san bằng (v)", tick: false },
+  { en: "light (adj/n/v) /laɪt/", vn: "nhẹ (trọng lượng), nhạt (màu sắc), sáng (adj); ánh sáng (n); đốt, thắp sáng (v)", tick: false },
+  { en: "likely (adj/adv) /ˈlaɪkli/", vn: "có khả năng xảy ra, rất có thể (đuôi -ly nhưng là tính từ; cấu trúc: be likely to V / It is likely that)", tick: false },
+  { en: "little (adj/det) /ˈlɪtl/", vn: "nhỏ bé, ít ỏi (dùng với danh từ không đếm được; phân biệt với a little)", tick: false },
+  { en: "lonely (adj) /ˈləʊnli/", vn: "cô đơn, hiu quạnh, đơn độc (chỉ trạng thái cảm xúc lạc lõng; danh từ là loneliness)", tick: false },
+  { en: "long (adj/v) /lɒŋ/", vn: "dài, lâu (adj); khao khát, ao ước mong mỏi điều gì (v - cấu trúc: long for sth / long to V)", tick: false },
+  { en: "loose (adj) /luːs/", vn: "lỏng lẻo, rộng, sút ra (trái nghĩa với tight; phân biệt với động từ lose /luːz/)", tick: false },
+  { en: "loud (adj/adv) /laʊd/", vn: "to, vang đồ, om sòm (âm thanh) (trạng từ thường dùng là loudly)", tick: false },
+  { en: "lovely (adj) /ˈlʌvli/", vn: "đáng yêu, xinh xắn, tuyệt vời (đuôi -ly nhưng là tính từ; danh từ gốc là love)", tick: false },
+  { en: "low (adj/adv) /ləʊ/", vn: "thấp, lùn, ở mức độ thấp (trái nghĩa với high)", tick: false },
+  { en: "loyal (adj) /ˈlɔɪəl/", vn: "trung thành, thành thật (luôn đi với giới từ: loyal to sb/sth; danh từ là loyalty)", tick: false },
+  { en: "lucky (adj) /ˈlʌki/", vn: "may mắn, gặp may (danh từ là luck, bằng với fortunate, trái nghĩa là unlucky)", tick: false },
+  { en: "mad (adj) /mæd/", vn: "điên rồ, tức giận, bực dọc (cấu trúc: be mad at sb - giận ai; be mad about sth - điên cuồng vì cái gì)", tick: false },
+  { en: "male (adj/n) /meɪl/", vn: "thuộc giống đực, nam giới (adj); đàn ông, con đực (n; trái nghĩa là female)", tick: false },
+  { en: "maritime (adj) /ˈmærɪtaɪm/", vn: "thuộc hàng hải, thuộc biển, gần biển (Ví dụ: maritime law - luật hàng hải)", tick: false },
+  { en: "married (adj) /ˈmærid/", vn: "đã kết hôn, đã lập gia đình (cấu trúc bẫy giới từ: be married to sb - kết hôn với ai)", tick: false },
+  { en: "massive (adj) /ˈmæsɪv/", vn: "to lớn, đồ sộ, ồ ạt, khổng lồ (bằng với huge / enormous)", tick: false },
+  { en: "mean (adj/v) /miːn/", vn: "keo kiệt, ích kỷ, xấu tính (adj); có nghĩa là, muốn nói là (v; danh từ ý nghĩa là meaning)", tick: false },
+  { en: "medical (adj) /ˈmedɪkl/", vn: "thuộc y học, thuộc y tế (danh từ y khoa/bác sĩ là medicine/doctor)", tick: false },
+  { en: "middle (adj/n) /ˈmɪdl/", vn: "ở giữa, trung lưu (adj); giữa, trung tâm (n - cụm: in the middle of)", tick: false },
+  { en: "military (adj/n) /ˈmɪlətri/", vn: "thuộc quân đội, binh nghiệp (adj); lực lượng quân đội (n)", tick: false },
+  { en: "miserable (adj) /ˈmɪzrəbl/", vn: "khốn khổ, khổ sở, đáng thương, tồi tàn (danh từ là misery)", tick: false },
+  { en: "monthly (adj/adv/n) /ˈmʌnθli/", vn: "hằng tháng (adj/adv); tạp chí xuất bản hằng tháng (n; danh từ gốc là month)", tick: false },
+  { en: "multiple (adj) /ˈmʌltɪpl/", vn: "nhiều, phức tạp, đa dạng (Ví dụ: multiple-choice question - câu hỏi trắc nghiệm)", tick: false },
+  { en: "musical (adj/n) /ˈmjuːzɪkl/", vn: "thuộc âm nhạc, có năng khiếu nhạc (adj); phim ca nhạc, kịch ca múa (n; danh từ gốc là music)", tick: false },
+  { en: "mysterious (adj) /mɪˈstɪəriəs/", vn: "bí ẩn, huyền bí, thần bí (danh từ là mystery)", tick: false },
+  { en: "national (adj) /ˈnæʃnəl/", vn: "thuộc quốc gia, mang tính dân tộc (danh từ là nation, quốc tịch là nationality)", tick: false },
+  { en: "native (adj/n) /ˈneɪtɪv/", vn: "bản xứ, bản địa, tự nhiên (adj - cụm: native speaker); người bản xứ (n)", tick: false },
+  { en: "near (adj/adv/prep) /nɪə(r)/", vn: "gần (khoảng cách không gian hoặc thời gian)", tick: false },
+  { en: "nearby (adj/adv) /ˌnɪəˈbaɪ/", vn: "gần đây, gần bên (tính từ đứng trước danh từ hoặc adv đứng cuối câu; không dùng làm prep)", tick: false },
+  { en: "neat (adj) /niːt/", vn: "gọn gàng, ngăn nắp, sạch sẽ (bằng với tidy)", tick: false },
+  { en: "necessary (adj) /ˈnesəsəri/", vn: "cần thiết, thiết yếu (cấu trúc: It is necessary for sb to V; trái nghĩa là unnecessary)", tick: false },
+  { en: "nervous (adj) /ˈnɜːvəs/", vn: "lo lắng, bồn chồn, thuộc thần kinh (cấu trúc: be nervous about sth)", tick: false },
+  { en: "new (adj) /njuː/", vn: "mới, mới mẻ, chưa quen (trái nghĩa với old)", tick: false },
+  { en: "next (adj/adv/det) /nekst/", vn: "tiếp theo, bên cạnh (cấu trúc vị trí: next to - ngay bên cạnh)", tick: false },
+  { en: "nice (adj) /naɪs/", vn: "đẹp, tốt, tử tế, dễ chịu (cấu trúc: It's nice of sb to V)", tick: false },
+  { en: "noble (adj/n) /ˈnəʊbl/", vn: "cao quý, quý tộc, nguy nga (adj); người quý tộc (n; danh từ sự cao quý là nobility)", tick: false },
+  { en: "noisy (adj) /ˈnɔɪzi/", vn: "ồn ào, huyên náo (danh từ tiếng ồn là noise, trái nghĩa là quiet)", tick: false },
+  { en: "north (adj/adv/n) /nɔːθ/", vn: "thuộc hướng bắc (adj); về phía bắc (adv); phía bắc (n)", tick: false },
+  { en: "northern (adj) /ˈnɔːðən/", vn: "thuộc phương Bắc, ở phía Bắc (chỉ vùng miền, khu vực địa lý)", tick: false },
+  { en: "numeric (adj) /njuːˈmerɪk/", vn: "thuộc về số học, bằng số (tiếng Anh-Mỹ thường dùng numerical)", tick: false },
+  { en: "numerous (adj) /ˈnjuːmərəs/", vn: "nhiều, đông đảo, số lượng lớn (bằng với many / plentiful; danh từ gốc là number)", tick: false },
+  { en: "odd (adj) /ɒd/", vn: "kỳ quặc, lập dị (bằng với strange); số lẻ (trái nghĩa với even - số chẵn); dư thừa", tick: false },
+  { en: "official (adj/n) /əˈfɪʃl/", vn: "chính thức, thuộc công vụ (adj); viên chức, công chức (n; trạng từ là officially)", tick: false },
+  { en: "old (adj) /əʊld/", vn: "già, cũ, cổ (trái nghĩa với young / new; danh từ tuổi tác là age)", tick: false },
+  { en: "open (adj/v) /ˈəʊpən/", vn: "mở cửa, cởi mở (adj); mở ra (v; trái nghĩa là closed / close)", tick: false },
+  { en: "opposite (adj/n/prep) /ˈɒpəzɪt/", vn: "đối diện, trái ngược (adj/n/prep; cấu trúc: opposite to/from sb/sth)", tick: false },
+  { en: "orange (adj/n) /ˈɒrɪndʒ/", vn: "màu cam (adj); quả cam, nước cam (n)", tick: false },
+  { en: "ordinary (adj) /ˈɔːdnri/", vn: "thông thường, bình thường, dung thường (trái nghĩa là extraordinary)", tick: false },
+  { en: "outdoor (adj) /ˈaʊtdɔː(r)/", vn: "ngoài trời (tính từ luôn đứng trước danh từ; phân biệt với trạng từ outdoors)", tick: false },
+  { en: "outer (adj) /ˈaʊtə(r)/", vn: "ở ngoài, bên ngoài (tính từ luôn đứng trước danh từ; trái nghĩa là inner)", tick: false },
+
+  ],
+  5: [
+  { en: "overall (adj/adv) /ˌəʊvərˈɔːl/", vn: "tổng thể, nhìn chung, toàn bộ", tick: false },
+  { en: "own (adj/pron/v) /əʊn/", vn: "riêng, tự mình (adj/pron - cụm: on my own); sở hữu, làm chủ (v - người sở hữu là owner)", tick: false },
+  { en: "pale (adj) /peɪl/", vn: "nhợt nhạt, xanh xao (sắc mặt), nhạt màu (màu sắc)", tick: false },
+  { en: "past (adj/n/prep) /pɑːst/", vn: "quá khứ, đã qua (adj/n); qua, đi ngang qua (prep)", tick: false },
+  { en: "patient (adj/n) /ˈpeɪʃnt/", vn: "kiên nhẫn, nhẫn nại (adj - đi với giới từ with); bệnh nhân (n; danh từ sự kiên nhẫn là patience)", tick: false },
+  { en: "perfect (adj/v) /ˈpɜːfɪkt/ hoặc /pəˈfekt/", vn: "hoàn hảo, hoàn mỹ (adj); hoàn thiện (v; danh từ là perfection)", tick: false },
+  { en: "pink (adj/n) /pɪŋk/", vn: "màu hồng", tick: false },
+  { en: "plain (adj/n) /pleɪn/", vn: "trơn, đơn giản, rõ ràng, xấu xí (tính cách/ngoại hình) (adj); đồng bằng (n)", tick: false },
+  { en: "pleasant (adj) /ˈpleznt/", vn: "dễ chịu, thoải mái, dễ mến (danh từ sự vui thích là pleasure, trái nghĩa là unpleasant)", tick: false },
+{ en: "pleased (adj) /pliːzd/", vn: "hài lòng, vui mừng (chỉ cảm xúc người; cấu trúc: be pleased with sth / be pleased to V)", tick: false },
+  { en: "pocket (adj/n) /ˈpɒkɪt/", vn: "bỏ túi, nhỏ gọn (adj - Ví dụ: pocket money); túi quần/áo (n)", tick: false },
+  { en: "polite (adj) /pəˈlaɪt/", vn: "lịch sự, lễ phép (luôn đi với giới từ: polite to sb; danh từ là politeness; trái nghĩa là impolite)", tick: false },
+  { en: "political (adj) /pəˈlɪtɪkl/", vn: "thuộc về chính trị (danh từ chính trị/chính trị gia là politics/politician)", tick: false },
+  { en: "poor (adj) /pɔː(r)/", vn: "nghèo khổ, tội nghiệp, chất lượng kém (cụm: the poor - người nghèo nói chung)", tick: false },
+  { en: "popular (adj) /ˈpɒpjələ(r)/", vn: "phổ biến, được yêu thích (luôn đi với giới từ: popular with/among sb; danh từ là popularity)", tick: false },
+  { en: "possible (adj) /ˈpɒsəbl/", vn: "có thể, có khả năng xảy ra (cấu trúc: It is possible for sb to V; trái nghĩa là impossible)", tick: false },
+  { en: "powerful (adj) /ˈpaʊəfl/", vn: "quyền lực, mạnh mẽ, có sức ảnh hưởng lớn (danh từ gốc là power; trái nghĩa là powerless)", tick: false },
+  { en: "precious (adj) /ˈpreʃəs/", vn: "quý giá, quý báu, cao quý (Ví dụ: precious stones - đá quý)", tick: false },
+  { en: "predictable (adj) /rɪˈprɪktəbl/", vn: "có thể dự đoán trước được (động từ là predict; trái nghĩa là unpredictable)", tick: false },
+  { en: "pregnant (adj) /ˈpreɡnənt/", vn: "mang thai, có bầu (danh từ sự mang thai là pregnancy)", tick: false },
+  { en: "prepared (adj) /rɪˈpeəd/", vn: "đã được chuẩn bị sẵn sàng (cấu trúc: be prepared for sth / be prepared to V)", tick: false },
+  { en: "present (adj/n/v) /ˈpreznt/ hoặc /prɪˈzent/", vn: "có mặt, hiện tại (adj); món quà, hiện tại (n); trình bày, trao tặng (v - phát âm là /prɪˈzent/)", tick: false },
+  { en: "pretty (adj/adv) /ˈprɪti/", vn: "xinh xắn, dễ nhìn (adj); khá là, tương đối (adv - dùng bổ nghĩa cho tính từ/trạng từ khác)", tick: false },
+  { en: "previous (adj) /ˈpriːviəs/", vn: "trước đó, ưu tiên (trạng từ thường gặp là previously - trước đây)", tick: false },
+  { en: "prime (adj/n) /praɪm/", vn: "hàng đầu, chủ chốt, căn bản (adj - Ví dụ: prime minister - thủ tướng); thời kỳ hoàng kim (n)", tick: false },
+  { en: "principal (adj/n) /ˈprɪnsəpl/", vn: "chính, chủ yếu (adj); hiệu trưởng trường phổ thông (n; phân biệt với principle - nguyên tắc)", tick: false },
+  { en: "private (adj) /ˈpraɪvət/", vn: "riêng tư, cá nhân, tư nhân (danh từ sự riêng tư là privacy; trái nghĩa là public)", tick: false },
+  { en: "prize (adj/n) /praɪz/", vn: "đạt giải, xứng đáng làm phần thưởng (adj); giải thưởng, phần thưởng (n)", tick: false },
+  { en: "professional (adj/n) /prəˈfeʃənl/", vn: "chuyên nghiệp, có tay nghề cao (adj); chuyên gia, vận động viên chuyên nghiệp (n; danh từ gốc là profession)", tick: false },
+  { en: "proper (adj) /ˈprɒpə(r)/", vn: "đúng đắn, thích hợp, phù hợp tiêu chuẩn (trạng từ là properly)", tick: false },
+  { en: "proud (adj) /praʊd/", vn: "tự hào, hãnh diện (cấu trúc kinh điển: be proud of sb/sth = take pride in sb/sth)", tick: false },
+  { en: "public (adj/n) /ˈpʌblɪk/", vn: "công cộng, công khai (adj); công chúng, quần chúng (n; cụm: in public - nơi công cộng)", tick: false },
+  { en: "pure (adj) /pjʊə(r)/", vn: "nguyên chất, tinh khiết, trong sạch (danh từ sự tinh khiết là purity)", tick: false },
+  { en: "purple (adj/n) /ˈpɜːpl/", vn: "màu tím", tick: false },
+  { en: "quick (adj) /kwɪk/", vn: "nhanh nhẹn, mau lẹ (trạng từ là quickly)", tick: false },
+  { en: "quiet (adj/n) /ˈkwaɪət/", vn: "yên tĩnh, thanh bình, trầm tính (trái nghĩa là noisy)", tick: false },
+  { en: "rapid (adj) /ˈræpɪd/", vn: "nhanh chóng, mau lẹ, dồn dập (thường dùng chỉ tốc độ phát triển, thay đổi; trạng từ là rapidly)", tick: false },
+  { en: "raw (adj) /rɔː/", vn: "sống, chưa nấu chín (thức ăn), thô, dạng nguyên bản (nguyên liệu; Ví dụ: raw material)", tick: false },
+  { en: "ready (adj) /ˈredi/", vn: "sẵn sàng (cấu trúc: be ready for sth / be ready to V)", tick: false },
+  { en: "real (adj) /ˈriːəl/", vn: "có thật, thực tế, chân thật (trái nghĩa là unreal / fake)", tick: false },
+  { en: "realistic (adj) /ˌriːəˈlɪstɪk/", vn: "thực tế, có tính khả thi (danh từ là reality; trái nghĩa là unrealistic)", tick: false },
+  { en: "reasonable (adj) /ˈriːznəbl/", vn: "hợp lý, phải chăng (giá cả) (động từ/danh từ gốc là reason)", tick: false },
+  { en: "recent (adj) /ˈriːsnt/", vn: "gần đây, mới xảy ra (trạng từ recently thường dùng trong thì Hiện tại hoàn thành)", tick: false },
+  { en: "red (adj/n) /red/", vn: "màu đỏ", tick: false },
+  { en: "religious (adj) /rɪˈlɪdʒəs/", vn: "thuộc về tôn giáo, sùng đạo (danh từ tôn giáo là religion)", tick: false },
+  { en: "remote (adj) /rɪˈməʊt/", vn: "xa xôi, hẻo lánh (Ví dụ: remote area - vùng sâu vùng xa); thiết bị điều khiển từ xa (n)", tick: false },
+  { en: "responsible (adj) /rɪˈspɒnsəbl/", vn: "chịu trách nhiệm (cấu trúc: be responsible for sb/sth; danh từ là responsibility; trái nghĩa là irresponsible)", tick: false },
+  { en: "rich (adj) /rɪtʃ/", vn: "giàu có, phong phú, giàu dinh dưỡng (cụm: the rich - người giàu nói chung)", tick: false },
+  { en: "right (adj/adv/n) /raɪt/", vn: "đúng, chính xác (trái nghĩa với wrong); bên phải; quyền lợi (n - cụm: human rights)", tick: false },
+  { en: "ripe (adj) /raɪp/", vn: "chín (trái cây, quả ngọt; trái nghĩa với raw/green)", tick: false },
+  { en: "rough (adj) /rʌf/", vn: "gồ ghề, ráp (bề mặt), dữ dội (biển động), thô bạo (tính cách; trạng từ là roughly)", tick: false },
+  { en: "round (adj/n/prep) /raʊnd/", vn: "tròn, hình tròn (adj/n); xung quanh, vòng quanh (prep)", tick: false },
+  { en: "routine (adj/n) /ruːˈtiːn/", vn: "thường lệ, định kỳ (adj); thói quen hằng ngày, công việc đều đặn (n)", tick: false },
+  ],
+  6: [
+{ en: "ill (adj) /ɪl/", vn: "ốm, đau yếu (thường làm vị ngữ sau tobe; danh từ là illness; bằng với sick)", tick: false },
+  { en: "important (adj) /ɪmˈpɔːtnt/", vn: "quan trọng, trọng yếu (cấu trúc: It is important for sb to V; danh từ là importance)", tick: false },
+  { en: "indoor (adj) /ˈɪndɔː(r)/", vn: "trong nhà, nội thất (tính từ luôn đứng trước danh từ; phân biệt với trạng từ indoors)", tick: false },
+  { en: "industrial (adj) /ɪnˈdʌstriəl/", vn: "thuộc về công nghiệp (phân biệt với industrious - cần cù, siêng năng; danh từ là industry)", tick: false },
+  { en: "innocent (adj) /ˈɪnəsnt/", vn: "ngây thơ, vô tội, trong trắng (luôn đi với giới từ: innocent of sth; danh từ là innocence)", tick: false },
+  { en: "intelligent (adj) /ɪnˈtelɪdʒənt/", vn: "thông minh, sáng suốt (danh từ là intelligence, bằng với smart)", tick: false },
+  { en: "interested (adj) /ˈɪntrəstɪd/ hoặc /ˈɪntərestɪd/", vn: "có hứng thú, quan tâm (chỉ cảm xúc người; cấu trúc: be interested in sth / V-ing)", tick: false },
+  { en: "interesting (adj) /ˈɪntrəstɪŋ/ hoặc /ˈɪntərestɪŋ/", vn: "thú vị, hấp dẫn (chỉ tính chất của sự vật/trải nghiệm)", tick: false },
+  { en: "international (adj) /ˌɪntəˈnæʃnəl/", vn: "mang tính quốc tế (danh từ là nation, trạng từ là internationally)", tick: false },
+  { en: "jealous (adj) /ˈdʒeləs/", vn: "ghen tị, ghen đố kỵ (luôn đi với giới từ: jealous of sb/sth; danh từ là jealousy)", tick: false },
+  { en: "joint (adj/n) /dʒɔɪnt/", vn: "chung, cùng chung (adj - Ví dụ: joint venture - liên doanh); khớp xương, mối nối (n)", tick: false },
+  { en: "juicy (adj) /ˈdʒuːsi/", vn: "mọng nước (trái cây), có nhiều tình tiết hấp dẫn/ly kỳ (nghĩa bóng; danh từ là juice)", tick: false },
+  { en: "junior (adj/n) /ˈdʒuːniə(r)/", vn: "cấp dưới, ít tuổi hơn, sinh viên năm ba (n); nhỏ hơn, thấp thỏi hơn (adj - đi với giới từ to)", tick: false },
+  { en: "just (adj/adv) /dʒʌst/", vn: "công bằng, chính đáng (adj); vừa mới, chỉ (adv)", tick: false },
+  { en: "keen (adj) /kiːn/", vn: "say mê, sắc bén, thính (giác quan) (cấu trúc bài thi: be keen on sth / V-ing - đam mê cái gì)", tick: false },
+  { en: "kind (adj/n) /kaɪnd/", vn: "tốt bụng, tử tế (adj - cấu trúc: be kind to sb); loại, hạng, thể loại (n - cụm: a kind of)", tick: false },
+  { en: "late (adj/adv) /leɪt/", vn: "muộn, trễ, cuối mùa (lưu ý vừa là adj vừa là adv; trạng từ lately mang nghĩa là 'dạo gần đây')", tick: false },
+  { en: "lead (adj/v/n) /liːd/ hoặc /led/", vn: "hàng đầu, chính (adj); dẫn dắt (v); chì (n - phát âm là /led/)", tick: false },
+  { en: "level (adj/n/v) /ˈlevl/", vn: "bằng phẳng, ngang bằng (adj); cấp độ, mức độ (n); san bằng (v)", tick: false },
+  { en: "light (adj/n/v) /laɪt/", vn: "nhẹ (trọng lượng), nhạt (màu sắc), sáng (adj); ánh sáng (n); đốt, thắp sáng (v)", tick: false },
+  { en: "likely (adj/adv) /ˈlaɪkli/", vn: "có khả năng xảy ra, rất có thể (đuôi -ly nhưng là tính từ; cấu trúc: be likely to V / It is likely that)", tick: false },
+  { en: "little (adj/det) /ˈlɪtl/", vn: "nhỏ bé, ít ỏi (dùng với danh từ không đếm được; phân biệt với a little)", tick: false },
+  { en: "lonely (adj) /ˈləʊnli/", vn: "cô đơn, hiu quạnh, đơn độc (chỉ trạng thái cảm xúc lạc lõng; danh từ là loneliness)", tick: false },
+  { en: "long (adj/v) /lɒŋ/", vn: "dài, lâu (adj); khao khát, ao ước mong mỏi điều gì (v - cấu trúc: long for sth / long to V)", tick: false },
+  { en: "loose (adj) /luːs/", vn: "lỏng lẻo, rộng, sút ra (trái nghĩa với tight; phân biệt với động từ lose /luːz/)", tick: false },
+  { en: "loud (adj/adv) /laʊd/", vn: "to, vang đồ, om sòm (âm thanh) (trạng từ thường dùng là loudly)", tick: false },
+  { en: "lovely (adj) /ˈlʌvli/", vn: "đáng yêu, xinh xắn, tuyệt vời (đuôi -ly nhưng là tính từ; danh từ gốc là love)", tick: false },
+  { en: "low (adj/adv) /ləʊ/", vn: "thấp, lùn, ở mức độ thấp (trái nghĩa với high)", tick: false },
+  { en: "loyal (adj) /ˈlɔɪəl/", vn: "trung thành, thành thật (luôn đi với giới từ: loyal to sb/sth; danh từ là loyalty)", tick: false },
+  { en: "lucky (adj) /ˈlʌki/", vn: "may mắn, gặp may (danh từ là luck, bằng với fortunate, trái nghĩa là unlucky)", tick: false },
+  { en: "mad (adj) /mæd/", vn: "điên rồ, tức giận, bực dọc (cấu trúc: be mad at sb - giận ai; be mad about sth - điên cuồng vì cái gì)", tick: false },
+  { en: "male (adj/n) /meɪl/", vn: "thuộc giống đực, nam giới (adj); đàn ông, con đực (n; trái nghĩa là female)", tick: false },
+  { en: "maritime (adj) /ˈmærɪtaɪm/", vn: "thuộc hàng hải, thuộc biển, gần biển (Ví dụ: maritime law - luật hàng hải)", tick: false },
+  { en: "married (adj) /ˈmærid/", vn: "đã kết hôn, đã lập gia đình (cấu trúc bẫy giới từ: be married to sb - kết hôn với ai)", tick: false },
+  { en: "massive (adj) /ˈmæsɪv/", vn: "to lớn, đồ sộ, ồ ạt, khổng lồ (bằng với huge / enormous)", tick: false },
+  { en: "mean (adj/v) /miːn/", vn: "keo kiệt, ích kỷ, xấu tính (adj); có nghĩa là, muốn nói là (v; danh từ ý nghĩa là meaning)", tick: false },
+  { en: "medical (adj) /ˈmedɪkl/", vn: "thuộc y học, thuộc y tế (danh từ y khoa/bác sĩ là medicine/doctor)", tick: false },
+  { en: "middle (adj/n) /ˈmɪdl/", vn: "ở giữa, trung lưu (adj); giữa, trung tâm (n - cụm: in the middle of)", tick: false },
+  { en: "military (adj/n) /ˈmɪlətri/", vn: "thuộc quân đội, binh nghiệp (adj); lực lượng quân đội (n)", tick: false },
+  { en: "miserable (adj) /ˈmɪzrəbl/", vn: "khốn khổ, khổ sở, đáng thương, tồi tàn (danh từ là misery)", tick: false },
+  { en: "monthly (adj/adv/n) /ˈmʌnθli/", vn: "hằng tháng (adj/adv); tạp chí xuất bản hằng tháng (n; danh từ gốc là month)", tick: false },
+  { en: "multiple (adj) /ˈmʌltɪpl/", vn: "nhiều, phức tạp, đa dạng (Ví dụ: multiple-choice question - câu hỏi trắc nghiệm)", tick: false },
+  { en: "musical (adj/n) /ˈmjuːzɪkl/", vn: "thuộc âm nhạc, có năng khiếu nhạc (adj); phim ca nhạc, kịch ca múa (n; danh từ gốc là music)", tick: false },
+  { en: "mysterious (adj) /mɪˈstɪəriəs/", vn: "bí ẩn, huyền bí, thần bí (danh từ là mystery)", tick: false },
+  { en: "national (adj) /ˈnæʃnəl/", vn: "thuộc quốc gia, mang tính dân tộc (danh từ là nation, quốc tịch là nationality)", tick: false },
+  { en: "native (adj/n) /ˈneɪtɪv/", vn: "bản xứ, bản địa, tự nhiên (adj - cụm: native speaker); người bản xứ (n)", tick: false },
+  { en: "near (adj/adv/prep) /nɪə(r)/", vn: "gần (khoảng cách không gian hoặc thời gian)", tick: false },
+  { en: "nearby (adj/adv) /ˌnɪəˈbaɪ/", vn: "gần đây, gần bên (tính từ đứng trước danh từ hoặc adv đứng cuối câu; không dùng làm prep)", tick: false },
+  { en: "neat (adj) /niːt/", vn: "gọn gàng, ngăn nắp, sạch sẽ (bằng với tidy)", tick: false },
+  { en: "necessary (adj) /ˈnesəsəri/", vn: "cần thiết, thiết yếu (cấu trúc: It is necessary for sb to V; trái nghĩa là unnecessary)", tick: false },
+  { en: "nervous (adj) /ˈnɜːvəs/", vn: "lo lắng, bồn chồn, thuộc thần kinh (cấu trúc: be nervous about sth)", tick: false },
+  { en: "new (adj) /njuː/", vn: "mới, mới mẻ, chưa quen (trái nghĩa với old)", tick: false },
+  { en: "next (adj/adv/det) /nekst/", vn: "tiếp theo, bên cạnh (cấu trúc vị trí: next to - ngay bên cạnh)", tick: false },
+  { en: "nice (adj) /naɪs/", vn: "đẹp, tốt, tử tế, dễ chịu (cấu trúc: It's nice of sb to V)", tick: false },
+  { en: "noble (adj/n) /ˈnəʊbl/", vn: "cao quý, quý tộc, nguy nga (adj); người quý tộc (n; danh từ sự cao quý là nobility)", tick: false },
+  { en: "noisy (adj) /ˈnɔɪzi/", vn: "ồn ào, huyên náo (danh từ tiếng ồn là noise, trái nghĩa là quiet)", tick: false },
+  { en: "north (adj/adv/n) /nɔːθ/", vn: "thuộc hướng bắc (adj); về phía bắc (adv); phía bắc (n)", tick: false },
+  { en: "northern (adj) /ˈnɔːðən/", vn: "thuộc phương Bắc, ở phía Bắc (chỉ vùng miền, khu vực địa lý)", tick: false },
+  { en: "numeric (adj) /njuːˈmerɪk/", vn: "thuộc về số học, bằng số (tiếng Anh-Mỹ thường dùng numerical)", tick: false },
+  { en: "numerous (adj) /ˈnjuːmərəs/", vn: "nhiều, đông đảo, số lượng lớn (bằng với many / plentiful; danh từ gốc là number)", tick: false },
+
+  ],
+
+  7: [
+  { en: "odd (adj) /ɒd/", vn: "kỳ quặc, lập dị (bằng với strange); số lẻ (trái nghĩa với even - số chẵn); dư thừa", tick: false },
+  { en: "official (adj/n) /əˈfɪʃl/", vn: "chính thức, thuộc công vụ (adj); viên chức, công chức (n; trạng từ là officially)", tick: false },
+  { en: "old (adj) /əʊld/", vn: "già, cũ, cổ (trái nghĩa với young / new; danh từ tuổi tác là age)", tick: false },
+  { en: "open (adj/v) /ˈəʊpən/", vn: "mở cửa, cởi mở (adj); mở ra (v; trái nghĩa là closed / close)", tick: false },
+  { en: "opposite (adj/n/prep) /ˈɒpəzɪt/", vn: "đối diện, trái ngược (adj/n/prep; cấu trúc: opposite to/from sb/sth)", tick: false },
+  { en: "orange (adj/n) /ˈɒrɪndʒ/", vn: "màu cam (adj); quả cam, nước cam (n)", tick: false },
+  { en: "ordinary (adj) /ˈɔːdnri/", vn: "thông thường, bình thường, dung thường (trái nghĩa là extraordinary)", tick: false },
+  { en: "outdoor (adj) /ˈaʊtdɔː(r)/", vn: "ngoài trời (tính từ luôn đứng trước danh từ; phân biệt với trạng từ outdoors)", tick: false },
+  { en: "outer (adj) /ˈaʊtə(r)/", vn: "ở ngoài, bên ngoài (tính từ luôn đứng trước danh từ; trái nghĩa là inner)", tick: false },
+  { en: "overall (adj/adv) /ˌəʊvərˈɔːl/", vn: "tổng thể, nhìn chung, toàn bộ", tick: false },
+  { en: "own (adj/pron/v) /əʊn/", vn: "riêng, tự mình (adj/pron - cụm: on my own); sở hữu, làm chủ (v - người sở hữu là owner)", tick: false },
+  { en: "pale (adj) /peɪl/", vn: "nhợt nhạt, xanh xao (sắc mặt), nhạt màu (màu sắc)", tick: false },
+  { en: "past (adj/n/prep) /pɑːst/", vn: "quá khứ, đã qua (adj/n); qua, đi ngang qua (prep)", tick: false },
+  { en: "patient (adj/n) /ˈpeɪʃnt/", vn: "kiên nhẫn, nhẫn nại (adj - đi với giới từ with); bệnh nhân (n; danh từ sự kiên nhẫn là patience)", tick: false },
+  { en: "perfect (adj/v) /ˈpɜːfɪkt/ hoặc /pəˈfekt/", vn: "hoàn hảo, hoàn mỹ (adj); hoàn thiện (v; danh từ là perfection)", tick: false },
+  { en: "pink (adj/n) /pɪŋk/", vn: "màu hồng", tick: false },
+  { en: "plain (adj/n) /pleɪn/", vn: "trơn, đơn giản, rõ ràng, xấu xí (tính cách/ngoại hình) (adj); đồng bằng (n)", tick: false },
+  { en: "pleasant (adj) /ˈpleznt/", vn: "dễ chịu, thoải mái, dễ mến (danh từ sự vui thích là pleasure, trái nghĩa là unpleasant)", tick: false },
+  { en: "pleased (adj) /pliːzd/", vn: "hài lòng, vui mừng (chỉ cảm xúc người; cấu trúc: be pleased with sth / be pleased to V)", tick: false },
+  { en: "pocket (adj/n) /ˈpɒkɪt/", vn: "bỏ túi, nhỏ gọn (adj - Ví dụ: pocket money); túi quần/áo (n)", tick: false },
+  { en: "polite (adj) /pəˈlaɪt/", vn: "lịch sự, lễ phép (luôn đi với giới từ: polite to sb; danh từ là politeness; trái nghĩa là impolite)", tick: false },
+  { en: "political (adj) /pəˈlɪtɪkl/", vn: "thuộc về chính trị (danh từ chính trị/chính trị gia là politics/politician)", tick: false },
+  { en: "poor (adj) /pɔː(r)/", vn: "nghèo khổ, tội nghiệp, chất lượng kém (cụm: the poor - người nghèo nói chung)", tick: false },
+  { en: "popular (adj) /ˈpɒpjələ(r)/", vn: "phổ biến, được yêu thích (luôn đi với giới từ: popular with/among sb; danh từ là popularity)", tick: false },
+  { en: "possible (adj) /ˈpɒsəbl/", vn: "có thể, có khả năng xảy ra (cấu trúc: It is possible for sb to V; trái nghĩa là impossible)", tick: false },
+  { en: "powerful (adj) /ˈpaʊəfl/", vn: "quyền lực, mạnh mẽ, có sức ảnh hưởng lớn (danh từ gốc là power; trái nghĩa là powerless)", tick: false },
+  { en: "precious (adj) /ˈpreʃəs/", vn: "quý giá, quý báu, cao quý (Ví dụ: precious stones - đá quý)", tick: false },
+  { en: "predictable (adj) /rɪˈprɪktəbl/", vn: "có thể dự đoán trước được (động từ là predict; trái nghĩa là unpredictable)", tick: false },
+  { en: "pregnant (adj) /ˈpreɡnənt/", vn: "mang thai, có bầu (danh từ sự mang thai là pregnancy)", tick: false },
+  { en: "prepared (adj) /rɪˈpeəd/", vn: "đã được chuẩn bị sẵn sàng (cấu trúc: be prepared for sth / be prepared to V)", tick: false },
+  { en: "present (adj/n/v) /ˈpreznt/ hoặc /prɪˈzent/", vn: "có mặt, hiện tại (adj); món quà, hiện tại (n); trình bày, trao tặng (v - phát âm là /prɪˈzent/)", tick: false },
+  { en: "pretty (adj/adv) /ˈprɪti/", vn: "xinh xắn, dễ nhìn (adj); khá là, tương đối (adv - dùng bổ nghĩa cho tính từ/trạng từ khác)", tick: false },
+  { en: "previous (adj) /ˈpriːviəs/", vn: "trước đó, ưu tiên (trạng từ thường gặp là previously - trước đây)", tick: false },
+  { en: "prime (adj/n) /praɪm/", vn: "hàng đầu, chủ chốt, căn bản (adj - Ví dụ: prime minister - thủ tướng); thời kỳ hoàng kim (n)", tick: false },
+  { en: "principal (adj/n) /ˈprɪnsəpl/", vn: "chính, chủ yếu (adj); hiệu trưởng trường phổ thông (n; phân biệt với principle - nguyên tắc)", tick: false },
+  { en: "private (adj) /ˈpraɪvət/", vn: "riêng tư, cá nhân, tư nhân (danh từ sự riêng tư là privacy; trái nghĩa là public)", tick: false },
+  { en: "prize (adj/n) /praɪz/", vn: "đạt giải, xứng đáng làm phần thưởng (adj); giải thưởng, phần thưởng (n)", tick: false },
+  { en: "professional (adj/n) /prəˈfeʃənl/", vn: "chuyên nghiệp, có tay nghề cao (adj); chuyên gia, vận động viên chuyên nghiệp (n; danh từ gốc là profession)", tick: false },
+  { en: "proper (adj) /ˈprɒpə(r)/", vn: "đúng đắn, thích hợp, phù hợp tiêu chuẩn (trạng từ là properly)", tick: false },
+  { en: "proud (adj) /praʊd/", vn: "tự hào, hãnh diện (cấu trúc kinh điển: be proud of sb/sth = take pride in sb/sth)", tick: false },
+  { en: "public (adj/n) /ˈpʌblɪk/", vn: "công cộng, công khai (adj); công chúng, quần chúng (n; cụm: in public - nơi công cộng)", tick: false },
+  { en: "pure (adj) /pjʊə(r)/", vn: "nguyên chất, tinh khiết, trong sạch (danh từ sự tinh khiết là purity)", tick: false },
+  { en: "purple (adj/n) /ˈpɜːpl/", vn: "màu tím", tick: false },
+  { en: "quick (adj) /kwɪk/", vn: "nhanh nhẹn, mau lẹ (trạng từ là quickly)", tick: false },
+  { en: "quiet (adj/n) /ˈkwaɪət/", vn: "yên tĩnh, thanh bình, trầm tính (trái nghĩa là noisy)", tick: false },
+  { en: "rapid (adj) /ˈræpɪd/", vn: "nhanh chóng, mau lẹ, dồn dập (thường dùng chỉ tốc độ phát triển, thay đổi; trạng từ là rapidly)", tick: false },
+  { en: "raw (adj) /rɔː/", vn: "sống, chưa nấu chín (thức ăn), thô, dạng nguyên bản (nguyên liệu; Ví dụ: raw material)", tick: false },
+{ en: "royal (adj) /ˈrɔɪəl/", vn: "thuộc hoàng gia, vua chúa (Ví dụ: royal family - gia đình hoàng gia)", tick: false },
+  { en: "rude (adj) /ruːd/", vn: "thô lỗ, khiếm nhã, bất lịch sự (luôn đi với giới từ: rude to sb; trái nghĩa là polite)", tick: false },
+  { en: "rural (adj) /ˈrʊərəl/", vn: "thuộc nông thôn, vùng quê (trái nghĩa với urban - thuộc đô thị)", tick: false },
+  { en: "sad (adj) /sæd/", vn: "buồn bã, sầu muộn (danh từ nỗi buồn là sadness; trái nghĩa là happy)", tick: false },
+  { en: "safe (adj/n) /seɪf/", vn: "an toàn (adj - danh từ sự an toàn là safety); két sắt, két an toàn (n)", tick: false },
+  { en: "salt (adj/n/v) /sɔːlt/", vn: "mặn, có chứa muối (adj); muối ăn (n); rắc muối, muối dưa (v)", tick: false },
+  { en: "same (adj/pron) /seɪm/", vn: "giống nhau, cùng một (luôn có 'the' đi trước: the same as; trái nghĩa là different)", tick: false },
+  { en: "satisfied (adj) /ˈsætɪsfaɪd/", vn: "hài lòng, thỏa mãn (chỉ cảm xúc người; cấu trúc: be satisfied with sth; trái nghĩa là dissatisfied)", tick: false },
+  { en: "scary (adj) /ˈskeəri/", vn: "đáng sợ, ghê rợn (động từ làm hoảng sợ là scare)", tick: false },
+  { en: "scientific (adj) /ˌsaɪənˈtɪfɪk/", vn: "thuộc khoa học, có tính khoa học (danh từ nhà khoa học/khoa học là scientist/science)", tick: false },
+  ],
+
+  8: [
+  { en: "secret (adj/n) /ˈsiːkrət/", vn: "bí mật, thầm kín (adj); điều bí mật, bí quyết (n; trạng từ là secretly)", tick: false },
+  { en: "senior (adj/n) /ˈsiːniə(r)/", vn: "cao cấp hơn, lâu năm hơn, sinh viên năm cuối (n); lớn tuổi hơn, chức vụ cao hơn (adj - đi với giới từ to)", tick: false },
+  { en: "sensitive (adj) /ˈsensətɪv/", vn: "nhạy cảm, dễ bị tổn thương (cấu trúc: be sensitive to sth; phân biệt với sensible - khôn ngoan)", tick: false },
+  { en: "shiny (adj) /ˈʃaɪni/", vn: "sáng bóng, bóng loáng, chiếu sáng (danh từ/động từ gốc là shine)", tick: false },
+  { en: "short (adj) /ʃɔːt/", vn: "ngắn, thấp lùn, thiếu hụt (cụm: be short of sth - thiếu cái gì; danh từ độ dài là shortness)", tick: false },
+  { en: "shy (adj) /ʃaɪ/", vn: "nhút nhát, bẽn lẽn, e thẹn (danh từ sự nhút nhát là shyness)", tick: false },
+  { en: "sick (adj) /sɪk/", vn: "ốm yếu, bệnh tật, buồn nôn (cụm: be sick of sth - chán ngấy cái gì; danh từ là sickness)", tick: false },
+  { en: "signal (adj/n/v) /ˈsɪɡnəl/", vn: "nổi bật, đáng chú ý (adj); tín hiệu, dấu hiệu (n); ra hiệu, báo hiệu (v)", tick: false },
+  { en: "silent (adj) /ˈsaɪlənt/", vn: "im lặng, thanh vắng, yên tĩnh (danh từ sự im lặng là silence)", tick: false },
+  { en: "silly (adj) /ˈsɪli/", vn: "ngớ ngẩn, khờ khạo, ngốc nghếch (bằng với foolish)", tick: false },
+  { en: "silver (adj/n) /ˈsɪlvə(r)/", vn: "bằng bạc, có màu bạc (adj); bạc, đồ bạc (n)", tick: false },
+  { en: "sincere (adj) /sɪnˈsɪə(r)/", vn: "chân thành, thành thật (danh từ sự chân thành là sincerity; trạng từ kết thư là Sincerely yours)", tick: false },
+  { en: "single (adj/n/v) /ˈsɪŋɡl/", vn: "độc thân, đơn lẻ, chỉ một (adj); vé một chiều (n); chọn ra, tách ra (v - cụm: single out)", tick: false },
+  { en: "skilled (adj) /skɪld/", vn: "khéo léo, lành nghề, có kỹ năng tốt (danh từ là skill; trái nghĩa là unskilled)", tick: false },
+  { en: "skinny (adj) /ˈskɪni/", vn: "gầy trơ xương, gầy gò (mang nghĩa hơi tiêu cực; phân biệt với slim)", tick: false },
+  { en: "slim (adj/v) /slɪm/", vn: "mảnh mai, thon gọn (mang nghĩa tích cực/khen ngợi) (adj); giảm cân (v)", tick: false },
+  { en: "slippery (adj) /ˈslɪpəri/", vn: "trơn trượt, khó nắm giữ (động từ trượt ngã là slip)", tick: false },
+  { en: "slow (adj/v) /sləʊ/", vn: "chậm chạp, trì trệ (adj); làm chậm lại (v - cụm: slow down; trạng từ là slowly)", tick: false },
+  { en: "small (adj) /smɔːl/", vn: "nhỏ, bé, chật hẹp, không đáng kể (trái nghĩa với large / big)", tick: false },
+  { en: "smart (adj) /smɑːt/", vn: "thông minh, nhanh trí (bằng với intelligent); sành điệu, chỉnh tề (bề ngoài)", tick: false },
+  { en: "smooth (adj/v) /smuːð/", vn: "nhẵn thín, mượt mà, trôi chảy (adj); làm mượt, làm dịu đi (v; trạng từ là smoothly)", tick: false },
+  { en: "social (adj) /ˈsəʊʃl/", vn: "thuộc xã hội, có tính bầy đàn/hòa đồng (danh từ xã hội là society)", tick: false },
+  { en: "soft (adj) /sɒft/", vn: "mềm mại, dịu dàng (giọng nói), nhu nhược (tính cách) (trạng từ là softly)", tick: false },
+  { en: "solar (adj) /ˈsəʊlə(r)/", vn: "thuộc mặt trời, liên quan đến hệ mặt trời (Ví dụ: solar energy - năng lượng mặt trời)", tick: false },
+  { en: "sole (adj/n) /səʊl/", vn: "duy nhất, độc nhất (tính từ đứng trước danh từ; trạng từ là solely); lòng bàn chân, đế giày (n)", tick: false },
+  { en: "solid (adj/n) /ˈsɒlɪd/", vn: "vững chắc, rắn chắc, liên tục (adj); chất rắn (n)", tick: false },
+  { en: "some (det/pron) /sʌm/ hoặc /səm/", vn: "một vài, một ít (thường dùng trong câu khẳng định hoặc câu mời mọc/đề nghị)", tick: false },
+  { en: "sore (adj/n) /sɔː(r)/", vn: "đau rát, sưng đỏ (do viêm nhiễm hoặc vận động cơ bắp; cụm: sore throat - đau họng) (adj); vết loét (n)", tick: false },
+  { en: "south (adj/adv/n) /saʊθ/", vn: "thuộc hướng nam (adj); về hướng nam (adv); phía nam (n)", tick: false },
+  { en: "southern (adj) /ˈsʌðən/", vn: "thuộc phương Nam, ở phía Nam (chỉ vùng miền, khu vực địa lý)", tick: false },
+  { en: "spare (adj/v/n) /speə(r)/", vn: "dư thừa, dự phòng, rảnh rỗi (adj - cụm: spare time); tiết kiệm, dành ra (v); lốp dự phòng (n)", tick: false },
+  { en: "special (adj) /ˈspeʃl/", vn: "đặc biệt, riêng biệt, đặc sản (danh từ sự đặc biệt/chuyên môn là specialty / speciality)", tick: false },
+  { en: "spicy (adj) /ˈspaɪsi/", vn: "cay, có nhiều gia vị (đồ ăn) (danh từ gia vị là spice)", tick: false },
+  { en: "spiritual (adj) /ˈspɪrɪtʃuəl/", vn: "thuộc tâm linh, thuộc tinh thần (danh từ linh hồn/tinh thần là spirit)", tick: false },
+  { en: "splendid (adj) /ˈsplendɪd/", vn: "lộng lẫy, tráng lệ, tuyệt vời, xuất sắc (danh từ là splendor)", tick: false },
+  { en: "square (adj/n/v) /skweə(r)/", vn: "vuông, hình vuông (adj/n); quảng trường (n); nhân lên bình phương (v)", tick: false },
+  { en: "steep (adj) /stiːp/", vn: "dốc đứng, hiểm trở (đường sá), tăng vọt/quá đắt (giá cả; trạng từ là steeply)", tick: false },
+  { en: "sticky (adj) /ˈstɪki/", vn: "dính, dính nhớt, oi bức (thời tiết) (động từ dán/găm vào là stick)", tick: false },
+  { en: "stiff (adj) /stɪf/", vn: "cứng đơ, đơ cứng (cơ bắp), cứng nhắc (nghi thức), gay gắt (cuộc cạnh tranh; trạng từ là stiffly)", tick: false },
+{ en: "still (adj/adv) /stɪl/", vn: "đứng yên, tĩnh lặng, không chuyển động (adj); vẫn, vẫn còn (adv)", tick: false },
+  { en: "straight (adj/adv) /streɪt/", vn: "thẳng, thẳng thắn, liên tục (adj); thẳng tiến, ngay lập tức (adv)", tick: false },
+  { en: "strange (adj) /streɪndʒ/", vn: "kỳ lạ, lạ lẫm, xa lạ (danh từ người lạ là stranger)", tick: false },
+  { en: "striking (adj) /ˈstraɪkɪŋ/", vn: "nổi bật, gây ấn tượng sâu sắc, thu hút chú ý (động từ gốc là strike)", tick: false },
+  { en: "stupid (adj) /ˈstjuːpɪd/", vn: "ngu ngốc, đần độn, dại dột (danh từ sự ngu ngốc là stupidity)", tick: false },
+  { en: "subject (adj/n) /ˈsʌbdʒɪkt/", vn: "lệ thuộc, tùy thuộc vào (adj - cấu trúc: be subject to sth); môn học, chủ đề, chủ ngữ (n)", tick: false },
+  { en: "successful (adj) /səkˈsesfl/", vn: "thành công (động từ là succeed, danh từ là success; cấu trúc: be successful in doing sth)", tick: false },
+  { en: "sudden (adj) /ˈsʌdn/", vn: "đột ngột, thình lình, bất ngờ (trạng từ rất phổ biến là suddenly)", tick: false },
+  { en: "suitable (adj) /ˈsuːtəbl/ hoặc /ˈsjuːtəbl/", vn: "phù hợp, thích hợp (cấu trúc: be suitable for sb/sth; trái nghĩa là unsuitable)", tick: false },
+  { en: "sunny (adj) /ˈsʌni/", vn: "có nắng, tràn ngập ánh nắng (danh từ mặt trời/ánh nắng là sun)", tick: false },
+  { en: "super (adj) /ˈsuːpə(r)/", vn: "tuyệt vời, siêu đẳng, cực kỳ tốt (thường dùng trong văn nói)", tick: false },
+  { en: "superior (adj/n) /suːˈpɪəriə(r)/ hoặc /sjuːˈpɪəriə(r)/", vn: "cao cấp hơn, tốt hơn, vượt trội hơn (adj - cấu trúc: be superior to sth/sb; trái nghĩa là inferior); cấp trên (n)", tick: false },
+  { en: "sure (adj/adv) /ʃɔː(r)/ hoặc /ʃʊə(r)/", vn: "chắc chắn, tin tưởng (adj - cấu trúc: be sure of/about sth hoặc be sure to do sth); chắc chắn rồi (adv)", tick: false },
+  { en: "sweet (adj/n) /swiːt/", vn: "ngọt ngào, dịu dàng, dễ thương (adj); kẹo, món ngọt (n)", tick: false },
+  { en: "symbolic (adj) /sɪmˈbɒlɪk/", vn: "mang tính biểu tượng, có tính tượng trưng (danh từ biểu tượng là symbol; cấu trúc: be symbolic of sth)", tick: false },
+  { en: "sympathetic (adj) /ˌsɪmpəˈθetɪk/", vn: "đồng cảm, thông cảm, biết trắc ẩn (cấu trúc: be sympathetic to/towards sb; động từ đồng cảm là sympathize)", tick: false },
+  { en: "tall (adj) /tɔːl/", vn: "cao (chỉ chiều cao người, cây cối, tòa nhà; phân biệt với high - cao so với mặt đất)", tick: false },
+  { en: "tame (adj/v) /teɪm/", vn: "đã thuần hóa, dễ bảo, ngoan ngoãn (động vật) (adj); thuần hóa, làm cho ngoan ngoãn (v)", tick: false },
+  { en: "tasty (adj) /ˈteɪsti/", vn: "ngon, có hương vị đậm đà (thường dùng cho đồ ăn; danh từ/động từ vị là taste)", tick: false },
+  ],
+  9: [
+{ en: "technical (adj) /ˈteknɪkl/", vn: "thuộc về kỹ thuật, chuyên môn (danh từ công nghệ/kỹ thuật là technology/technique)", tick: false },
+  { en: "tender (adj) /ˈtendə(r)/", vn: "mềm (thịt), dịu dàng, ân cần (tính cách), dễ bị tổn thương (vết thương; trạng từ là tenderly)", tick: false },
+  { en: "terrible (adj) /ˈterəbl/", vn: "khủng khiếp, tồi tệ, kinh khủng (trạng từ terribly thường dùng để nhấn mạnh mức độ tiêu cực)", tick: false },
+  { en: "thick (adj) /θɪk/", vn: "dày, đặc, đậm đặc (chất lỏng), dày đặc (sương mù; trái nghĩa với thin; danh từ độ dày là thickness)", tick: false },
+  { en: "thin (adj) /θɪn/", vn: "mỏng, gầy, thưa thớt, loãng (chất lỏng; trái nghĩa với thick)", tick: false },
+  { en: "thirsty (adj) /ˈθɜːsti/", vn: "khát nước, thèm khát (nghĩa bóng; danh từ sự khát nước là thirst)", tick: false },
+  { en: "tight (adj/adv) /taɪt/", vn: "chặt, khít, chật chội (quần áo), nghiêm ngặt (lịch trình) (adj/adv; động từ thắt chặt là tighten)", tick: false },
+  { en: "tiny (adj) /ˈtaɪni/", vn: "tí hon, rất nhỏ, nhỏ xíu (bằng với rất nhỏ / cực nhỏ)", tick: false },
+  { en: "tired (adj) /ˈtaɪəd/", vn: "mệt mỏi, chán nản (cấu trúc bẫy: be tired from sth - mệt vì làm gì; be tired of sth - chán ngấy cái gì)", tick: false },
+  { en: "twin (adj/n) /twɪn/", vn: "sinh đôi, đôi, kép (adj - Ví dụ: twin beds - giường đôi); anh chị em sinh đôi (n)", tick: false },
+  { en: "ugly (adj) /ˈʌɡli/", vn: "xấu xí, xấu xí (ngoại hình), đáng ghét, tồi tệ (tình huống; danh từ sự xấu xí là ugliness)", tick: false },
+  { en: "unable (adj) /ʌnˈeɪbl/", vn: "không thể, không có khả năng (cấu trúc: be unable to V; trái nghĩa là able; danh từ là inability)", tick: false },
+  { en: "unacceptable (adj) /ˌʌnəkˈseptəbl/", vn: "không thể chấp nhận được (động từ gốc là accept; trái nghĩa là acceptable)", tick: false },
+  { en: "uncomfortable (adj) /ʌnˈkʌmftəbl/", vn: "không thoải mái, khó chịu (danh từ gốc là comfort; trái nghĩa là comfortable)", tick: false },
+  { en: "unconscious (adj) /ʌnˈkɒnʃəs/", vn: "bất tỉnh, ngất đi, không có ý thức (danh từ sự bất tỉnh là unconsciousness; trái nghĩa là conscious)", tick: false },
+  { en: "unexpected (adj) /ˌʌnɪkˈspektɪd/", vn: "bất ngờ, không lường trước được (động từ gốc là expect; trạng từ là unexpectedly)", tick: false },
+  { en: "unfair (adj) /ˌʌnˈfeə(r)/", vn: "bất công, không công bằng (luôn đi với giới từ: be unfair to sb; danh từ là unfairness; trái nghĩa là fair)", tick: false },
+  { en: "unfortunate (adj) /ʌnˈfɔːtʃənət/", vn: "không may, đáng tiếc, bất hạnh (bằng với unlucky; trạng từ rất phổ biến là unfortunately)", tick: false },
+  { en: "unhappy (adj) /ʌnˈhæpi/", vn: "khổ sở, buồn bã, không hạnh phúc (danh từ là unhappiness; trái nghĩa là happy)", tick: false },
+  { en: "unit (n) /ˈjuːnɪt/", vn: "đơn vị, bài học (trong giáo trình), bộ phận độc lập", tick: false },
+  { en: "united (adj) /juˈnaɪtɪd/", vn: "hợp nhất, đoàn kết, liên hiệp (động từ gốc là unite; danh từ sự đoàn kết là unity)", tick: false },
+  { en: "unknown (adj) /ˌʌnˈnəʊn/", vn: "không được biết đến, vô danh, lạ lẫm (trái nghĩa là known)", tick: false },
+  { en: "unlikely (adj) /ʌnˈlaɪkli/", vn: "ít có khả năng xảy ra, khó xảy ra (đuôi -ly nhưng là tính từ; cấu trúc: be unlikely to V)", tick: false },
+  { en: "unnecessary (adj) /ʌnˈnesəsəri/", vn: "không cần thiết, dư thừa (trái nghĩa là necessary)", tick: false },
+  { en: "unpleasant (adj) /ʌnˈpleznt/", vn: "khó chịu, đáng ghét, không dễ chịu (trái nghĩa là pleasant)", tick: false },
+  { en: "unusual (adj) /ʌnˈjuːʒuəl/", vn: "bất thường, khác thường, kỳ lạ (trạng từ là unusually; trái nghĩa là usual)", tick: false },
+  { en: "unwilling (adj) /ʌnˈwɪlɪŋ/", vn: "không sẵn lòng, miễn cưỡng (cấu trúc bẫy: be unwilling to V; danh từ là unwillingness; trái nghĩa là willing)", tick: false },
+  { en: "upper (adj) /ˈʌpə(r)/", vn: "ở trên, phía trên, cấp cao hơn (tính từ luôn đứng trước danh từ; trái nghĩa là lower)", tick: false },
+  { en: "upset (adj/v) /ˌʌpˈset/", vn: "buồn bã, thất vọng, bực mình (adj - cấu trúc: be upset about sth); làm đổ, làm lo lắng (v)", tick: false },
+  { en: "urban (adj) /ˈɜːbən/", vn: "thuộc đô thị, thành thị (trái nghĩa với rural - thuộc nông thôn)", tick: false },
+  { en: "urgent (adj) /ˈɜːdʒənt/", vn: "khẩn cấp, cấp bách (danh từ sự khẩn cấp là urgency; trạng từ là urgently)", tick: false },
+  { en: "used (adj) /juːzd/", vn: "đã qua sử dụng, cũ (adj); quen với (cấu trúc bài thi: be/get used to + V-ing/N)", tick: false },
+  { en: "useful (adj) /ˈjuːsfl/", vn: "hữu ích, có ích (cấu trúc: be useful for/to sb; trái nghĩa là useless; danh từ là usefulness)", tick: false },
+  { en: "useless (adj) /ˈjuːsləs/", vn: "vô dụng, không có ích (cấu trúc: be useless at sth - dở tệ môn gì; It is useless V-ing - vô ích khi làm gì)", tick: false },
+  { en: "usual (adj) /ˈjuːʒuəl/", vn: "thông thường, như thường lệ (cụm: as usual - như thường lệ; trạng từ là usually)", tick: false },
+  { en: "vacant (adj) /ˈveɪkənt/", vn: "trống, còn bỏ trống (phòng, ghế, vị trí công việc; danh từ khoảng trống/chỗ trống là vacancy)", tick: false },
+  { en: "valuable (adj) /ˈvæljuəbl/", vn: "có giá trị, quý giá (danh từ gốc là value; lưu ý invaluable mang nghĩa là cực kỳ quý giá, không thể định giá)", tick: false },
+  { en: "various (adj) /ˈveəriəs/", vn: "đa dạng, nhiều loại khác nhau (luôn đi với danh từ số nhiều; động từ biến đổi là vary, danh từ là variety)", tick: false },
+  { en: "vast (adj) /vɑːst/", vn: "bao la, rộng lớn, khổng lồ (về diện tích, quy mô, số lượng; trạng từ là vastly)", tick: false },
+  { en: "violent (adj) /ˈvaɪələnt/", vn: "bạo lực, hung dữ, dữ dội (thời tiết; danh từ sự bạo lực là violence; trạng từ là violently)", tick: false },
+  { en: "vivid (adj) /ˈvɪvɪd/", vn: "sống động, chói lọi (màu sắc), sâu sắc/rõ ràng (ký ức, trí tưởng tượng; trạng từ là vividly)", tick: false },
+  { en: "warm (adj/v) /wɔːm/", vn: "ấm áp, nồng hậu (tính cách) (adj); làm cho ấm lên (v - cụm: warm up; danh từ là warmth)", tick: false },
+  { en: "weekly (adj/adv/n) /ˈwiːkli/", vn: "hằng tuần (adj/adv); báo/tạp chí xuất bản hằng tuần (n; danh từ gốc là week)", tick: false },
+  { en: "weird (adj) /wɪəd/", vn: "kỳ dị, kỳ quặc, quái đản (bằng với strange / odd)", tick: false },
+  { en: "west (adj/adv/n) /west/", vn: "thuộc hướng tây (adj); về phía tây (adv); phía tây (n)", tick: false },
+  { en: "western (adj) /ˈwestən/", vn: "thuộc phương Tây, ở phía Tây (chỉ vùng miền, khu vực địa lý hoặc văn hóa)", tick: false },
+  { en: "wet (adj) /wet/", vn: "ướt, ẩm ướt (trái nghĩa với dry; cụm: wet season - mùa mưa)", tick: false },
+  { en: "white (adj/n) /waɪt/", vn: "màu trắng", tick: false },
+  { en: "whole (adj/n) /həʊl/", vn: "toàn bộ, trọn vẹn, đầy đủ (adj - đứng trước danh từ số ít; danh từ cái toàn thể)", tick: false },
+  { en: "wide (adj) /waɪd/", vn: "rộng, rộng lớn, rộng khắp (trái nghĩa với narrow; danh từ chiều rộng là width, động từ mở rộng là widen)", tick: false },
+  { en: "wild (adj) /waɪld/", vn: "hoang dã, hoang dại (tự nhiên), cuồng nhiệt (tính cách; trạng từ là wildly)", tick: false },
+  { en: "willing (adj) /ˈwɪlɪŋ/", vn: "sẵn lòng, tự nguyện (cấu trúc bài thi: be willing to V; danh từ là willingness; trái nghĩa là unwilling)", tick: false },
+  { en: "wise (adj) /waɪz/", vn: "khôn ngoan, sáng suốt, có trí tuệ (danh từ lòng khôn ngoan là wisdom; trái nghĩa là unwise)", tick: false },
+  { en: "wonderful (adj) /ˈwʌndəfl/", vn: "tuyệt vời, kỳ diệu, thần kỳ (danh từ/động từ gốc là wonder)", tick: false },
+  { en: "wooden (adj) /ˈwʊdn/", vn: "bằng gỗ (chất liệu), đơ như gỗ (cử chỉ; danh từ gốc chất liệu gỗ là wood)", tick: false },
+  { en: "wool (n) /wʊl/", vn: "len, sợi len, lông cừu (tính từ bằng len là woolen / woollen)", tick: false },
+  { en: "worldwide (adj/adv) /ˌwɜːldˈwaɪd/", vn: "trên toàn thế giới, mang tính toàn cầu (bằng với global)", tick: false },
+  { en: "worried (adj) /ˈwʌrid/", vn: "lo lắng, bồn chồn (chỉ cảm xúc người; cấu trúc bài thi: be worried about sb/sth; động từ là worry)", tick: false },
+  { en: "worse (adj/adv) /wɜːs/", vn: "tồi tệ hơn, xấu hơn (dạng so sánh hơn của bad / badly; động từ làm tệ hơn là worsen)", tick: false },
+  { en: "worth (adj/n) /wɜːθ/", vn: "đáng giá, có giá trị là (adj - cấu trúc bẫy viết lại câu: be worth + V-ing - đáng làm gì); giá trị (n)", tick: false },
+  { en: "worthy (adj) /ˈwɜːði/", vn: "xứng đáng, đáng tôn trọng (cấu trúc bài thi: be worthy of sb/sth; trái nghĩa là unworthy)", tick: false },
+  { en: "wrong (adj/adv/n) /rɒŋ/", vn: "sai, sai sót, không đúng (adj/adv; cụm bài thi: There is something wrong with... - có gì đó bất ổn với...)", tick: false },
+  { en: "yellow (adj/n) /ˈjeləʊ/", vn: "màu vàng", tick: false },
+  { en: "young (adj) /jʌŋ/", vn: "trẻ, trẻ tuổi, còn non nớt (trái nghĩa với old; cụm: the young - giới trẻ nói chung)", tick: false },
+
+  ],
+
+  10: [
+  { en: "ubiquitous (adj) /juːˈbɪkwɪtəs/", vn: "ở đâu cũng có, phổ biến khắp nơi (từ vựng nâng cao cực hay cho bài đọc hiểu C1/B2)", tick: false },
+  { en: "pervasive (adj) /pəˈveɪsɪv/", vn: "lan tỏa khắp, tràn ngập, có tính thấu suốt (động từ là pervade)", tick: false },
+  { en: "extravagant (adj) /ɪkˈstrævəɡənt/", vn: "hoang phí, xa xỉ, quá mức cho phép (danh từ sự hoang phí là extravagance)", tick: false },
+  { en: "plentiful (adj) /ˈplentɪfl/", vn: "phong phú, dồi dào, có số lượng lớn (bằng với giàu có / nhiều; danh từ gốc là plenty)", tick: false },
+  { en: "paltry (adj) /ˈpɔːltri/", vn: "tầm thường, không đáng kể, ít ỏi đến mức nực cười (số tiền, số lượng)", tick: false },
+  { en: "imperative (adj/n) /ɪmˈperətɪv/", vn: "cấp bách, bắt buộc, tối quan trọng (cấu trúc giả định: It is imperative that + S + V nguyên mẫu)", tick: false },
+  { en: "pressing (adj) /ˈpresɪŋ/", vn: "cấp bách, cần giải quyết ngay (Ví dụ trong đề thi: a pressing problem - một vấn đề cấp bách)", tick: false },
+  { en: "grave (adj/n) /ɡreɪv/", vn: "nghiêm trọng, trầm trọng (tính chất sự việc; adj); ngôi mộ (n; danh từ sự nghiêm trọng là gravity)", tick: false },
+  { en: "drastic (adj) /ˈdræstɪk/", vn: "mạnh mẽ, quyết liệt, triệt để (Ví dụ trong đề thi: take drastic measures - thực hiện các biện pháp quyết liệt)", tick: false },
+  { en: "exquisite (adj) /ɪkˈskwɪzɪt/ hoặc /ˈekskwɪzɪt/", vn: "tinh tế, sắc sảo, cực kỳ thanh tú/đẹp đẽ (trạng từ là exquisitely)", tick: false },
+  { en: "refined (adj) /rɪˈfaɪnd/", vn: "đã tinh chế, thanh lịch, lịch lãm, tinh tế (tính cách/ngôn từ; động từ gốc lọc dầu/đường là refine)", tick: false },
+  { en: "cultivated (adj) /ˈkʌltɪveɪtɪd/", vn: "có học thức, có canh tác/trồng trọt (đất đai), có nuôi dưỡng (học vấn/tình cảm; động từ là cultivate)", tick: false },
+  { en: "scholarly (adj) /ˈskɒləli/", vn: "uyên bác, có tính học thuật, mang tính nghiên cứu (danh từ học giả là scholar)", tick: false },
+  { en: "academic (adj/n) /ˌækəˈdemɪk/", vn: "thuộc học thuật, thuộc viện hàn lâm (adj); học giả, viện sĩ (n; danh từ năm học là academic year)", tick: false },
+{ en: "transparent (adj) /trænˈspærənt/", vn: "trong suốt (vật lý), minh bạch, rõ ràng (thông tin/tổ chức; danh từ là transparency)", tick: false },
+  { en: "opaque (adj) /əʊˈpeɪk/", vn: "đục, mờ, không xuyên thấu (vật lý), tối nghĩa, khó hiểu (văn bản; danh từ là opacity)", tick: false },
+  { en: "tacit (adj) /ˈtæsɪt/", vn: "ngầm, không nói ra bằng lời (Ví dụ: tacit agreement - sự đồng ý ngầm; trạng từ là tacitly)", tick: false },
+  { en: "clandestine (adj) /klænˈdestɪn/", vn: "bí mật, lén lút, thường là bất hợp pháp (Ví dụ: clandestine meetings - các cuộc họp bí mật)", tick: false },
+  { en: "surreptitious (adj) /ˌsʌrəpˈtɪʃəs/", vn: "lén lút, vụng trộm (hành vi tránh bị phát hiện; trạng từ là surreptitiously)", tick: false },
+  { en: "flagrant (adj) /ˈfleɪɡrənt/", vn: "trắng trợn, tồi tệ một cách hiển nhiên (Ví dụ: a flagrant violation of law - sự vi phạm pháp luật trắng trợn)", tick: false },
+  { en: "celebrated (adj) /ˈselɪbreɪtɪd/", vn: "nổi tiếng, lừng danh, được ca tụng (thường mang nghĩa tích cực; đi với giới từ: celebrated for sth)", tick: false },
+  { en: "renowned (adj) /rɪˈnaʊnd/", vn: "nổi tiếng, có tiếng tăm lừng lẫy (cấu trúc bài thi: be renowned for sth = be famous for sth)", tick: false },
+  { en: "noteworthy (adj) /ˈnəʊtwɜːði/", vn: "đáng chú ý, đáng ghi nhận (bằng với đáng chú ý / quan trọng)", tick: false },
+  { en: "remarkable (adj) /rɪˈmɑːkəbl/", vn: "đáng chú ý, khác thường, xuất sắc (trạng từ là remarkably; trái nghĩa là unremarkable)", tick: false },
+  { en: "austere (adj) /ɔːˈstɪə(r)/", vn: "khắc khổ, mộc mạc, giản dị hoàn toàn (lối sống), nghiêm khắc (tính cách; danh từ là austerity)", tick: false },
+  { en: "stark (adj) /stɑːk/", vn: "trần trụi, rõ rệt (sự khác biệt), hoàn toàn (hoang đường), ảm đạm (phong cảnh)", tick: false },
+  { en: "bleak (adj) /bliːk/", vn: "ảm đạm, lạnh lẽo, hoang vắng (thời tiết/phong cảnh), mịt mờ, tuyệt vọng (tương lai)", tick: false },
+  { en: "desolate (adj) /ˈdesələt/", vn: "hoang vắng, tiêu điều (nơi chốn), cô độc, buồn thảm (cảm xúc người)", tick: false },
+  { en: "barren (adj) /ˈbærən/", vn: "cằn cỗi, không sinh sản được (đất đai), hiếm muộn (phụ nữ), vô bổ (cuộc thảo luận)", tick: false },
+  { en: "sterile (adj) /ˈsteraɪl/", vn: "vô trùng, sạch khuẩn (y tế), cằn cỗi, không có khả năng sinh sản (động thực vật; danh từ là sterility)", tick: false },
+  { en: "fecund (adj) /ˈfekənd/ hoặc /ˈfiːkənd/", vn: "màu mỡ, tốt tươi (đất đai), sinh sản nhiều, đầy sáng tạo (trí tưởng tượng; danh từ là fecundity)", tick: false },
+  { en: "cogent (adj) /ˈkəʊdʒənt/", vn: "vững chắc, có sức thuyết phục mạnh mẽ (lập luận, lý lẽ; danh từ là cogency)", tick: false },
+  { en: "compelling (adj) /kəmˈpelɪŋ/", vn: "hấp dẫn, thuyết phục, không thể cưỡng lại được (Ví dụ: compelling evidence - bằng chứng thuyết phục)", tick: false },
+  { en: "persuasive (adj) /pəˈsweɪsɪv/", vn: "có sức thuyết phục, biết cách thuyết phục người khác (động từ là persuade, danh từ là persuasion)", tick: false },
+  { en: "convincing (adj) /kəmˈvɪnsɪŋ/", vn: "có sức thuyết phục, làm cho người ta tin (động từ là convince; trái nghĩa là unconvincing)", tick: false },
+  { en: "fraudulent (adj) /ˈfrɔːdjələnt/", vn: "gian lận, lừa đảo, có tính chất lừa gạt (pháp lý; danh từ hành vi lừa đảo là fraud)", tick: false },
+  { en: "deceptive (adj) /rɪˈseptɪv/", vn: "dễ làm cho nhầm lẫn, có tính lừa dối (bề ngoài; động từ là deceive, danh từ là deception)", tick: false },
+  { en: "delusive (adj) /rɪˈluːsɪv/", vn: "huyễn hoặc, lừa dối, làm cho ảo tưởng (động từ là delude, danh từ ảo tưởng là delusion)", tick: false },
+  { en: "illusory (adj) /rɪˈluːsəri/", vn: "hão huyền, không có thực, do ảo giác tạo nên (danh từ ảo giác là illusion)", tick: false },
+  { en: "chimerical (adj) /kaɪˈmerɪkl/", vn: "hão huyền, không tưởng, viển vông (bắt nguồn từ quái vật Chimera trong thần thoại)", tick: false },
+  { en: "utopian (adj) /juːˈtəʊpiən/", vn: "không tưởng, thuộc về một xã hội hoàn hảo nhưng phi thực tế (trái nghĩa với dystopian)", tick: false },
+  { en: "attainable (adj) /əˈteɪnəbl/", vn: "có thể đạt được, khả thi (động từ gốc là attain; trái nghĩa là unattainable)", tick: false },
+  { en: "accessible (adj) /əkˈsesəbl/", vn: "có thể tiếp cận, dễ sử dụng (cấu trúc bài thi: be accessible to sb; danh từ là accessibility)", tick: false },
+  { en: "peculiar (adj) /pɪˈkjuːliə(r)/", vn: "kỳ lạ, khác thường (bằng với kỳ quặc); đặc trưng, riêng biệt (cấu trúc bẫy: be peculiar to sb/sth)", tick: false },
+  { en: "representative (adj/n) /ˌreprɪˈzentətɪv/", vn: "tiêu biểu, điển hình (adj - đi với giới từ of); người đại diện (n; động từ là represent)", tick: false },
+  { en: "model (adj/n) /ˈmɒdl/", vn: "mẫu mực, lý tưởng, dùng làm mẫu (adj - Ví dụ: a model student); mô hình, người mẫu (n)", tick: false },
+  { en: "suboptimal (adj) /ˌsʌbˈɒptɪməl/", vn: "dưới mức tối ưu, chưa phải là tốt nhất/đạt chuẩn tốt nhất", tick: false },
+  { en: "insufficient (adj) /ˌɪnsəˈfɪʃnt/", vn: "thiếu, không đủ (cấu trúc: be insufficient for sth; danh từ là insufficiency; trái nghĩa là sufficient)", tick: false },
+  { en: "immaterial (adj) /ˌɪməˈtɪəriəl/", vn: "không quan trọng, không liên quan/vô giá trị (trong một cuộc thảo luận), phi vật chất", tick: false },
+  { en: "apt (adj) /æpt/", vn: "thích hợp, có xu hướng bẩm sinh (cấu trúc: be apt to V - dễ có xu hướng làm gì), nhanh trí/thông minh", tick: false },
+  { en: "fitting (adj/n) /ˈfɪtɪŋ/", vn: "thích hợp, phù hợp, xứng đáng (adj - bằng với thích hợp); sự thử quần áo, phụ tùng lắp ráp (n)", tick: false },
+  { en: "decorous (adj) /ˈdekərəs/", vn: "đúng mực, lịch thiệp, lịch sự và phù hợp với hoàn cảnh (trang trọng; danh từ là decorum)", tick: false },
+  { en: "seemly (adj) /ˈsiːmli/", vn: "phù hợp, thanh lịch, lịch sự (tính từ đuôi -ly; thường dùng trong thể phủ định)", tick: false },
+  { en: "unseemly (adj) /ʌnˈsiːmli/", vn: "không phù hợp, không lịch sự, thiếu tế nhị (hành vi nơi công cộng)", tick: false },
+  { en: "indecorous (adj) /ɪnˈdekərəs/", vn: "thiếu lịch sự, không đúng mực, vô duyên (trái nghĩa với decorous)", tick: false },
+  { en: "discrepant (adj) /rɪˈskrepənt/", vn: "khác biệt, mâu thu hẫn, không nhất quán (giữa hai lời khai, số liệu; danh từ là discrepancy)", tick: false },
+  { en: "congruous (adj) /ˈkɒŋɡruəs/", vn: "phù hợp, tương hợp, nhất quán (cấu trúc: be congruous with sth; danh từ là congruity)", tick: false },
+
+  ],
+
+  11: [
+  { en: "perplexing (adj) /pəˈpleksɪŋ/", vn: "rắc rối, gây lúng túng, làm cho hoang mang (tính chất sự việc; động từ là perplex)", tick: false },
+  { en: "baffling (adj) /ˈbæflɪŋ/", vn: "gây khó hiểu, làm cho đầu óc hoàn toàn rối bời (động từ làm cho bối rối là baffle)", tick: false },
+  { en: "nebulous (adj) /ˈnebjələs/", vn: "mơ hồ, tăm tối, không rõ ràng (khái niệm/ý tưởng), thuộc tinh vân (thiên văn)", tick: false },
+  { en: "amorphous (adj) /əˈmɔːfəs/", vn: "vô định hình, không có cấu trúc rõ ràng (hình dáng/tổ chức)", tick: false },
+  { en: "immobile (adj) /ɪˈməʊbaɪl/", vn: "bất động, đứng yên không thể di chuyển (danh từ sự bất động là immobility; động từ là immobilize)", tick: false },
+  { en: "determined (adj) /rɪˈtɜːmɪnd/", vn: "quyết tâm, kiên quyết (cấu trúc bài thi: be determined to V; danh từ lòng quyết tâm là determination)", tick: false },
+  { en: "inexorable (adj) /ɪnˈeksərəbl/", vn: "không thể lay chuyển, không thể dừng lại được (Ví dụ: the inexorable progress of time - sự trôi đi không thể dừng lại của thời gian)", tick: false },
+  { en: "consequential (adj) /ˌkɒnsɪˈkwenʃl/", vn: "hệ trọng, có tầm ảnh hưởng lớn (Ví dụ: a consequential decision); là hậu quả logic của cái gì", tick: false },
+  { en: "momentous (adj) /məˈmentəs/", vn: "quan trọng, mang tính lịch sử, có ảnh hưởng lớn đến tương lai (Ví dụ: a momentous occasion)", tick: false },
+  { en: "broad (adj) /brɔːd/", vn: "rộng lớn, bao quát (nghĩa bóng), rõ ràng (ánh sáng ban ngày; cụm: broad daylight), khái quát (ý tưởng)", tick: false },
+  { en: "sparse (adj) /spɑːs/", vn: "thưa thớt, rải rác, không đậm đặc (Ví dụ: sparse population - dân cư thưa thớt; danh từ là sparsity)", tick: false },
+  { en: "diligent (adj) /ˈdɪlɪdʒənt/", vn: "siêng năng, cần cù, có trách nhiệm cao (danh từ sự siêng năng là diligence)", tick: false },
+  { en: "assiduous (adj) /əˈsɪdʒuəs/", vn: "chăm chỉ, cần mẫn, làm việc kiên trì và đều đặn (danh từ sự cần mẫn là assiduity)", tick: false },
+  { en: "indolent (adj) /ˈɪndələnt/", vn: "lười biếng, biếng nhác (văn phong trang trọng; danh từ sự lười biếng là indolence)", tick: false },
+  { en: "meticulous (adj) /məˈtɪkjələs/", vn: "tỉ mỉ, kỹ lưỡng, trau chuốt từng chi tiết nhỏ (thường mang nghĩa khen ngợi; trạng từ là meticulously)", tick: false },
+  { en: "painstaking (adj) /ˈpeɪnzteɪkɪŋ/", vn: "chịu khó, cực kỳ cẩn thận và đòi hỏi nhiều công sức (Ví dụ: painstaking research - nghiên cứu công phu)", tick: false },
+  { en: "lucrative (adj) /ˈluːkrətɪv/", vn: "sinh lợi, béo bở, kiếm được rất nhiều tiền (Ví dụ: a lucrative business - một công việc kinh doanh béo bở)", tick: false },
+  { en: "profitable (adj) /ˈprɒfɪtəbl/", vn: "có lãi, sinh lợi nhuận (kinh doanh), có ích (trải nghiệm; danh từ là profit)", tick: false },
+  { en: "unrewarding (adj) /ˌʌnrɪˈwɔːdɪŋ/", vn: "không đem lại kết quả tốt, không bõ công làm, không thỏa mãn (công việc)", tick: false },
+  { en: "transient (adj) /ˈtrænziənt/", vn: "ngắn ngủi, tạm thời, chóng tàn (Ví dụ: transient success - thành công tạm thời; danh từ là transience)", tick: false },
+  { en: "fleeting (adj) /ˈfliːtɪŋ/", vn: "thoáng qua, vùn vụt (thời gian, khoảnh khắc; Ví dụ: a fleeting glimpse - một cái nhìn thoáng qua)", tick: false },
+  { en: "permanent (adj) /ˈpɜːmənənt/", vn: "lâu dài, vĩnh viễn, cố định (Ví dụ: permanent job - công việc lâu dài; danh từ là permanence)", tick: false },
+  { en: "ambiguous (adj) /æmˈbɪɡjuəs/", vn: "mơ hồ, đa nghĩa, nhập nhằng khó hiểu (danh từ sự mơ hồ là ambiguity; trái nghĩa là unambiguous)", tick: false },
+  { en: "equivocal (adj) /ɪˈkwɪvəkl/", vn: "mập mờ, không rõ ràng (nhằm che giấu sự thật hoặc né tránh; trái nghĩa là unequivocal)", tick: false },
+  { en: "explicit (adj) /ɪkˈsplɪsɪt/", vn: "rõ ràng, dứt khoát, nói thẳng không ẩn ý (trạng từ là explicitly; trái nghĩa là implicit)", tick: false },
+  { en: "resilient (adj) /rɪˈzɪliənt/", vn: "kiên cường, có khả năng phục hồi nhanh chóng (sau tai nạn/thất bại), đàn hồi tốt (vật chất; danh từ là resilience)", tick: false },
+  { en: "hardy (adj) /ˈhɑːdi/", vn: "chịu đựng tốt, chịu được gian khổ, chịu được thời tiết khắc nghiệt (người, động thực vật)", tick: false },
+  { en: "fragile (adj) /ˈfrædʒaɪl/", vn: "mong manh, dễ vỡ (đồ vật), yếu ớt (sức khỏe), dễ tổn thương (tâm lý; danh từ là fragility)", tick: false },
+  { en: "benevolent (adj) /bəˈnevələnt/", vn: "nhân từ, rộng lượng, hay làm việc thiện (danh từ sự nhân từ là benevolence; trái nghĩa là malevolent)", tick: false },
+  { en: "altruistic (adj) /ˌæltruˈɪstɪk/", vn: "vị tha, lòng bồ tát, luôn nghĩ cho người khác trước (danh từ lòng vị tha là altruism)", tick: false },
+  { en: "malevolent (adj) /məˈnevələnt/", vn: "hiểm ác, có ác ý, muốn làm hại người khác (danh từ là malevolence; trái nghĩa là benevolent)", tick: false },
+  { en: "profound (adj) /prəˈfaʊnd/", vn: "sâu sắc, uyên thâm (kiến thức), sâu sắc/to lớn (ảnh hưởng, thay đổi; danh từ là profundity)", tick: false },
+{ en: "deep (adj) /diːp/", vn: "sâu, sâu sắc (suy nghĩ/cảm xúc), trầm (giọng nói; bẫy cụm từ: deep in thought - mải mê suy nghĩ)", tick: false },
+  { en: "superficial (adj) /ˌsuːpəˈfɪʃl/", vn: "hời hợt, nông cạn (tính cách/hiểu biết), bề ngoài (vết thương; danh từ là superficiality)", tick: false },
+  { en: "obsolete (adj) /ˈɒbsəliːt/", vn: "lỗi thời, không còn được sử dụng do có công nghệ mới tốt hơn (Ví dụ: obsolete technology)", tick: false },
+  { en: "outdated (adj) /ˌaʊtˈdeɪtɪd/", vn: "lỗi thời, cũ kỹ (phương pháp, quan niệm, phong cách; bằng với out-of-date)", tick: false },
+  { en: "contemporary (adj/n) /kəmˈtemprəri/", vn: "đương đại, hiện đại (adj), người sống cùng thời (n; cấu trúc: contemporary with sth)", tick: false },
+  { en: "affluent (adj) /ˈæfluənt/", vn: "giàu có, thịnh vượng, có nhiều tài sản (thường chỉ một vùng, xã hội hoặc gia cảnh; danh từ là affluence)", tick: false },
+  { en: "wealthy (adj) /ˈwelθi/", vn: "giàu có, nhiều tiền bạc (danh từ gốc là wealth; cấu trúc hay gặp: the wealthy - giới nhà giàu)", tick: false },
+  { en: "impoverished (adj) /ɪmˈpɒvərɪʃt/", vn: "nghèo nàn, xơ xác, bị bần cùng hóa (vùng miền/gia đình), suy kiệt (đất đai chất dinh dưỡng)", tick: false },
+  { en: "plausible (adj) /ˈplɔːzəbl/", vn: "hợp lý, đáng tin, có khả năng đúng (lý do/lập luận; danh từ là plausibility; trái nghĩa là implausible)", tick: false },
+  { en: "credible (adj) /ˈkredəbl/", vn: "đáng tin cậy, có thể tin được (nhân chứng/bằng chứng; cấu trúc bài thi: a credible alternative)", tick: false },
+  { en: "implausible (adj) /ɪmˈplɔːzəbl/", vn: "khó tin, không hợp lý, đầy hoài nghi (trái nghĩa hoàn toàn với plausible)", tick: false },
+  { en: "dynamic (adj) /daɪˈnæmɪk/", vn: "năng động, sôi nổi (người), không ngừng biến đổi/phát triển (hệ thống/nền kinh tế)", tick: false },
+  { en: "vibrant (adj) /ˈvaɪbrənt/", vn: "tràn đầy sức sống, sôi động (thành phố/bầu không khí), rực rỡ (màu sắc; danh từ là vibrancy)", tick: false },
+  { en: "stagnant (adj) /ˈstæɡnənt/", vn: "trì trệ, chậm chạp không phát triển (nền kinh tế/kinh doanh), tù đọng (nước ao hồ; danh từ là stagnation)", tick: false },
+  { en: "chaotic (adj) /keɪˈɒtɪk/", vn: "hỗn loạn, lộn xộn, mất trật tự hoàn toàn (danh từ gốc là chaos - sự hỗn loạn)", tick: false },
+  { en: "turbulent (adj) /ˈtɜːbjələnt/", vn: "nhiều biến động, sóng gió, đầy bất ổn (lịch sử/giai đoạn), hỗn lưu/nhiễu loạn (không khí/dòng nước)", tick: false },
+  { en: "tranquil (adj) /ˈtræŋkwɪl/", vn: "yên bình, thanh bình, tĩnh lặng (phong cảnh/tâm hồn; danh từ là tranquility)", tick: false },
+  { en: "pragmatic (adj) /præɡˈmætɪk/", vn: "thực tế, thực dụng theo nghĩa tích cực (giải quyết dựa trên thực tiễn thay vì lý thuyết; danh từ là pragmatism)", tick: false },
+  { en: "practical (adj) /ˈpræktɪkl/", vn: "thiết thực, có tính thực hành, có ích trong thực tế (trái nghĩa là impractical)", tick: false },
+  { en: "idealistic (adj) /aɪˌdɪəˈlɪstɪk/", vn: "duy tâm, duy lý tưởng, mơ tưởng những điều hoàn hảo (danh từ là idealist - kẻ mộng mơ)", tick: false },
+  { en: "comprehensive (adj) /ˌkɒmprɪˈhensɪv/", vn: "toàn diện, bao quát, chứa đựng mọi khía cạnh cần thiết (Ví dụ: comprehensive review/study)", tick: false },
+  { en: "thorough (adj) /ˈθʌrə/", vn: "cẩn thận, kỹ lưỡng, thấu đáo, làm từ đầu đến đuôi không bỏ sót (trạng từ rất hay thi: thoroughly)", tick: false },
+
+  ],
+
+  12: [
+{ en: "variable (adj/n) /ˈveəriəbl/", vn: "hay thay đổi, có thể biến đổi (adj); biến số (n; động từ gốc là vary)", tick: false },
+  { en: "volatile (adj) /ˈvɒlətaɪl/", vn: "dễ bay hơi (hóa học), dễ thay đổi đột ngột, tâm trạng thất thường, bất ổn (thị trường/tình hình; danh từ là volatility)", tick: false },
+  { en: "stable (adj) /ˈsteɪbl/", vn: "ổn định, vững chắc, kiên định (danh từ sự ổn định là stability; trái nghĩa là unstable)", tick: false },
+  { en: "erratic (adj) /ɪˈrætɪk/", vn: "thất thường, không đều, chập chờn, không thể dự đoán (Ví dụ: erratic behavior - hành vi thất thường)", tick: false },
+  { en: "intricate (adj) /ˈɪntrɪkət/", vn: "rắc rối, phức tạp, có nhiều chi tiết nhỏ đan xen (Ví dụ: an intricate design; danh từ là intricacy)", tick: false },
+  { en: "distinct (adj) /dɪˈstɪŋkt/", vn: "riêng biệt, khác biệt rõ ràng, dễ nhận thấy (cấu trúc: be distinct from sth; danh từ là distinction)", tick: false },
+  { en: "unmistakable (adj) /ˌʌnmɪˈsteɪkəbl/", vn: "không thể nhầm lẫn được, rõ ràng, hiển nhiên (trạng từ là unmistakably)", tick: false },
+  { en: "obscure (adj/v) /əbˈskjʊə(r)/", vn: "mơ hồ, ít người biết đến, tối tăm (adj); che khuất, làm cho khó hiểu (v; danh từ là obscurity)", tick: false },
+  { en: "hostile (adj) /ˈhɒstaɪl/", vn: "thù địch, căm ghét, không thân thiện (cấu trúc bẫy giới từ: be hostile to/towards sb/sth; danh từ là hostility)", tick: false },
+  { en: "aggressive (adj) /.../", vn: "hung hăng, ngổ ngáo (tính cách), quyết liệt, xông xáo (kinh doanh; danh từ là aggression)", tick: false },
+  { en: "amicable (adj) /ˈæmɪkəbl/", vn: "thân thiện, hòa nhã, thỏa thuận trong hòa bình (Ví dụ: an amicable settlement - một sự hòa giải êm đẹp)", tick: false },
+  { en: "persistent (adj) /pəˈsɪstənt/", vn: "kiên trì, bền bỉ (người), dai dẳng, liên tục không ngừng (sự việc; danh từ là persistence)", tick: false },
+  { en: "tenacious (adj) /təˈneɪʃəs/", vn: "ngoan cường, kiên trì, bám chặt không buông (ý chí/trí nhớ; danh từ lòng kiên trì là tenacity)", tick: false },
+  { en: "irresolute (adj) /ɪˈrezəluːt/", vn: "do dự, phân vân, thiếu quyết đoán (danh từ sự do dự là irresolution; trái nghĩa là resolute)", tick: false },
+  { en: "crucial (adj) /ˈkruːʃl/", vn: "cốt lõi, tối quan trọng, mang tính quyết định (cấu trúc: play a crucial role in sth; trạng từ là crucially)", tick: false },
+  { en: "pivotal (adj) /ˈpɪvətəl/", vn: "nòng cốt, then chốt, mang tính trọng tâm (danh từ gốc là pivot - trục xoay)", tick: false },
+  { en: "trivial (adj) /ˈtrɪviəl/", vn: "tầm thường, nhỏ nhặt, không đáng kể (danh từ chuyện vặt rãnh là trivia; danh từ sự tầm thường là triviality)", tick: false },
+  { en: "exhaustive (adj) /ɪɡˈzɔːstɪv/", vn: "thấu chu đáo, toàn diện, không bỏ sót chi tiết nào (Ví dụ: an exhaustive search - một cuộc tìm kiếm toàn diện)", tick: false },
+  { en: "limited (adj) /ˈlɪmɪtɪd/", vn: "có hạn, bị hạn chế (động từ gốc là limit; danh từ sự hạn chế là limitation)", tick: false },
+  { en: "apparent (adj) /əˈpærənt/", vn: "rõ ràng, hiển nhiên (bề ngoài), dường như (nhưng chưa chắc đúng; trạng từ là apparently)", tick: false },
+  { en: "evident (adj) /ˈevɪdənt/", vn: "rõ ràng, hiển nhiên, có bằng chứng rõ rệt (cấu trúc: It is evident that...; danh từ là evidence)", tick: false },
+  { en: "hidden (adj) /ˈhɪdn/", vn: "bị che giấu, ẩn giấu, tiềm ẩn (quá khứ phân từ của hide)", tick: false },
+  { en: "convoluted (adj) /ˈkɒnvəluːtɪd/", vn: "xoắn xuýt, rối rắm, quá phức tạp một cách khó hiểu (lập luận/câu văn)", tick: false },
+  { en: "straightforward (adj) /ˌstreɪtˈfɔːwəd/", vn: "thẳng thắn (tính cách), đơn giản, dễ hiểu không phức tạp (nhiệm vụ/quy trình)", tick: false },
+  { en: "redundant (adj) /rɪˈdʌndənt/", vn: "dư thừa, rườm rà (văn phong), bị sa thải do công ty thừa nhân sự (nhân viên; danh từ là redundancy)", tick: false },
+  { en: "superfluous (adj) /suːˈpɜːfluəs/", vn: "thừa, không cần thiết, vượt quá nhu cầu thực tế (danh từ là superfluity)", tick: false },
+  { en: "concise (adj) /kənˈsaɪs/", vn: "ngắn gọn, súc tích, ngắn nhưng đầy đủ ý (danh từ sự súc tích là conciseness / concision)", tick: false },
+  { en: "rigorous (adj) /ˈrɪɡərəs/", vn: "nghiêm ngặt, khắt khe, chính xác và tỉ mỉ (phương pháp/kiểm tra; danh từ là rigor / rigour)", tick: false },
+  { en: "stringent (adj) /ˈstrɪndʒənt/", vn: "nghiêm ngặt, chặt chẽ, chế tài nặng (luật pháp, nội quy, điều kiện tài chính; danh từ là stringency)", tick: false },
+  { en: "lenient (adj) /ˈliːniənt/", vn: "khoan dung, vị tha, nhẹ tay khi phạt (thầy cô/tòa án; danh từ sự khoan dung là leniency / lenience)", tick: false },
+  { en: "innovative (adj) /ˈɪnəveɪtɪv/", vn: "có tính đổi mới, sáng tạo, mang tính cải tiến (động từ là innovate; danh từ là innovation)", tick: false },
+  { en: "groundbreaking (adj) /ˈɡraʊndbreɪkɪŋ/", vn: "đột phá, mang tính cách mạng, mở ra hướng đi mới (Ví dụ: groundbreaking research)", tick: false },
+  { en: "conventional (adj) /kənˈvenʃənl/", vn: "theo tập quán, thông thường, truyền thống (thường mang nghĩa hơi lối mòn; danh từ là convention)", tick: false },
+  { en: "diverse (adj) /daɪˈvɜːs/", vn: "đa dạng, gồm nhiều loại khác nhau (danh từ sự đa dạng là diversity; động từ là diversify)", tick: false },
+  { en: "heterogeneous (adj) /ˌhetərəʊˈdʒiːniəs/", vn: "hỗn hợp, không đồng nhất, gồm nhiều thành phần khác biệt (trái nghĩa với homogeneous)", tick: false },
+  { en: "homogeneous (adj) /həˈmɒdʒəniəs/ hoặc /ˌhəʊməˈdʒiːniəs/", vn: "đồng nhất, cùng một loại, đồng đều (danh từ là homogeneity)", tick: false },
+  { en: "formidable (adj) /fəˈmɪdəbl/ hoặc /ˈfɔːmɪdəbl/", vn: "dữ dội, ghê gớm, đáng gờm (đối thủ/thử thách khiến người ta kiêng dè)", tick: false },
+  { en: "intimidating (adj) /ɪnˈtɪmɪdeɪtɪŋ/", vn: "đáng sợ, dễ làm cho người khác mất tự tin/co rúm lại (động từ đe dọa là intimidate)", tick: false },
+  { en: "feeble (adj) /ˈfiːbl/", vn: "yếu ớt, gầy guộc (sức khỏe), kém thuyết phục, lỏng lẻo (lời xin lỗi/lập luận; trạng từ là feebly)", tick: false },
+  { en: "authentic (adj) /ɔːˈθentɪk/", vn: "đích thực, chuẩn thực, có nguồn gốc xác thực (danh từ tính xác thực là authenticity)", tick: false },
+  { en: "wordy (adj) /ˈwɜːdi/", vn: "dài dòng, rườm rà, dùng quá nhiều từ ngữ không cần thiết (bằng với verbose)", tick: false },
+{ en: "engaging (adj) /ɪnˈɡeɪdʒɪŋ/", vn: "lôi cuốn, hấp dẫn, thu hút sự chú ý (bằng với attractive/interesting; cấu trúc: an engaging smile)", tick: false },
+  { en: "chronic (adj) /ˈkrɒnɪk/", vn: "mãn tính, kinh niên (bệnh tật), kéo dài dai dẳng khó giải quyết (nạn đói/thất nghiệp; trái nghĩa với acute)", tick: false },
+  { en: "acute (adj) /əˈkjuːt/", vn: "cấp tính (bệnh), rất nghiêm trọng/gắt gao (thiếu hụt), sắc bén/nhạy bén (giác quan/trí tuệ)", tick: false },
+  { en: "deliberate (adj) /dɪˈlɪbərət/", vn: "cố ý, chủ tâm, có tính toán trước (bằng với intentional; động từ /dɪˈlɪbəreɪt/ có nghĩa là cân nhắc/thảo luận)", tick: false },
+  { en: "intentional (adj) /ɪnˈtenʃənl/", vn: "cố ý, chủ đích (trái nghĩa là accidental; danh từ là intention - ý định)", tick: false },
+  { en: "accidental (adj) /ˌæksɪˈdentl/", vn: "tình cờ, ngẫu nhiên, vô ý (danh từ gốc là accident; trạng từ rất hay gặp: accidentally)", tick: false },
+  { en: "prominent (adj) /ˈprɒmɪnənt/", vn: "xuất chúng, nổi bật, dễ thấy (người/vị trí; danh từ sự nổi bật là prominence)", tick: false },
+  { en: "eminent (adj) /ˈemɪnənt/", vn: "xuất sắc, lỗi lạc, có địa vị cao và được kính trọng (thường dùng cho chuyên gia, nhà khoa học; danh từ là eminence)", tick: false },
+  { en: "antiquated (adj) /ˈæntɪkweɪtɪd/", vn: "cổ xưa, cũ kỹ, lỗi thời không còn phù hợp với hiện đại (hệ thống/quan niệm/máy móc)", tick: false },
+  { en: "modern (adj) /ˈmɒdn/", vn: "hiện đại, tân tiến (danh từ sự hiện đại hóa là modernization; động từ là modernize)", tick: false },
+  ],
+
+  13: [
+  { en: "subtle (adj) /ˈsʌtl/", vn: "tế nhị, tinh tế, khó nhận biết rõ ràng (âm câm 'b'; Ví dụ: a subtle difference - sự khác biệt tinh tế)", tick: false },
+  { en: "nuanced (adj) /ˈnjuːɑːnst/", vn: "có nhiều sắc thái tinh tế, tinh vi, đòi hỏi sự hiểu biết sâu sắc (lập luận/tác phẩm nghệ thuật)", tick: false },
+  { en: "blatant (adj) /ˈbleɪtənt/", vn: "trơ tráo, rành rành, hiển nhiên một cách đáng chê trách (Ví dụ: a blatant lie - một lời nói dối trắng trợn)", tick: false },
+  { en: "compatible (adj) /kəmˈpætəbl/", vn: "tương thích, hợp nhau (máy tính/tính cách; bẫy giới từ: be compatible with sb/sth; danh từ là compatibility)", tick: false },
+  { en: "harmonious (adj) /hɑːˈməʊniəs/", vn: "hài hòa, hòa thuận, êm thấm (mối quan hệ/âm thanh; danh từ là harmony)", tick: false },
+  { en: "incompatible (adj) /ˌɪnkəmˈpætəbl/", vn: "xung khắc, không tương thích, không thể sống chung/phối hợp (cấu trúc: be incompatible with sth)", tick: false },
+  { en: "all-inclusive (adj) /ˌɔːl ɪnˈkluːsɪv/", vn: "trọn gói, bao gồm tất cả mọi chi phí/dịch vụ (thường dùng trong ngành du lịch/khách sạn)", tick: false },
+  { en: "restricted (adj) /rɪˈstrɪktɪd/", vn: "bị hạn chế, bị giới hạn (quyền truy cập/khu vực quân sự; động từ là restrict; danh từ là restriction)", tick: false },
+  { en: "preliminary (adj) /rɪˈlɪmɪnəri/", vn: "sơ bộ, mở đầu, mang tính chuẩn bị cho bước chính thức (Ví dụ: preliminary results - kết quả sơ bộ)", tick: false },
+  { en: "introductory (adj) /ˌɪntrəˈdʌktəri/", vn: "mang tính giới thiệu, mở đầu (khóa học/chương sách/giá ưu đãi mua lần đầu)", tick: false },
+  { en: "final (adj) /ˈfaɪnl/", vn: "cuối cùng, chung cuộc (động từ hoàn thiện là finalize; danh từ trận chung kết/kỳ thi cuối kỳ là final)", tick: false },
+  { en: "vulnerable (adj) /ˈvʌlnərəbl/", vn: "dễ bị tổn thương, dễ bị nguy hiểm (thể chất/tâm lý; bẫy giới từ: be vulnerable to sth; danh từ là vulnerability)", tick: false },
+  { en: "susceptible (adj) /səˈseptəbl/", vn: "dễ bị ảnh hưởng, nhạy cảm, dễ mắc (bệnh/thói xấu; bẫy giới từ bắt buộc: be susceptible to sth)", tick: false },
+  { en: "immune (adj) /ɪˈmjuːn/", vn: "miễn dịch, được miễn (thuế/nghĩa vụ; bẫy giới từ cực hay thi: be immune to sth / immune from sth)", tick: false },
+  { en: "dense (adj) /dens/", vn: "dày đặc, đông đúc (dân số/sương mù/rừng rậm; danh từ mật độ là density)", tick: false },
+  { en: "compact (adj) /kəmˈpækt/ hoặc /ˈkɒmpækt/", vn: "nhỏ gọn, chật ních, cô đọng (không gian/thiết bị; động từ là nén chặt)", tick: false },
+  { en: "abstract (adj) /ˈæbstrækt/", vn: "trừu tượng (ý tưởng/nghệ thuật; danh từ là bản tóm tắt luận văn; trái nghĩa với concrete)", tick: false },
+  { en: "conceptual (adj) /kənˈseptʃuəl/", vn: "thuộc về khái niệm, thuộc tư tưởng triết lý (danh từ gốc là concept - khái niệm)", tick: false },
+  { en: "concrete (adj) /ˈkɒŋkriːt/", vn: "cụ thể, thực tế bằng xương bằng thịt (Ví dụ: concrete evidence - bằng chứng cụ thể; nghĩa gốc là bê tông)", tick: false },
+  { en: "random (adj) /ˈrændəm/", vn: "ngẫu nhiên, tình cờ, không theo quy luật (cấu trúc hay gặp: at random - một cách ngẫu nhiên)", tick: false },
+  { en: "arbitrary (adj) /ˈɑːbɪtrəri/", vn: "độc đoán, tùy tiện, hứng lên thì làm chứ không dựa trên lý do hay hệ thống nào", tick: false },
+  { en: "systematic (adj) /ˌsɪstəˈmætɪk/", vn: "có hệ thống, bài bản, làm việc có phương pháp kỹ lưỡng (danh từ hệ thống là system)", tick: false },
+  { en: "precise (adj) /prɪˈsaɪs/", vn: "chính xác, tỉ mỉ, rõ ràng từng chi tiết nhỏ (danh từ sự chính xác là precision)", tick: false },
+  { en: "accurate (adj) /ˈækjərət/", vn: "chính xác, đúng đắn (không có lỗi sai; danh từ là accuracy; trái nghĩa là inaccurate)", tick: false },
+  { en: "erroneous (adj) /ɪˈrəʊniəs/", vn: "sai lầm, dựa trên thông tin sai lệch (Ví dụ: erroneous belief; danh từ lỗi sai là error)", tick: false },
+  { en: "passive (adj) /ˈpæsɪv/", vn: "thụ động, bị động (trong giao tiếp/học tập/thì ngữ pháp; trái nghĩa là active)", tick: false },
+  { en: "submissive (adj) /səbˈmɪsɪv/", vn: "phục tùng, khúm núm, dễ bảo một cách quá mức (động từ gốc là submit - nộp bài/phục tùng)", tick: false },
+  { en: "assertive (adj) /əˈsɜːtɪv/", vn: "quyết đoán, quả quyết, tự tin thể hiện quan điểm của mình mà không hung hăng (danh từ là assertiveness)", tick: false },
+  { en: "multifaceted (adj) /ˌmʌltiˈfæsɪtɪd/", vn: "nhiều mặt, nhiều khía cạnh phức tạp (dùng cho vấn đề, tài năng của một người)", tick: false },
+  { en: "uniform (adj) /ˈjuːnɪfɔːm/", vn: "đồng đều, đồng nhất, giống nhau ở mọi lúc mọi nơi (danh từ có nghĩa là bộ đồng phục)", tick: false },
+  { en: "valid (adj) /ˈvælɪd/", vn: "có hiệu lực (vé/hộ chiếu), có căn cứ hợp lý (lập luận; danh từ tính hiệu lực là validity; động từ là validate)", tick: false },
+  { en: "legitimate (adj) /lɪˈdʒɪtɪmət/", vn: "hợp pháp, chính đáng, đúng luật (Ví dụ: a legitimate business; danh từ tính chính đáng là legitimacy)", tick: false },
+  { en: "invalid (adj) /ɪnˈvælɪd/", vn: "không có hiệu lực, vô giá trị (lập luận/văn bản); lưu ý từ này phát âm là /ˈɪnvəlɪd/ khi làm danh từ nghĩa là người tàn tật", tick: false },
+  { en: "objective (adj/n) /əbˈdʒektɪv/", vn: "khách quan (adj; trái nghĩa là subjective); mục tiêu, mục đích ngắn hạn (n)", tick: false },
+  { en: "unbiased (adj) /ʌnˈbaɪəst/", vn: "không thiên vị, vô tư, công bằng (bằng với impartial; trái nghĩa là biased - thiên vị)", tick: false },
+  { en: "subjective (adj) /səbˈdʒektɪv/", vn: "chủ quan, dựa trên quan điểm cá nhân thay vì sự thật khách quan (danh từ là subjectivity)", tick: false },
+  { en: "empirical (adj) /ɪmˈpɪrɪkl/", vn: "dựa trên kinh nghiệm thực tế, thực nghiệm, quan sát được chứ không phải lý thuyết (Ví dụ: empirical evidence)", tick: false },
+  { en: "observational (adj) /ˌɒbzəˈveɪʃənl/", vn: "thuộc về quan sát, dựa trên việc theo dõi thực tế (danh từ sự quan sát là observation)", tick: false },
+  { en: "theoretical (adj) /ˌθɪəˈretɪkl/", vn: "thuộc về lý thuyết, mang tính giả định chưa thực hành (danh từ gốc là theory - lý thuyết)", tick: false },
+  { en: "cognitive (adj) /ˈkɒɡnətɪv/", vn: "thuộc về nhận thức, tư duy của não bộ (Ví dụ: cognitive development - sự phát triển nhận thức)", tick: false },
+  { en: "intellectual (adj/n) /ˌɪntəˈlektʃuəl/", vn: "thuộc về trí tuệ, trí thức (adj); người trí thức, đầu óc bác học (n; danh từ trí tuệ là intellect)", tick: false },
+{ en: "emotional (adj) /ɪˈmʊvʃənl/", vn: "thuộc về cảm xúc, dễ cảm động, xúc động (danh từ là emotion)", tick: false },
+  { en: "sequential (adj) /sɪˈkwenʃl/", vn: "liên tục, theo thứ tự tuyến tính, tuần tự (danh từ gốc là sequence)", tick: false },
+  { en: "chronological (adj) /ˌkrɒnəˈlɒdʒɪkl/", vn: "theo thứ tự thời gian (Ví dụ: in chronological order)", tick: false },
+  { en: "concurrent (adj) /kənˈkʌrənt/", vn: "đồng thời, xảy ra cùng một lúc, đồng quy (cấu trúc: concurrent with sth)", tick: false },
+  { en: "simultaneous (adj) /ˌsɪməlˈteɪniəs/", vn: "đồng thời, cùng một lúc (trạng từ rất hay gặp: simultaneously)", tick: false },
+  { en: "inherent (adj) /ɪnˈhɪərənt/ hoặc /ɪnˈherənt/", vn: "vốn có, cố hữu (bẫy giới từ bắt buộc: be inherent in sth)", tick: false },
+  { en: "intrinsic (adj) /ɪnˈtrɪnzɪk/", vn: "thuộc về bản chất bên trong, thực chất (bẫy giới từ: be intrinsic to sth; trái nghĩa là extrinsic)", tick: false },
+  { en: "extrinsic (adj) /ekˈstrɪnzɪk/", vn: "tác động từ bên ngoài vào, ngoại lai (không phải bản chất vốn có)", tick: false },
+  { en: "overt (adj) /əʊˈvɜːt/", vn: "công khai, rành rành, không che giấu (Ví dụ: overt criticism - lời chỉ trích công khai; trái nghĩa là covert)", tick: false },
+  { en: "covert (adj) /ˈkəʊvɜːt/ hoặc /ˈkʌvət/", vn: "bí mật, ẩn giấu, làm một cách lén lút (Ví dụ: covert operations - các chiến dịch bí mật)", tick: false },
+
+  ],
+
+  14: [
+  { en: "adverse (adj) /ˈædvɜːs/ hoặc /ədˈvɜːs/", vn: "bất lợi, tiêu cực, có hại (Ví dụ: adverse weather conditions; danh từ sự bất lợi là adversity)", tick: false },
+  { en: "unfavorable (adj) /ʌnˈfeɪvərəbl/", vn: "không thuận lợi, bất lợi, đầy triển vọng xấu (Ví dụ: unfavorable review)", tick: false },
+  { en: "beneficial (adj) /ˌbenɪˈfɪʃl/", vn: "có lợi, ích lợi (cấu trúc giới từ: be beneficial to sb/sth; danh từ là benefit)", tick: false },
+  { en: "inevitable (adj) /ɪnˈevɪtəbl/", vn: "không thể tránh khỏi, chắc chắn sẽ xảy ra (danh từ sự tất yếu là inevitability)", tick: false },
+  { en: "unavoidable (adj) /ˌʌnəˈvɔɪdəbl/", vn: "không thể tránh khỏi (bằng nghĩa với inevitable; động từ là avoid)", tick: false },
+  { en: "preventable (adj) /rɪˈventəbl/", vn: "có thể ngăn chặn được, có thể phòng ngừa (động từ là prevent; danh từ là prevention)", tick: false },
+  { en: "substantial (adj) /səbˈstænʃl/", vn: "đáng kể, lớn lao, trọng yếu (bằng nghĩa với considerable; trạng từ là substantially)", tick: false },
+  { en: "considerable (adj) /kənˈsɪdərəbl/", vn: "đáng kể, to tát, có tầm quan trọng (tránh nhầm với considerate - chu đáo, biết nghĩ)", tick: false },
+  { en: "negligible (adj) /ˈneɡlɪdʒəbl/", vn: "không đáng kể, siêu nhỏ, có thể bỏ qua được (động từ gốc là neglect - thờ ơ/bỏ bê)", tick: false },
+  { en: "flexible (adj) /ˈfleksəbl/", vn: "linh hoạt, mềm dẻo (thời gian/tính cách/vật liệu; danh từ tính linh hoạt là flexibility)", tick: false },
+  { en: "adaptable (adj) /əˈdæptəbl/", vn: "có khả năng thích nghi cao (người/thiết bị; động từ thích nghi là adapt)", tick: false },
+  { en: "rigid (adj) /ˈrɪdʒɪd/", vn: "cứng nhắc, khắt khe, khó lay chuyển (quy tắc/tính cách; danh từ sự cứng nhắc là rigidity)", tick: false },
+  { en: "critical (adj) /ˈkrɪtɪkl/", vn: "chỉ trích/phê bình, nguy kịch/nghiêm trọng, mang tính quyết định (danh từ là critic hoặc criticism)", tick: false },
+  { en: "essential (adj) /ɪˈsenʃl/", vn: "cần thiết, thiết yếu, cốt lõi (cấu trúc giới từ: be essential to/for sth)", tick: false },
+  { en: "dispensable (adj) /dɪˈspensəbl/", vn: "không quan trọng, có thể bỏ qua, có thể thiếu được (trái nghĩa hoàn toàn với indispensable)", tick: false },
+  { en: "intensive (adj) /ɪnˈtensɪv/", vn: "chuyên sâu, cấp tốc, thâm canh (Ví dụ: intensive course; tránh nhầm với intense - mãnh liệt/gắt gao)", tick: false },
+  { en: "manual (adj/n) /ˈmænjuəl/", vn: "bằng tay, thủ công (adj; Ví dụ: manual labor); sách hướng dẫn sử dụng (n)", tick: false },
+  { en: "internal (adj) /ɪnˈtɜːnl/", vn: "bên trong, nội bộ (quốc gia/công ty), nội tạng (cơ thể; trái nghĩa là external)", tick: false },
+  { en: "domestic (adj) /dəˈmestɪk/", vn: "trong nước, nội địa (Ví dụ: domestic flights), thuộc về gia đình/nội trợ (Ví dụ: domestic violence)", tick: false },
+  { en: "external (adj) /ekˈstɜːnl/", vn: "bên ngoài, ngoại cảnh, ngoài mặt (trạng từ là externally)", tick: false },
+  { en: "enduring (adj) /ɪnˈdjʊərɪŋ/", vn: "lâu dài, bền bỉ, trường tồn (Ví dụ: enduring success; động từ chịu đựng/kéo dài là endure)", tick: false },
+  { en: "ephemeral (adj) /ɪˈfemərəl/", vn: "phù du, sớm nở tối tàn, ngắn ngủi chóng bành (Ví dụ: ephemeral pleasure; bằng nghĩa với short-lived)", tick: false },
+  { en: "intermittent (adj) /ˌɪntəˈmɪtənt/", vn: "gián đoạn, từng cơn, lúc có lúc không (Ví dụ: intermittent rain/fasting)", tick: false },
+  { en: "sporadic (adj) /spəˈrædɪk/", vn: "rời rạc, lẻ tẻ, thỉnh thoảng mới xảy ra ở vài nơi (Ví dụ: sporadic outbreaks of disease)", tick: false },
+  { en: "constant (adj) /ˈkɒnstənt/", vn: "không đổi, liên tục bền bỉ, kiên định (trạng từ constantly rất hay dùng làm dấu hiệu thì HTTD chỉ sự phàn nàn)", tick: false },
+  { en: "fluctuating (adj) /ˈflʌktʃueɪtɪŋ/", vn: "biến động, trồi sụt thất thường (giá cả/nhiệt độ; động từ gốc là fluctuate; danh từ là fluctuation)", tick: false },
+  { en: "severe (adj) /sɪˈvɪə(r)/", vn: "khốc liệt, rất nghiêm trọng (bệnh tật/thời tiết), nghiêm khắc (tính cách; danh từ là severity)", tick: false },
+  { en: "mild (adj) /maɪld/", vn: "ôn hòa (thời tiết), nhẹ dịu (vị đồ ăn/triệu chứng bệnh), nhu mì (tính cách)", tick: false },
+  { en: "primary (adj) /ˈpraɪməri/", vn: "chính, chủ yếu, hàng đầu, bậc tiểu học (trạng từ chủ yếu là primarily)", tick: false },
+  { en: "impartial (adj) /ɪmˈpɑːʃl/", vn: "công bằng, vô tư, không thiên vị (bằng nghĩa với unbiased; danh từ sự công bằng là impartiality)", tick: false },
+  { en: "terminal (adj/n) /ˈtɜːmɪnl/", vn: "giai đoạn cuối (bệnh hiểm nghèo vô phương cứu chữa; adj), nhà ga sân bay/bến bãi (n)", tick: false },
+  { en: "fatal (adj) /ˈfeɪtl/", vn: "chết người, chí mạng, mang tính hủy diệt (Ví dụ: a fatal accident/mistake; danh từ số ca tử vong là fatality)", tick: false },
+  { en: "benign (adj) /bɪˈnaɪn/", vn: "lành tính (y học: u lành), nhân từ, hiền lành (người), tốt cho môi trường/khí hậu", tick: false },
+  { en: "initial (adj/n/v) /ɪˈnɪʃl/", vn: "ban đầu, lúc đầu (adj); chữ cái đầu của tên (n); ký tên bằng chữ cái đầu (v; danh từ sáng kiến là initiative)", tick: false },
+  { en: "original (adj/n) /əˈrɪdʒənl/", vn: "nguyên bản, độc đáo, thuộc về ban đầu (adj); bản gốc (n; danh từ nguồn gốc là origin; động từ là originate)", tick: false },
+  { en: "subsequent (adj) /ˈsʌbsɪkwənt/", vn: "xảy ra sau, theo sau, đến sau (trạng từ rất hay làm từ nối trong bài đọc điền từ: subsequently)", tick: false },
+  { en: "ultimate (adj) /ˈʌltɪmət/", vn: "cuối cùng, sau cùng, tối thượng, cốt lõi (trạng từ xét cho cùng/rốt cuộc là ultimately)", tick: false },
+  { en: "immediate (adj) /ɪˈmiːdiət/", vn: "lập tức, tức thì (Ví dụ: immediate action), trực tiếp/gần kề (Ví dụ: immediate family - gia đình ruột thịt)", tick: false },
+  { en: "discrete (adj) /dɪˈskriːt/", vn: "riêng rẽ, rời rạc, độc lập (tránh nhầm hoàn toàn với discreet - kín đáo, thận trọng)", tick: false },
+  { en: "rational (adj) /ˈræʃnəl/", vn: "có lý trí, dựa trên lý trí, hợp lý (danh từ tính lý trí là rationality; trái nghĩa là irrational)", tick: false },
+  { en: "logical (adj) /ˈlɒdʒɪkl/", vn: "hợp lô-gích, hợp lý, có tính suy luận chặt chẽ (danh từ là logic; trái nghĩa là illogical)", tick: false },
+  { en: "irrational (adj) /ɪˈræʃnəl/", vn: "phi lý, mất lý trí, không dựa trên logic (Ví dụ: irrational fear - nỗi sợ phi lý)", tick: false },
+  { en: "conscious (adj) /ˈkɒnʃəs/", vn: "tỉnh táo, có ý thức, nhận biết được (cấu trúc: be conscious of sth = aware of sth; danh từ là consciousness)", tick: false },
+  { en: "subconscious (adj/n) /ˌsʌbˈkɒnʃəs/", vn: "thuộc về tiềm thức (adj); tiềm thức (n; trạng từ là subconsciously)", tick: false },
+  { en: "neutral (adj) /ˈnjuːtrəl/", vn: "trung lập, không bên nào (chiến tranh/tranh chấp), trung tính (hóa học/màu sắc; danh từ là neutrality)", tick: false },
+  { en: "partisan (adj/n) /ˌpɑːtɪˈzæn/ hoặc /ˈpɑːtɪzæn/", vn: "thiên vị, đảng phái, mù quáng theo một phe (adj); người theo phe/du kích (n)", tick: false },
+  { en: "specific (adj) /spəˈsɪfɪk/", vn: "cụ thể, rõ ràng, đặc trưng riêng biệt (cấu trúc bẫy: be specific to sth; động từ chỉ định là specify)", tick: false },
+  { en: "particular (adj) /pəˈtɪkjələ(r)/", vn: "cụ thể, đặc biệt, kỹ tính/kén chọn (cấu trúc: be particular about sth; cụm từ: in particular - nói riêng)", tick: false },
+  { en: "general (adj) /ˈdʒenrəl/", vn: "chung chung, tổng quát (cụm từ: in general - nhìn chung; trạng từ là generally)", tick: false },
+  { en: "universal (adj) /ˌjuːnɪˈvɜːsl/", vn: "phổ quát, phổ biến, có giá trị toàn cầu/vũ trụ (danh từ vũ trụ là universe)", tick: false },
+  { en: "unique (adj) /juːˈniːk/", vn: "độc nhất vô nhị, độc đáo, duy nhất (cấu trúc giới từ chuyên Anh: be unique to sth)", tick: false },
+  { en: "artificial (adj) /ˌɑːtɪˈfɪʃl/", vn: "nhân tạo (Ví dụ: artificial intelligence / artificial flowers; trái nghĩa với natural)", tick: false },
+  { en: "synthetic (adj) /sɪnˈθetɪk/", vn: "tổng hợp nhân tạo (hóa học/sợi vải), giả tạo (cảm xúc; động từ tổng hợp là synthesize)", tick: false },
+  { en: "natural (adj) /ˈnætʃrəl/", vn: "thuộc tự nhiên, bẩm sinh (danh từ tự nhiên là nature; trạng từ tự nhiên là naturally)", tick: false },
+  ],
+
+  15: [
+  { en: "vertical (adj) /ˈvɜːtɪkl/", vn: "thẳng đứng, theo chiều dọc (trái nghĩa hoàn toàn với horizontal)", tick: false },
+  { en: "perpendicular (adj) /ˌpɜːpənˈdɪkjələ(r)/", vn: "vuông góc (cấu trúc hình học hoặc kiến trúc: be perpendicular to sth)", tick: false },
+  { en: "horizontal (adj) /ˌhɒrɪˈzɒntl/", vn: "nằm ngang, theo chiều ngang (danh từ đường chân trời là horizon)", tick: false },
+  { en: "parallel (adj/n/v) /ˈpærəlel/", vn: "song song, tương đồng (cấu trúc: be parallel to/with sth; đường song song (n); tương đương (v))", tick: false },
+  { en: "corresponding (adj) /ˌkɒrəˈspɒndɪŋ/", vn: "tương ứng, đối lưu (động từ trao đổi thư từ/tương ứng là correspond; bẫy giới từ: correspond to/with sth)", tick: false },
+  { en: "divergent (adj) /daɪˈvɜːdʒənt/", vn: "bất đồng, rẽ ra nhiều hướng khác nhau (suy nghĩ/lối sống; động từ phân rẽ là diverge)", tick: false },
+  { en: "mutual (adj) /ˈmjuːtʃuəl/", vn: "lẫn nhau, chung từ hai phía (Ví dụ: mutual understanding - sự thấu hiểu lẫn nhau / mutual friends - bạn chung)", tick: false },
+  { en: "reciprocal (adj) /rɪˈsɪprəkl/", vn: "đối ứng, có qua có lại, công bằng cho cả đôi bên (Ví dụ: a reciprocal agreement - hiệp định có qua có lại)", tick: false },
+  { en: "unilateral (adj) /ˌjuːnɪˈlætrəl/", vn: "đơn phương, từ một phía (Ví dụ: a unilateral decision - quyết định đơn phương; trái nghĩa là bilateral)", tick: false },
+  { en: "static (adj) /ˈstætɪk/", vn: "tĩnh, không di chuyển, không thay đổi phát triển (Ví dụ: static prices; trái nghĩa là dynamic)", tick: false },
+  { en: "stationary (adj) /ˈsteɪʃənri/", vn: "đứng yên một chỗ, không chuyển động (tránh nhầm với stationery mang đuôi -ery nghĩa là văn phòng phẩm)", tick: false },
+  { en: "prospective (adj) /prəˈspektɪv/", vn: "có triển vọng, tiềm năng, tương lai (Ví dụ: prospective students/employers; danh từ viễn cảnh là prospect)", tick: false },
+  { en: "actual (adj) /ˈæktʃuəl/", vn: "thực tế, thực sự, có thật trên thực tế chứ không phải trên lý thuyết (trạng từ là actually)", tick: false },
+  { en: "imprecise (adj) /ˌɪmprɪˈsaɪs/", vn: "không chính xác, mơ hồ, đại khái (trái nghĩa hoàn toàn với precise)", tick: false },
+  { en: "definite (adj) /ˈdefɪnət/", vn: "rõ ràng, dứt khoát, chắc chắn (dấu hiệu nhận biết: definite article - mạo từ xác định 'the')", tick: false },
+  { en: "chief (adj/n) /tʃiːf/", vn: "chính, trọng yếu, đứng đầu (adj; Ví dụ: chief executive); người đứng đầu/thủ lĩnh (n)", tick: false },
+  { en: "first (adj/adv) /fɜːst/", vn: "đầu tiên, trước hết (lưu ý cấu trúc so sánh nhất đi với to-V: the first to do sth)", tick: false },
+  { en: "absolute (adj) /ˈæbsəluːt/", vn: "tuyệt đối, hoàn toàn, độc quyền toàn trị (Ví dụ: absolute power; trạng từ là absolutely)", tick: false },
+  { en: "total (adj/n/v) /ˈtəʊtl/", vn: "toàn bộ, tổng cộng (adj); tổng số (n); lên tới tổng cộng là (v; trạng từ là totally)", tick: false },
+  { en: "relative (adj/n) /ˈrelətɪv/", vn: "tương đối (khi so sánh với cái khác; adj); họ hàng, người thân trong gia đình (n)", tick: false },
+  { en: "intermediate (adj) /ˌɪntəˈmiːdiət/", vn: "trung cấp, giữa, trung gian (Ví dụ: intermediate level - trình độ trung cấp)", tick: false },
+  { en: "transitional (adj) /trænˈzɪʃənl/", vn: "mang tính chuyển tiếp, quá độ (giai đoạn/thời kỳ; danh từ sự chuyển dịch là transition)", tick: false },
+  { en: "sophisticated (adj) /səˈfɪstɪkeɪtɪd/", vn: "tinh vi, phức tạp, sành điệu/thạo đời (người; danh từ sự tinh vi là sophistication)", tick: false },
+  { en: "rudimentary (adj) /ˌruːdɪˈmentri/", vn: "thô sơ, sơ đẳng, mới ở mức sơ khai (Ví dụ: rudimentary technology / rudimentary knowledge)", tick: false },
+  { en: "narrow (adj/v) /ˈnærəʊ/", vn: "chật hẹp, eo hẹp (adj); thu hẹp lại (v; cụm từ bẫy: narrow down - thu hẹp phạm vi lựa chọn)", tick: false },
+  { en: "major (adj/n/v) /ˈmeɪdʒə(r)/", vn: "chủ yếu, trọng đại, lớn (adj); chuyên ngành đại học (n); học chuyên ngành về (v đi với giới từ in)", tick: false },
+  { en: "significant (adj) /sɪɡˈnɪfɪkənt/", vn: "đáng kể, có ý nghĩa lớn, quan trọng (danh từ ý nghĩa/tầm quan trọng là significance)", tick: false },
+  { en: "minor (adj/n) /ˈmaɪnə(r)/", vn: "nhỏ, thứ yếu, không quan trọng (adj); người vị thành niên (n; danh từ thiểu số là minority)", tick: false },
+  { en: "tentative (adj) /ˈtentətɪv/", vn: "dự kiến, ướm thử, chưa cố định chính thức (Ví dụ: a tentative schedule - lịch trình dự kiến)", tick: false },
+  { en: "inner (adj) /ˈɪnə(r)/", vn: "bên trong, thuộc về nội tâm/tâm hồn (Ví dụ: inner peace - sự bình yên trong tâm hồn)", tick: false },
+  { en: "exterior (adj/n) /ɪkˈstɪəriə(r)/", vn: "thuộc bên ngoài, ngoại thất (adj); phần vỏ bề ngoài, bề nổi (n; trái nghĩa là interior)", tick: false },
+{ en: "maximum (adj/n) /ˈmæksɪməm/", vn: "tối đa, cực đại (adj/n; trái nghĩa hoàn toàn với minimum)", tick: false },
+  { en: "highest (adj) /ˈhaɪɪst/", vn: "cao nhất (dạng so sánh nhất của high; thường dùng trong các biểu đồ bài thi viết)", tick: false },
+  { en: "minimum (adj/n) /ˈmɪnɪməm/", vn: "tối thiểu, cực tiểu (Ví dụ: minimum wage - mức lương tối thiểu)", tick: false },
+  { en: "optimum (adj) /ˈɒptɪməm/", vn: "tối ưu, tốt nhất trong điều kiện sẵn có (Ví dụ: optimum conditions; động từ tối ưu hóa là optimize)", tick: false },
+  { en: "ideal (adj/n) /aɪˈdiːəl/", vn: "lý tưởng, hoàn hảo (adj); hình mẫu lý tưởng (n; danh từ chủ nghĩa lý tưởng là idealism)", tick: false },
+  { en: "worst (adj) /wɜːst/", vn: "tồi tệ nhất, xấu nhất (dạng so sánh nhất của bad/ill; cụm từ bẫy: at worst - trong trường hợp xấu nhất)", tick: false },
+  { en: "visual (adj) /ˈvɪʒuəl/", vn: "thuộc về thị giác, bằng mắt (Ví dụ: visual aids - giáo cụ trực quan; danh từ thị lực là vision)", tick: false },
+  { en: "optical (adj) /ˈɒptɪkl/", vn: "thuộc về quang học, kính học, mắt (Ví dụ: optical illusion - ảo ảnh thị giác)", tick: false },
+  { en: "auditory (adj) /ˈɔːdɪtri/", vn: "thuộc về thính giác, khả năng nghe (Ví dụ: auditory cortex - vùng vỏ não thính giác)", tick: false },
+  { en: "mental (adj) /ˈmentl/", vn: "thuộc về tinh thần, tâm thần, trí óc (trạng từ là mentally; danh từ tâm lý học là mentality)", tick: false },
+  { en: "linear (adj) /ˈlɪniə(r)/", vn: "thuộc đường thẳng, tuyến tính, phát triển đều theo một chiều (danh từ gốc là line)", tick: false },
+  { en: "direct (adj/v) /dəˈrekt/ hoặc /daɪˈrekt/", vn: "trực tiếp, thẳng thắn (adj); hướng dẫn, chỉ đường, đạo diễn (v; trái nghĩa là indirect)", tick: false },
+  { en: "non-linear (adj) /ˌnɒnˈlɪniə(r)/", vn: "phi tuyến tính, không theo đường thẳng, nhảy vọt/không đều", tick: false },
+  { en: "structural (adj) /ˈstrʌktʃərəl/", vn: "thuộc về cấu trúc, kết cấu (Ví dụ: structural changes - những thay đổi mang tính cấu trúc)", tick: false },
+  { en: "organizational (adj) /ˌɔːɡənaɪˈzeɪʃənl/", vn: "thuộc về tổ chức, cơ cấu cơ quan (danh từ là organization; động từ là organize)", tick: false },
+  { en: "functional (adj) /ˈfʌŋkʃənl/", vn: "thuộc về chức năng, thiết thực, hoạt động bình thường (động từ/danh từ là function)", tick: false },
+  { en: "strategic (adj) /strəˈtiːdʒɪk/", vn: "mang tính chiến lược, có kế hoạch dài hạn (danh từ chiến lược là strategy)", tick: false },
+  { en: "tactical (adj) /ˈtæktɪkl/", vn: "mang tính chiến thuật, thủ thuật ngắn hạn (danh từ chiến thuật là tactics)", tick: false },
+  { en: "sound (adj) /saʊnd/", vn: "vững chãi, khỏe mạnh (thể chất), hợp lý/có cơ sở chặt chẽ (lập luận; Ví dụ: sound advice - lời khuyên thấu đáo)", tick: false },
+  { en: "flawed (adj) /flɔːd/", vn: "có tì vết, có lỗi sai, không hoàn hảo (danh từ lỗi sai/khuyết điểm là flaw; trái nghĩa là flawless)", tick: false },
+  { en: "factual (adj) /ˈfæktʃuəl/", vn: "dựa trên sự thật, có thật chứ không phải hư cấu (danh từ gốc là fact)", tick: false },
+  { en: "speculative (adj) /ˈspekjələtɪv/", vn: "mang tính suy đoán, đầu cơ tích trữ (tài chính), mang tính giả định chưa có chứng cứ", tick: false },
+  { en: "hypothetical (adj) /ˌhaɪpəˈθetɪkl/", vn: "mang tính giả thuyết, giả định để phân tích (danh từ giả thuyết là hypothesis)", tick: false },
+  { en: "proven (adj) /pruːvn/ hoặc /ˈprəʊvn/", vn: "đã được chứng minh, đã được kiểm nghiệm (quá khứ phân từ của prove dùng như tính từ đứng trước danh từ)", tick: false },
+  { en: "relevant (adj) /ˈreləvənt/", vn: "liên quan, thích đáng (bẫy giới từ: be relevant to sth; danh từ sự liên quan là relevance)", tick: false },
+  { en: "pertinent (adj) /ˈpɜːtɪnənt/", vn: "phù hợp, đi thẳng vào vấn đề, thích đáng (bẫy giới từ chuyên Anh nâng cao: be pertinent to sth)", tick: false },
+  ],
+
+  16: [
+  { en: "separate (adj) /ˈseprət/", vn: "riêng rẽ, tách biệt (động từ /ˈsepəreɪt/ là chia tách; bẫy giới từ: be separate from sth)", tick: false },
+  { en: "identical (adj) /aɪˈdentɪkl/", vn: "giống hệt nhau, đồng nhất (cấu trúc giới từ: be identical to/with sth; Ví dụ: identical twins - sinh đôi cùng trứng)", tick: false },
+  { en: "meaningful (adj) /ˈmiːnɪŋfl/", vn: "đầy ý nghĩa, có tầm quan trọng, có chủ đích rõ ràng (trái nghĩa hoàn toàn là meaningless)", tick: false },
+  { en: "insignificant (adj) /ˌɪnsɪɡˈnɪfɪkənt/", vn: "tầm thường, không đáng kể, không có tầm ảnh hưởng (trái nghĩa với significant)", tick: false },
+  { en: "insightful (adj) /ˈɪnsaɪtfl/", vn: "sâu sắc, có cái nhìn thấu suốt, đầy sáng suốt (danh từ sự thấu hiểu bản chất là insight)", tick: false },
+  { en: "shallow (adj) /ˈʃæləʊ/", vn: "nông cạn (hiểu biết/tính cách), nông/cạn (nước hồ; trái nghĩa hoàn toàn với deep)", tick: false },
+  { en: "intense (adj) /ɪnˈtens/", vn: "mãnh liệt, dữ dội, gắt gao (cảm xúc/nhiệt độ/nỗi đau; tránh nhầm với intensive - chuyên sâu)", tick: false },
+  { en: "widespread (adj) /ˈwaɪdspred/", vn: "lan rộng, phổ biến, trải dài trên diện tích lớn (Ví dụ: widespread criticism)", tick: false },
+  { en: "delicate (adj) /ˈdelɪkət/", vn: "mỏng manh, dễ vỡ (đồ vật), nhạy cảm/tế nhị (vấn đề), tinh tế/khéo léo (hương vị/bàn tay; danh từ là delicacy)", tick: false },
+  { en: "obvious (adj) /ˈɒbviəs/", vn: "hiển nhiên, rõ ràng, dễ thấy (bằng nghĩa với clear/evident; trạng từ là obviously)", tick: false },
+  { en: "clear (adj/v) /klɪə(r)/", vn: "rõ ràng, trong suốt (adj); dọn dẹp, làm sạch (v; cụm từ hay thi: clear up - giải thích/làm sáng tỏ)", tick: false },
+  { en: "incorrect (adj) /ˌɪnkəˈrekt/", vn: "sai, không chính xác (bằng nghĩa với wrong; trái nghĩa hoàn toàn với correct)", tick: false },
+  { en: "steady (adj) /ˈstedi/", vn: "vững vàng, đều đặn, kiên định không đổi (Ví dụ: a steady increase - một sự tăng trưởng đều đặn)", tick: false },
+  { en: "secure (adj/v) /sɪˈkjʊə(r)/", vn: "an toàn, chắc chắn, kiên cố (adj); đạt được, chiếm được sau nhiều nỗ lực (v; danh từ là security)", tick: false },
+  { en: "pliable (adj) /ˈplaɪəbl/", vn: "dễ uốn nắn, mềm dẻo (vật liệu), dễ bị lung lay/gợi ý theo người khác (tính cách; danh từ là pliability)", tick: false },
+  { en: "efficient (adj) /frɪˈʃnt/", vn: "hiệu quả, năng suất cao (làm việc ít tốn tài nguyên/thời gian/tiền bạc nhất; danh từ là efficiency)", tick: false },
+  { en: "productive (adj) /rəˈdʌktɪv/", vn: "năng suất, sản xuất nhiều, sinh lợi cao (động từ là produce; danh từ sản lượng là productivity)", tick: false },
+  { en: "wasteful (adj) /ˈweɪstfl/", vn: "lãng phí, tốn kém vô ích (danh từ/động từ gốc là waste)", tick: false },
+  { en: "durable (adj) /ˈdjʊərəbl/", vn: "bền bỉ, lâu bền, chịu được ma sát/thời gian tốt (vật liệu/đồ dùng; danh từ độ bền là durability)", tick: false },
+  { en: "lasting (adj) /ˈlɑːstɪŋ/", vn: "kéo dài, trường tồn, có tầm ảnh hưởng lâu dài (Ví dụ: a lasting impression - ấn tượng khó phai)", tick: false },
+  { en: "effective (adj) /ɪˈfektɪv/", vn: "hiệu quả (đạt được mục tiêu đề ra; danh từ là effectiveness; lưu ý cụm từ: come into effect - có hiệu lực)", tick: false },
+  { en: "efficacious (adj) /ˌefɪˈkeɪʃəs/", vn: "có hiệu lực, linh nghiệm (thường dùng đặc thù cho các loại thuốc, phác đồ điều trị y tế; danh từ là efficacy)", tick: false },
+  { en: "visible (adj) /ˈvɪzəbl/", vn: "có thể nhìn thấy được, rõ ràng trước mắt (danh từ tính hiển hiện là visibility; trái nghĩa là invisible)", tick: false },
+  { en: "noticeable (adj) /ˈnəʊtɪsəbl/", vn: "đáng chú ý, dễ nhận thấy rõ ràng (động từ/danh từ gốc là notice)", tick: false },
+  { en: "invisible (adj) /ɪnˈvɪzəbl/", vn: "vô hình, không thể nhìn thấy bằng mắt thường (Ví dụ: invisible ink - mực tàng hình)", tick: false },
+  { en: "implicit (adj) /ɪmˈplɪsɪt/", vn: "ngầm, ẩn ý, ngầm hiểu chứ không nói thẳng ra (trái nghĩa hoàn toàn với explicit - rõ ràng)", tick: false },
+  { en: "certain (adj) /ˈsɜːtn/", vn: "chắc chắn (cấu trúc: be certain of/about sth; danh từ sự chắc chắn là certainty)", tick: false },
+  { en: "conditional (adj) /kənˈdɪʃənl/", vn: "có điều kiện, phụ thuộc vào điều kiện kèm theo (Ví dụ: a conditional offer; danh từ gốc là condition)", tick: false },
+  { en: "detailed (adj) /ˈdiːteɪld/", vn: "chi tiết, cặn kẽ, có nhiều thông tin nhỏ (danh từ là detail)", tick: false },
+  { en: "sketchy (adj) /ˈsketʃi/", vn: "sơ sài, đại khái, thiếu chi tiết đáng tin cậy (thông tin/kế hoạch; danh từ gốc là sketch - bản phác thảo)", tick: false },
+  { en: "adequate (adj) /ˈædɪkwət/", vn: "đầy đủ, thỏa đáng, vừa đủ cho một mục đích cụ thể (danh từ là adequacy)", tick: false },
+  { en: "sufficient (adj) /səˈfɪʃnt/", vn: "đủ, lượng đủ lớn đáp ứng yêu cầu (cấu trúc: be sufficient for sb/sth; danh từ là sufficiency)", tick: false },
+  { en: "exact (adj) /ɪɡˈzækt/", vn: "chính xác, chuẩn xác từng con số/chi tiết (trạng từ rất hay dùng: exactly)", tick: false },
+  { en: "approximate (adj) /əˈprɒksɪmət/", vn: "xấp xỉ, gần đúng (động từ /əˈprɒksɪmeɪt/ là ước lượng; trạng từ là approximately)", tick: false },
+  { en: "binding (adj) /ˈbaɪndɪŋ/", vn: "ràng buộc mang tính pháp lý, bắt buộc thực hiện (bẫy giới từ: be binding on/upon sb; động từ gốc là bind)", tick: false },
+  { en: "void (adj/n/v) /vɔɪd/", vn: "vô hiệu, không có giá trị pháp lý (adj); khoảng trống vô định (n; cụm từ hay gặp: null and void)", tick: false },
+  { en: "active (adj) /ˈæktɪv/", vn: "chủ động, tích cực hoạt động, nhanh nhẹn (danh từ hoạt động là activity; động từ kích hoạt là activate)", tick: false },
+  { en: "harsh (adj) /hɑːʃ/", vn: "khắc nghiệt (thời tiết), ác ý/gay gắt (lời chỉ trích), chói (âm thanh/ánh sáng)", tick: false },
+  { en: "faint (adj/v) /feɪt/", vn: "mờ nhạt, yếu ớt, thoang thoảng (âm thanh/ánh sáng/mùi hương; adj); ngất xỉu (v)", tick: false },
+  { en: "tough (adj) /tʌf/", vn: "dai (thịt), dai sức/mạnh mẽ (người), gay go/khó khăn (thử thách), cứng rắn (biện pháp xử lý)", tick: false },
+  { en: "weak (adj) /wiːk/", vn: "yếu ớt, lỏng lẻo, kém cỏi (danh từ điểm yếu là weakness; động từ làm yếu đi là weaken)", tick: false },
+  { en: "regular (adj) /ˈreɡjələ(r)/", vn: "đều đặn, thường xuyên, chính quy (danh từ sự đều đặn là regularity; trái nghĩa là irregular)", tick: false },
+  { en: "sloppy (adj) /ˈslɒpi/", vn: "cẩu thả, luộm thuộm, làm việc thiếu cẩn thận (Ví dụ: sloppy work; danh từ sự cẩu thả là sloppiness)", tick: false },
+  { en: "conspicuous (adj) /kənˈspɪkjuəs/", vn: "dễ thấy, lộ liễu, đập ngay vào mắt (Ví dụ: Traffic signs should be conspicuous; trái nghĩa là inconspicuous)", tick: false },
+  { en: "negative (adj) /ˈneɡətɪv/", vn: "tiêu cực, âm tính (y học), phủ định (ngữ pháp; trái nghĩa hoàn toàn với positive)", tick: false },
+  { en: "positive (adj) /ˈpɒzətɪv/", vn: "tích cực, dương tính (y học), khẳng định (ngữ pháp; trạng từ là positively)", tick: false },
+  { en: "robust (adj) /rəʊˈbʌst/", vn: "tráng kiện, cường tráng (người), mạnh mẽ/bền vững (hệ thống/nền kinh tế/lập luận)", tick: false },
+  { en: "strong (adj) /strɒŋ/", vn: "mạnh mẽ, bền vững, nồng nặc (mùi; danh từ sức mạnh là strength; động từ củng cố là strengthen)", tick: false },
+  { en: "advanced (adj) /ədˈvɑːnst/", vn: "tiên tiến, nâng cao, ở trình độ cao (Ví dụ: advanced technology / advanced learners; động từ là advance)", tick: false },
+  { en: "primitive (adj) /ˈprɪmətɪv/", vn: "nguyên thủy, thô sơ, thuộc về thời tiền sử (Ví dụ: primitive societies)", tick: false },
+  { en: "controversial (adj) /ˌkɒntrəˈvɜːʃl/", vn: "gây tranh cãi, còn nhiều ý kiến trái chiều (danh từ cuộc tranh luận lớn là controversy)", tick: false },
+  { en: "disputed (adj) /dɪˈspjuːtɪd/", vn: "đang bị tranh chấp, đang bị bác bỏ/kiện cáo (động từ/danh từ gốc là dispute)", tick: false },
+  { en: "accepted (adj) /əkˈseptɪd/", vn: "được thừa nhận, được chấp nhận rộng rãi (tập quán/quy chuẩn; động từ là accept)", tick: false },
+  { en: "novel (adj) /ˈnɒvl/", vn: "mới lạ, độc đáo chưa từng có trước đây (adj; lưu ý tránh nhầm với danh từ novel nghĩa là tiểu thuyết)", tick: false },
+  { en: "believable (adj) /bɪˈliːvəbl/", vn: "có thể tin được, mang tính thuyết phục (động từ là believe; trái nghĩa là unbelievable)", tick: false },
+  { en: "unbelievable (adj) /ˌʌnbɪˈliːvəbl/", vn: "không thể tin được, phi thường/quá mức tưởng tượng (bằng nghĩa với incredible)", tick: false },
+  { en: "articulate (adj/v) /ɑːˈtɪkjələt/", vn: "ăn nói lưu loát, rõ ràng, diễn đạt mạch lạc (adj); phát âm rõ/diễn đạt thành lời (v; /ɑːˈtɪkjuleɪt/)", tick: false },
+  { en: "incoherent (adj) /ˌɪnhəʊˈhɪərənt/", vn: "rời rạc, không mạch lạc, nói năng ú ớ khó hiểu (lập luận/người say rượu; trái nghĩa là coherent)", tick: false },
+  { en: "varied (adj) /ˈveərid/", vn: "đa dạng, phong phú, nhiều thay đổi (Ví dụ: a varied diet; động từ gốc là vary)", tick: false },
+  { en: "sharp (adj/adv) /ʃɑːp/", vn: "sắc bén (dao), sắc sảo (trí tuệ), đột ngột (biểu đồ tăng/giảm), đúng (giờ; Ví dụ: at 7 o'clock sharp)", tick: false },
+  { en: "dull (adj) /dʌl/", vn: "tẻ nhạt/chán ngắt (phim), mờ xỉn (màu sắc), cùn (dao), đần độn/chậm hiểu (người)", tick: false },
+
+  ],
+
+  17: [
+{ en: "sustainable (adj) /səˈsteɪnəbl/", vn: "bền vững, có thể duy trì lâu dài (môi trường/kinh tế; động từ duy trì là sustain; danh từ là sustainability)", tick: false },
+  { en: "unviable (adj) /ʌnˈvaɪəbl/", vn: "không khả thi, không thể tồn tại/phát triển độc lập được (kinh tế/y học; trái nghĩa hoàn toàn với viable)", tick: false },
+  { en: "preparatory (adj) /prɪˈpærətri/", vn: "mang tính chuẩn bị, sửa soạn (Ví dụ: preparatory steps - các bước chuẩn bị; danh từ là preparation)", tick: false },
+  { en: "concluding (adj) /kənˈkluːdɪŋ/", vn: "để kết luận, kết thúc (bài văn/chương sách; động từ là conclude; danh từ là conclusion)", tick: false },
+  { en: "partial (adj) /ˈpɑːʃl/", vn: "một phần, không hoàn chỉnh (Ví dụ: a partial success), thiên vị (cấu trúc bẫy: be partial to sb/sth)", tick: false },
+  { en: "changing (adj) /ˈtʃeɪndʒɪŋ/", vn: "đang thay đổi, biến đổi không ngừng (Ví dụ: a changing world; động từ là change)", tick: false },
+  { en: "unclear (adj) /ˌʌnˈklɪə(r)/", vn: "không rõ ràng, mơ hồ (bằng nghĩa với vague/obscure; trái nghĩa hoàn toàn với clear)", tick: false },
+  { en: "blur (adj/v/n) /blɜː(r)/", vn: "bị mờ, không rõ nét (thường dùng như tính từ ở dạng blurred; động từ là làm mờ; danh từ là vết mờ)", tick: false },
+  { en: "incidental (adj) /ˌɪnsɪˈdentl/", vn: "ngẫu nhiên, tình cờ, là tác dụng phụ/yếu tố phụ đi kèm (Ví dụ: incidental expenses - chi phí phát sinh phụ)", tick: false },
+  { en: "illegal (adj) /ɪˈliːɡl/", vn: "bất hợp pháp, trái pháp luật (danh từ tính bất hợp pháp là illegality; trái nghĩa hoàn toàn với legal)", tick: false },
+  { en: "large (adj) /lɑːdʒ/", vn: "lớn, rộng lớn (lưu ý cụm từ nâng cao: at large - ngoài vòng pháp luật, hoặc nói chung/số đông)", tick: false },
+  { en: "concealed (adj) /kənˈsiːld/", vn: "bị ẩn giấu, giấu kín (quá khứ phân từ của conceal; Ví dụ: a concealed weapon - vũ khí giấu kín)", tick: false },
+  { en: "verified (adj) /ˈverɪfaɪd/", vn: "đã được xác minh, đã được chứng thực độ chính xác (động từ xác minh là verify; danh từ là verification)", tick: false },
+  { en: "unproven (adj) /ˌʌnˈpruːvn/ hoặc /ˌʌnˈprəʊvn/", vn: "chưa được chứng minh, chưa được kiểm chứng thực tế (trái nghĩa hoàn toàn với proven)", tick: false },
+  { en: "structured (adj) /ˈstrʌktʃəd/", vn: "có cấu trúc, có tổ chức chặt chẽ, bài bản (Ví dụ: a highly structured lesson plan)", tick: false },
+  { en: "organized (adj) /ˈɔːɡənaɪzd/", vn: "có trật tự, ngăn nắp, làm việc có hệ thống khoa học (người/kế hoạch; động từ là organize)", tick: false },
+  { en: "fair (adj) /feə(r)/", vn: "công bằng, hợp lý, khá tốt (mức độ), da trắng/tóc vàng (bề ngoài; danh từ hội chợ/triển lãm)", tick: false },
+  { en: "applicable (adj) /əˈplɪkəbl/ hoặc /ˈæplɪkəbl/", vn: "có thể áp dụng được, thích hợp (bẫy giới từ: be applicable to sb/sth; động từ là apply)", tick: false },
+  { en: "inappropriate (adj) /ˌɪnəˈprəʊpriət/", vn: "không thích hợp, không phù hợp quy chuẩn (cấu trúc giới từ: be inappropriate for/to sth)", tick: false },
+  { en: "changeable (adj) /ˈtʃeɪndʒəbl/", vn: "dễ thay đổi, hay thay đổi thất thường (thời tiết/tâm trạng; bằng nghĩa với variable)", tick: false },
+  { en: "analytical (adj) /ˌænəˈlɪtɪkl/", vn: "thuộc về phân tích, có tư duy phân tích sâu sắc (Ví dụ: analytical skills; động từ phân tích là analyze)", tick: false },
+  { en: "intuitive (adj) /ɪnˈtjuːɪtɪv/", vn: "thuộc về trực giác, dễ hiểu/dễ sử dụng không cần hướng dẫn (thiết bị; danh từ trực giác là intuition)", tick: false },
+  { en: "aesthetic (adj) /iːsˈθetɪk/ hoặc /æsˈθetɪk/", vn: "thuộc về mỹ học, có tính thẩm mỹ cao (Ví dụ: aesthetic value - giá trị thẩm mỹ)", tick: false },
+  { en: "artistic (adj) /ɑːˈtɪstɪk/", vn: "thuộc về nghệ thuật, có khiếu nghệ thuật/khéo tay (danh từ người nghệ sĩ là artist)", tick: false },
+  { en: "anonymous (adj) /əˈnɒnɪməs/", vn: "ẩn danh, vô danh, giấu tên (Ví dụ: an anonymous donor; danh từ sự ẩn danh là anonymity)", tick: false },
+  { en: "nameless (adj) /ˈneɪmləs/", vn: "không có tên, vô danh, không thể gọi thành lời (nỗi sợ/nỗi đau)", tick: false },
+  { en: "known (adj) /nəʊn/", vn: "được biết đến (quá khứ phân từ của know; cụm từ bẫy giới từ: be known for sth / be known as sth)", tick: false },
+  { en: "matching (adj) /ˈmætʃɪŋ/", vn: "đồng bộ, vừa vặn, kết hợp ăn ý với nhau (màu sắc/quần áo; động từ/danh từ là match)", tick: false },
+  { en: "discordant (adj) /dɪˈskɔːdənt/", vn: "bất hòa, nghịch nhĩ, chói tai, không hòa hợp (âm thanh/quan điểm; danh từ là discordance)", tick: false },
+  { en: "energetic (adj) /ˌenəˈdʒetɪk/", vn: "tràn đầy năng lượng, năng nổ, mạnh mẽ (danh từ năng lượng là energy)", tick: false },
+  { en: "sluggish (adj) /ˈslʌɡɪʃ/", vn: "chậm chạp, uể oải, trì trệ (nền kinh tế/dòng chảy/cơ thể; danh từ sự trì trệ là sluggishness)", tick: false },
+  { en: "ethical (adj) /ˈeθɪkl/", vn: "thuộc về luân thường đạo lý, có đạo đức, đúng quy chuẩn nghề nghiệp (danh từ đạo đức học là ethics)", tick: false },
+  { en: "moral (adj/n) /ˈmɒrəl/", vn: "thuộc về đạo đức cá nhân/xã hội (adj); bài học đạo đức, luân lý rút ra từ câu chuyện (n)", tick: false },
+  { en: "unethical (adj) /ʌnˈeθɪkl/", vn: "vô đạo đức, vi phạm quy chuẩn đạo đức nghề nghiệp (Ví dụ: unethical behavior)", tick: false },
+  { en: "basic (adj) /ˈbeɪsɪk/", vn: "cơ bản, cơ sở, cốt lõi (danh từ nền tảng là basis; động từ dựa vào là base)", tick: false },
+  { en: "generic (adj) /dʒəˈnerɪk/", vn: "có tính đặc trưng chung của một nhóm/loài, thuốc gốc không có thương hiệu riêng", tick: false },
+  { en: "quantitative (adj) /ˈkwɒntɪtətɪv/", vn: "thuộc về số lượng, định lượng (nghiên cứu/dữ liệu toán học; danh từ số lượng là quantity)", tick: false },
+  { en: "numerical (adj) /njuːˈmerɪkl/", vn: "thuộc về hiển thị bằng số, chữ số (Ví dụ: in numerical order - theo thứ tự chữ số)", tick: false },
+  { en: "qualitative (adj) /ˈkwɒlɪtətɪv/", vn: "thuộc về chất lượng, định tính (phân tích chiều sâu bản chất; danh từ chất lượng là quality)", tick: false },
+  { en: "mandatory (adj) /ˈmændətəri/", vn: "bắt buộc theo luật định (bằng nghĩa với compulsory; danh từ lệnh bắt buộc là mandate)", tick: false },
+  { en: "compulsory (adj) /kəmˈpʌlsəri/", vn: "bắt buộc phải làm (do nội quy/luật pháp; Ví dụ: compulsory education; trái nghĩa là optional)", tick: false },
+  { en: "optional (adj) /ˈɒpʃənl/", vn: "tùy chọn, không bắt buộc, tự nguyện (danh từ sự lựa chọn là option; động từ chọn là opt)", tick: false },
+  { en: "fixed (adj) /fɪkst/", vn: "cố định, bất động, không thay đổi (Ví dụ: fixed price - giá cố định; động từ sửa chữa/gài chặt là fix)", tick: false },
+  { en: "mobile (adj) /ˈməʊbaɪl/", vn: "lưu động, có tính di động, dễ dàng di chuyển từ nơi này sang nơi khác (danh từ tính di động là mobility)", tick: false },
+  { en: "tangible (adj) /ˈtændʒəbl/", vn: "hữu hình, có thể sờ mó thấy được, rõ ràng thực tế (Ví dụ: tangible assets - tài sản hữu hình)", tick: false },
+  { en: "virtual (adj) /ˈvɜːtʃuəl/", vn: "ảo, trên mạng mạng máy tính (Ví dụ: virtual reality - thực tế ảo), hầu như/gần như là thực tế", tick: false },
+  { en: "digital (adj) /ˈdɪdʒɪtl/", vn: "thuộc công nghệ kỹ thuật số, hiển thị bằng con số (Ví dụ: digital watch / digital marketing)", tick: false },
+  { en: "analog (adj) /ˈænəlɒɡ/", vn: "tương tự, công nghệ tín hiệu truyền thống kiểu cũ truyền tay (trái nghĩa hoàn toàn với digital)", tick: false },
+  { en: "upright (adj/adv) /ˈʌpraɪt/", vn: "thẳng đứng, đứng thẳng (tư thế); ngay thẳng, chính trực (tính cách/đạo đức)", tick: false },
+  { en: "man-made (adj) /ˌmæn ˈmeɪd/", vn: "do con người làm ra, nhân tạo (bằng nghĩa hoàn toàn với artificial)", tick: false },
+  { en: "toxic (adj) /ˈtɒksɪk/", vn: "độc hại (hóa chất), độc hại/tiêu cực (mối quan hệ/môi trường làm việc; danh từ chất độc là toxin)", tick: false },
+  { en: "poisonous (adj) /ˈpɔɪzənəs/", vn: "có độc, chứa chất độc truyền qua ăn uống/gặm cắn (động từ/danh từ chất độc là poison)", tick: false },
+  { en: "harmless (adj) /ˈhɑːmləs/", vn: "vô hại, lành tính, không gây nguy hiểm (danh từ sự tổn hại là harm; động từ làm hại là harm)", tick: false },
+  { en: "abundant (adj) /əˈbʌndənt/", vn: "dồi dào, phong phú, có lượng lớn dư thừa (bẫy giới từ: be abundant in sth; danh từ là abundance)", tick: false },
+  { en: "bountiful (adj) /ˈbaʊntɪfl/", vn: "rộng rãi, hào phóng (người), dồi dào/mùa màng bội thu (Ví dụ: a bountiful harvest)", tick: false },
+  { en: "elementary (adj) /ˌelɪˈmentri/", vn: "sơ yếu, cơ bản, tiểu học (Ví dụ: elementary school / elementary grammar)", tick: false },
+  { en: "notable (adj/n) /ˈnəʊtəbl/", vn: "đáng chú ý, xuất sắc, có danh tiếng (adj; bẫy giới từ: be notable for sth); người có địa vị (n)", tick: false },
+  { en: "peaceful (adj) /ˈpiːsfl/", vn: "hòa bình, yên bình, thanh thản (danh từ hòa bình là peace)", tick: false },
+  ],
+
+  18: [
+  { en: "needy (adj) /ˈniːdi/", vn: "nghèo túng, nghèo đói cơ cực cần sự trợ giúp xã hội (danh từ gốc/động từ cần là need)", tick: false },
+  { en: "creative (adj) /kriˈeɪtɪv/", vn: "sáng tạo, đầy óc đổi mới (động từ tạo ra là create; danh từ óc sáng tạo là creativity)", tick: false },
+  { en: "unoriginal (adj) /ˌʌnəˈrɪdʒənl/", vn: "không có gốc gác độc đáo, sao chép đạo nhái, lặp lại lối mòn (trái nghĩa với original)", tick: false },
+  { en: "ubiquitous (adj) /juːˈbɪkwɪtəs/", vn: "ở đâu cũng có, phổ biến khắp mọi nơi cùng lúc (bẫy giới từ bài đọc hiểu: be ubiquitous in sth)", tick: false },
+  { en: "rare (adj) /reə(r)/", vn: "hiếm, quý hiếm (trạng từ rất hay dùng chỉ tần suất: rarely; danh từ sự quý hiếm là rarity)", tick: false },
+  { en: "voluntary (adj) /ˈvɒləntri/", vn: "tự nguyện, tình nguyện (Ví dụ: voluntary work; danh từ tình nguyện viên là volunteer)", tick: false },
+  { en: "absurd (adj) /əbˈsɜːd/", vn: "ngớ ngẩn, phi lý, nực cười một cách quái đản (danh từ sự phi lý là absurdity)", tick: false },
+  { en: "core (adj/n) /kɔː(r)/", vn: "cốt lõi, trọng tâm, cốt truyện/lõi trái cây (Ví dụ: core values - các giá trị cốt lõi)", tick: false },
+  { en: "peripheral (adj) /pəˈrɪfərəl/", vn: "thuộc ngoại vi, chu vi bên ngoài, thứ yếu không nằm trong trọng tâm (danh từ thiết bị ngoại vi máy tính)", tick: false },
+  { en: "implied (adj) /ɪmˈplaɪd/", vn: "ngụ ý, ẩn ý, được hiểu ngầm dựa trên ngữ cảnh (quá khứ phân từ của imply)", tick: false },
+  { en: "relentless (adj) /rɪˈlentləs/", vn: "tàn nhẫn không nương tay (người), liên tục gay gắt không ngừng nghỉ (thời tiết/nỗ lực/áp lực)", tick: false },
+  { en: "fake (adj/n/v) /feɪk/", vn: "giả mạo, làm nhái (adj); đồ giả, kẻ lừa đảo (n); làm giả giấy tờ/con dấu (v)", tick: false },
+  { en: "long-term (adj) /ˌlɒŋ ˈtɜːm/", vn: "dài hạn, lâu dài (kế hoạch/hậu quả; trái nghĩa hoàn toàn với short-term)", tick: false },
+  { en: "everlasting (adj) /ˌevəˈlɑːstɪŋ/", vn: "vĩnh viễn, mãi mãi, bất diệt không bao giờ kết thúc (Ví dụ: everlasting love / fame)", tick: false },
+  { en: "advantageous (adj) /ˌædvənˈteɪdʒəs/", vn: "có lợi, mang lại lợi thế cạnh tranh (cấu trúc giới từ: be advantageous to sb/sth; danh từ là advantage)", tick: false },
+{ en: "poorest (adj) /ˈpɔːrɪst/", vn: "nghèo nhất, kém nhất (dạng so sánh nhất của poor; hay gặp trong bài đọc kinh tế hoặc biểu đồ)", tick: false },
+  { en: "flat (adj) /flæt/", vn: "bằng phẳng, xẹp (lốp xe), trì trệ không tăng trưởng (biểu đồ doanh thu), căn hộ (danh từ)", tick: false },
+  { en: "strict (adj) /strɪkt/", vn: "nghiêm khắc, nghiêm ngặt (luật lệ/giáo viên; trạng từ strictly hay đi với forbid - nghiêm cấm)", tick: false },
+  { en: "disjointed (adj) /dɪsˈdʒɔɪntɪd/", vn: "rời rạc, không mạch lạc, đứt đoạn (lập luận/bài văn/kế hoạch)", tick: false },
+  { en: "understated (adj) /ˌʌndəˈsteɪtɪd/", vn: "tinh tế, không phô trương, nói giảm nói tránh (động từ understate là nói giảm bớt)", tick: false },
+  { en: "unorthodox (adj) /ʌnˈɔːθədɒks/", vn: "không chính thống, độc lạ, không đi theo lối mòn truyền thống (Ví dụ: unorthodox methods)", tick: false },
+  { en: "extraneous (adj) /ɪkˈstreɪniəs/", vn: "bên ngoài, không liên quan, ngoại lai (Ví dụ: extraneous information - thông tin thừa thãi)", tick: false },
+  { en: "moderate (adj/v) /ˈmɒdərət/", vn: "vừa phải, có mức độ, ôn hòa (adj); làm cho giảm nhẹ, điều tiết (v; /ˈmɒdəreɪt/)", tick: false },
+  { en: "measurable (adj) /ˈmeʒərəbl/", vn: "có thể đo lường được, rõ rệt nhìn thấy được (động từ gốc là measure; danh từ là measurement)", tick: false },
+  { en: "motionless (adj) /ˈməʊʃnləs/", vn: "bất động, không im lìm, không nhúc nhích (danh từ motion là sự chuyển động)", tick: false },
+  { en: "fluid (adj/n) /ˈfluːɪd/", vn: "linh hoạt, dễ thay đổi (kế hoạch/tình hình); uyển chuyển (dáng đi); chất lỏng/chất lưu (n)", tick: false },
+  { en: "ceaseless (adj) /ˈsiːsləs/", vn: "không ngừng, liên tục không dứt (Ví dụ: ceaseless efforts - nỗ lực không ngừng nghỉ)", tick: false },
+  { en: "methodical (adj) /məˈθɒdɪkl/", vn: "ngăn nắp, cẩn thận, làm việc có phương pháp bài bản (danh từ method là phương pháp)", tick: false },
+  { en: "overlapping (adj) /ˌəʊvəˈlæpɪŋ/", vn: "chồng chéo lên nhau (nhiệm vụ/lịch trình), đè lên nhau (quá khứ phân từ của overlap)", tick: false },
+  { en: "equivalent (adj/n) /ɪˈkwɪvələnt/", vn: "tương đương (bẫy giới từ: be equivalent to sth); từ/vật tương đương (n; danh từ là equivalence)", tick: false },
+  { en: "simulated (adj) /ˈsɪmjuleɪtɪd/", vn: "được mô phỏng, giả lập (môi trường/bài tập; động từ mô phỏng là simulate)", tick: false },
+  { en: "framework (n) /ˈfreɪmwɜːk/", vn: "khuôn mẫu, cơ cấu cấu trúc cơ bản (lưu ý từ này gốc là danh từ nhưng hay đứng bổ nghĩa như tính từ)", tick: false },
+  { en: "aware (adj) /əˈweə(r)/", vn: "nhận thức được, biết được (bẫy giới từ: be aware of sth; danh từ là awareness; trái nghĩa là unaware)", tick: false },
+  { en: "oblivious (adj) /əˈblɪviəs/", vn: "mù tịt, không nhận biết được gì xung quanh (bẫy giới từ nâng cao: be oblivious to/of sth)", tick: false },
+  { en: "confusing (adj) /kənˈfjuːzɪŋ/", vn: "gây bối rối, dễ gây nhầm lẫn (dùng cho vật; người bị rối dùng confused; động từ là confuse)", tick: false },
+  { en: "statistical (adj) /stəˈtɪstɪkl/", vn: "thuộc về thống gia, số liệu thống kê (danh từ số liệu là statistics)", tick: false },
+  { en: "descriptive (adj) /dɪˈskrɪptɪv/", vn: "mang tính miêu tả, tả thực (Ví dụ: descriptive essay; động từ miêu tả là describe)", tick: false },
+  { en: "decorative (adj) /ˈdekərətɪv/", vn: "để trang trí, mang tính tô điểm (động từ trang trí là decorate; danh từ là decoration)", tick: false },
+  { en: "pioneering (adj) /ˌpaɪəˈnɪərɪŋ/", vn: "tiên phong, đi đầu (công trình nghiên cứu/người; danh từ/động từ pioneer là người tiên phong)", tick: false },
+  { en: "derivative (adj/n) /dɪˈrɪvətɪv/", vn: "bắt chước, không nguyên gốc (adj); chất dẫn xuất/từ phái sinh (n; động từ gốc là derive)", tick: false },
+  { en: "malignant (adj) /məˈlɪɡnənt/", vn: "ác tính (y học: u ác), hiểm ác/có ý thù hằn (người; trái nghĩa hoàn toàn với benign)", tick: false },
+  { en: "consecutive (adj) /kənˈsekjətɪv/", vn: "liên tiếp, liền kề nhau về số lượng/thời gian (Ví dụ: for 3 consecutive days)", tick: false },
+  { en: "personal (adj) /ˈpɜːsənl/", vn: "cá nhân, riêng tư (tránh nhầm với personnel /ˌpɜːsəˈnel/ nghĩa là bộ phận nhân sự)", tick: false },
+  { en: "working (adj) /ˈwɜːkɪŋ/", vn: "đang hoạt động, thuộc về công việc (Ví dụ: working environment - môi trường làm việc)", tick: false },
+  { en: "dysfunctional (adj) /dɪsˈfʌŋkʃənl/", vn: "bị rối loạn chức năng (y học), bất hòa/không êm ấm (gia đình/tổ chức)", tick: false },
+  { en: "concentrated (adj) /ˈkɒnsntreɪtɪd/", vn: "đậm đặc (hóa chất), tập trung cao độ (nỗ lực/dân cư; động từ tập trung là concentrate)", tick: false },
+  { en: "slight (adj) /slaɪt/", vn: "nhỏ, không đáng kể, thon gầy (người; trạng từ slightly rất hay dùng trong bài viết biểu đồ)", tick: false },
+  { en: "peerless (adj) /ˈpɪələs/", vn: "vô song, không ai sánh bằng, độc bộ thiên hạ (danh từ peer là người đồng trang lứa)", tick: false },
+  { en: "biological (adj) /ˌbaɪəˈlɒdʒɪkl/", vn: "thuộc về sinh học (Ví dụ: biological parents - bố mẹ ruột; danh từ sinh học là biology)", tick: false },
+  { en: "disparate (adj) /ˈdɪspərət/", vn: "khác biệt hẳn nhau, tạp nham gồm nhiều loại không liên quan (danh từ sự khác biệt là disparity)", tick: false },
+  { en: "shared (adj) /ʃeəd/", vn: "được chia sẻ, có chung, chung giữa nhiều người (Ví dụ: shared responsibility)", tick: false },
+  { en: "one-sided (adj) /ˌwʌn ˈsaɪdɪd/", vn: "phiến diện, một chiều (lập luận), lệch cánh/một bên áp đảo hoàn toàn (trận đấu)", tick: false },
+  { en: "relaxed (adj) /rɪˈlækst/", vn: "thoải mái, thư giãn (người), lỏng lẻo/không nghiêm khắc (nội quy/luật lệ; động từ là relax)", tick: false },
+  { en: "knotty (adj) /ˈnɒti/", vn: "nhiều nút thắt, rắc rối, đau đầu khó giải quyết (vấn đề/bài toán; danh từ knot là nút thắt)", tick: false },
+  { en: "brittle (adj) /ˈbrɪtl/", vn: "giòn, dễ gãy vụn (vật liệu/xương), dễ vỡ/dễ rạn nứt (mối quan hệ/tâm trạng)", tick: false },
+  { en: "fitful (adj) /ˈfɪtfl/", vn: "chập chờn, không đều, từng đợt ngắt quãng (Ví dụ: fitful sleep - giấc ngủ chập chờn)", tick: false },
+  { en: "salient (adj) /ˈseɪliənt/", vn: "nổi bật, trọng tâm, dễ thấy nhất (Ví dụ: salient features - các đặc điểm nổi bật nhất)", tick: false },
+  { en: "detrimental (adj) /ˌdetrɪˈmentl/", vn: "có hại, gây bất lợi lớn (bẫy giới từ bắt buộc: be detrimental to sth; danh từ sự tổn hại là detriment)", tick: false },
+  { en: "sturdy (adj) /ˈstɜːdi/", vn: "vững chắc, kiên cố (bàn ghế/nhà cửa), tráng kiện/mạnh mẽ (thể chất người)", tick: false },
+  { en: "elegant (adj) /ˈelɪɡənt/", vn: "thanh lịch, nhã nhặn (bề ngoài/thiết kế), tinh tế ngắn gọn (lập luận/cách giải toán)", tick: false },
+  { en: "crude (adj) /kruːd/", vn: "thô, chưa qua chế biến (Ví dụ: crude oil - dầu thô), thô thiển/thô lỗ (hành vi), sơ sài (bản phác thảo)", tick: false },
+  ],
+
+  19: [
+{ en: "debatable (adj) /dɪˈbeɪtəbl/", vn: "còn gây tranh cãi, chưa chắc chắn, có thể bàn luận lại (động từ/danh từ là debate)", tick: false },
+  { en: "connected (adj) /kəˈnektɪd/", vn: "có kết nối, có mối quan hệ qua lại (bẫy giới từ: be connected to/with sb/sth)", tick: false },
+  { en: "scattered (adj) /ˈskætəd/", vn: "rải rác, l rác, thưa thớt (dân cư/mây/đồ vật; quá khứ phân từ của động từ scatter)", tick: false },
+  { en: "serious (adj) /ˈsɪəriəs/", vn: "nghiêm trọng (vấn đề/bệnh tật), nghiêm túc (tính cách; danh từ sự nghiêm trọng là seriousness)", tick: false },
+  { en: "piercing (adj) /ˈpɪəsɪŋ/", vn: "buốt giá/thấu xương (thời tiết), sắc sảo/như nhìn thấu (ánh mắt), nhói buốt (nỗi đau)", tick: false },
+  { en: "impossible (adj) /ɪmˈpɒsəbl/", vn: "không thể thực hiện được, bất khả thi (danh từ sự bất khả thi là impossibility)", tick: false },
+  { en: "closing (adj) /ˈkləʊzɪŋ/", vn: "đóng lại, kết thúc (Ví dụ: closing speech - bài phát biểu bế mạc; trái nghĩa là opening)", tick: false },
+  { en: "evolving (adj) /ɪˈvɒlvɪŋ/", vn: "đang tiến hóa, đang phát triển không ngừng (danh từ sự tiến hóa là evolution; động từ là evolve)", tick: false },
+  { en: "cryptic (adj) /ˈkrɪptɪk/", vn: "bí ẩn, khó hiểu, mang tính đánh đố/mật mã (Ví dụ: a cryptic message - tin nhắn bí ẩn)", tick: false },
+  { en: "discernible (adj) /dɪˈsɜːnəbl/", vn: "có thể nhận thức được, có thể thấy rõ/phân biệt được (động từ nhìn thấu là discern)", tick: false },
+  { en: "prejudiced (adj) /ˈpredʒʊdɪst/", vn: "có thành kiến, định kiến từ trước (cấu trúc giới từ: be prejudiced against sb/sth; danh từ là prejudice)", tick: false },
+  { en: "shifting (adj) /ˈʃɪftɪŋ/", vn: "đang dịch chuyển, thay đổi liên tục (Ví dụ: shifting sands / shifting priorities; động từ là shift)", tick: false },
+  { en: "utilitarian (adj) /ˌjuːtɪlɪˈteəriən/", vn: "thiết thực, thực dụng, vị lợi (chỉ chú trọng vào công năng sử dụng hơn là vẻ đẹp thẩm mỹ)", tick: false },
+  { en: "ordered (adj) /ˈɔːdəd/", vn: "có thứ tự, được sắp xếp ngăn nắp/bài bản (trái nghĩa hoàn toàn với disordered)", tick: false },
+  { en: "haphazard (adj) /hæpˈhæzəd/", vn: "bừa bãi, ngẫu nhiên, vô tổ chức vô kỷ luật (không có bất kỳ kế hoạch hay hệ thống nào)", tick: false },
+  { en: "conflicting (adj) /kənˈflɪktɪŋ/", vn: "mâu thuẫn, trái ngược nhau, xung đột (Ví dụ: conflicting evidence - bằng chứng mâu thuẫn)", tick: false },
+  { en: "principled (adj) /ˈprɪnsəpld/", vn: "nguyên tắc, có đạo đức, luôn hành xử theo quy chuẩn đúng đắn (danh từ gốc là principle)", tick: false },
+  { en: "corrupt (adj/v) /kəˈrʌpt/", vn: "tham nhũng, đồi bại, suy thoái đạo đức (adj); đục khoét, làm cho hư hỏng (v; danh từ là corruption)", tick: false },
+  { en: "customized (adj) /ˈkʌstəmaɪzd/", vn: "được tùy biến, thiết kế riêng theo yêu cầu của khách hàng (động từ cá nhân hóa là customize)", tick: false },
+  { en: "math-based (adj) /mæθ beɪst/", vn: "dựa trên nền tảng toán học, sử dụng các phép tính toán học để phát triển", tick: false },
+  { en: "perceptible (adj) /pəˈseptəbl/", vn: "có thể cảm nhận được, có thể nhận thấy qua các giác quan (động từ cảm nhận là perceive)", tick: false },
+  { en: "plumb (adj/adv/v) /plʌm/", vn: "thẳng đứng hoàn toàn (xây dựng); chính xác/hoàn toàn (adv); đo độ sâu/tìm hiểu cặn kẽ (v)", tick: false },
+  { en: "explosive (adj/n) /ɪkˈspləʊsɪv/", vn: "dễ nổ, gây bùng nổ (biểu đồ tăng trưởng/tính cách; adj); chất nổ (n; động từ là explode)", tick: false },
+  { en: "idiosyncratic (adj) /ˌɪdiəsɪŋˈkrætɪk/", vn: "có phong cách riêng biệt, lập dị, độc đáo cấu thành từ bản chất cá nhân (danh từ là idiosyncrasy)", tick: false },
+  { en: "preposterous (adj) /prɪˈpɒstərəs/", vn: "ngớ ngẩn, phi lý, hoàn toàn trái ngược với lẽ tự nhiên và lý trí (bằng nghĩa với absurd)", tick: false },
+  { en: "ludicrous (adj) /ˈluːdɪkrəs/", vn: "lố bịch, nực cười, đáng khinh ghét vì quá ngớ ngẩn (Ví dụ: a ludicrous suggestion)", tick: false },
+  { en: "archaic (adj) /ɑːˈkeɪɪk/", vn: "cổ xưa, lỗi thời, thuộc về một thời đại lịch sử đã qua (Ví dụ: archaic laws - những bộ luật lỗi thời)", tick: false },
+  { en: "indelible (adj) /ɪnˈdeləbl/", vn: "không thể tẩy sạch, không thể phai mờ (Ví dụ: an indelible ink / an indelible impression - ấn tượng khó phai)", tick: false },
+  { en: "quixotic (adj) /kwɪkˈsɒtɪk/", vn: "hão huyền, viển vông, lý tưởng hóa một cách ngây thơ (bắt nguồn từ nhân vật Don Quixote)", tick: false },
+  { en: "fastidious (adj) /fæˈstɪdiəs/", vn: "khó tính, kỹ tính, quá soi xét tỉ mỉ từng chi tiết nhỏ (Ví dụ: a fastidious researcher)", tick: false },
+  { en: "capricious (adj) /kəˈprɪʃəs/", vn: "thất thường, sáng nắng chiều mưa, dễ thay đổi không vì lý do gì (tâm trạng/thời tiết)", tick: false },
+  { en: "ostentatious (adj) /ˌɒstenˈteɪʃəs/", vn: "phô trương, khoe khoang của cải/tài năng để gây sự chú ý (danh từ sự phô trương là ostentation)", tick: false },
+  { en: "pretentious (adj) /prɪˈtenʃəs/", vn: "tự cao, kiêu kỳ, cố làm ra vẻ thanh cao/hiểu biết hơn người thực tế (động từ giả vờ là pretend)", tick: false },
+  { en: "enigmatic (adj) /ˌenɪɡˈmætɪk/", vn: "bí ẩn, bí hiểm, như một câu đố khó giải mã (Ví dụ: an enigmatic smile - nụ cười bí ẩn)", tick: false },
+  { en: "lucid (adj) /ˈluːsɪd/", vn: "rõ ràng, dễ hiểu (văn phong/lập luận), tỉnh táo/minh mẫn (đầu óc người già; danh từ là lucidity)", tick: false },
+  { en: "pellucid (adj) /pəˈluːsɪd/", vn: "trong suốt, trong vắt (nước/thủy tinh), cực kỳ minh bạch và dễ hiểu (lập luận văn bản)", tick: false },
+  { en: "ambivalent (adj) /æmˈbɪvələnt/", vn: "mâu thuẫn trong cảm xúc, vừa yêu vừa ghét, phân vân (cấu trúc: be ambivalent about sth)", tick: false },
+  { en: "malicious (adj) /məˈlɪʃəs/", vn: "hiểm độc, ác ý, có tâm địa độc địa muốn hại người (danh từ lòng ác độc là malice)", tick: false },
+  { en: "sinister (adj) /ˈsɪnɪstə(r)/", vn: "gở, đầy sát khí, có vẻ đe dọa/ám muội (Ví dụ: a sinister plot - một âm mưu ám muội)", tick: false },
+  { en: "innocuous (adj) /ɪˈnɒkjuəs/", vn: "vô hại, không có ý ác, không gây xúc phạm ai (Ví dụ: an innocuous remark - một lời nhận xét vô thưởng vô phạt)", tick: false },
+  { en: "pernicious (adj) /pəˈnɪʃəs/", vn: "nguy hại, độc hại, gây tổn hại lớn một cách âm thầm (Ví dụ: pernicious effects of fake news)", tick: false },
+  { en: "insidious (adj) /ɪnˈsɪdiəs/", vn: "quỷ quyệt, xảo quyệt, tiến triển âm thầm nhưng để lại hậu quả khôn lường (bệnh tật/mưu đồ)", tick: false },
+  { en: "salubrious (adj) /səˈluːbriəs/", vn: "lành mạnh, tốt cho sức khỏe (khí hậu/nơi ở trong lành; tránh nhầm với salutary - có lợi từ bài học sai lầm)", tick: false },
+  { en: "discretionary (adj) /dɪˈskreʃənri/", vn: "tùy nghi sử dụng, tự định đoạt theo ý muốn chứ không bắt buộc (Ví dụ: discretionary income - thu nhập khả dụng)", tick: false },
+  { en: "cursory (adj) /ˈkɜːsəri/", vn: "lướt qua, sơ sài, qua loa đại khái (Ví dụ: a cursory glance - một cái nhìn lướt qua)", tick: false },
+  { en: "disinterested (adj) /dɪsˈɪntrestɪd/", vn: "vô tư, khách quan, không vụ lợi (vì không có quyền lợi liên quan; tuyệt đối tránh nhầm với uninterested là thờ ơ)", tick: false },
+{ en: "facetious (adj) /fəˈsiːʃəs/", vn: "khôi hài không đúng chỗ, cợt nhả trước vấn đề nghiêm túc (Ví dụ: a facetious remark)", tick: false },
+  { en: "sarcastic (adj) /sɑːˈkæstɪk/", vn: "mỉa mai, châm biếm, nói ngược nghĩa để giễu cợt (danh từ sự mỉa mai là sarcasm)", tick: false },
+  { en: "cynical (adj) /ˈsɪnɪkl/", vn: "hoài nghi nhân tính, luôn nghĩ người khác hành động vì tư lợi ích kỷ (danh từ người hoài nghi là cynic)", tick: false },
+  { en: "skeptical (adj) /ˈskeptɪkl/", vn: "hoài nghi, ngờ vực tính xác thực của sự việc (cấu trúc giới từ: be skeptical about/of sth)", tick: false },
+  { en: "dogmatic (adj) /dɒɡˈmætɪk/", vn: "giáo điều, độc đoán, áp đặt niềm tin của mình mà không chấp nhận tranh luận (danh từ là dogma)", tick: false },
+  ],
+
+  20: [
+  { en: "cohesive (adj) /kəʊˈhiːsɪv/", vn: "gắn kết, có tính liên kết chặt chẽ giữa các thành phần (Ví dụ: a cohesive essay / a cohesive society)", tick: false },
+  { en: "anomalous (adj) /əˈnɒmələs/", vn: "bất thường, dị thường, lệch khỏi quy chuẩn chung (danh từ sự bất thường là anomaly)", tick: false },
+  { en: "aberrant (adj) /æˈberənt/", vn: "lầm lạc, lệch lạc, khác thường theo hướng tiêu cực (Ví dụ: aberrant behavior - hành vi lệch chuẩn)", tick: false },
+  { en: "eccentric (adj/n) /ɪkˈsentrɪk/", vn: "lập dị, kỳ quặc (adj); người có tính khí lập dị nhưng lập dị kiểu vô hại (n; danh từ là eccentricity)", tick: false },
+  { en: "prevalent (adj) /ˈprevələnt/", vn: "phổ biến, thịnh hành, đang diễn ra rất nhiều (tại một thời điểm/nơi chốn; danh từ là prevalence)", tick: false },
+  { en: "rampant (adj) /ˈræmpənt/", vn: "hung hăng, lan tràn không thể kiểm soát (tệ nạn, dịch bệnh, lạm phát; Ví dụ: rampant corruption)", tick: false },
+  { en: "systemic (adj) /sɪˈstemɪk/", vn: "có tính hệ thống, ảnh hưởng đến toàn bộ cơ thể hoặc toàn bộ tổ chức (tránh nhầm với systematic là có phương pháp)", tick: false },
+  { en: "endemic (adj) /enˈdemɪk/", vn: "đặc hữu, khu biệt, chỉ xuất hiện phổ biến ở một địa phương/sắc dân cụ thể (dịch bệnh/nạn đói)", tick: false },
+  { en: "pandemic (adj/n) /pænˈdemɪk/", vn: "đại dịch quốc tế, lan rộng toàn cầu (n); có tính chất đại dịch trên diện rộng (adj)", tick: false },
+  { en: "obstinate (adj) /ˈɒbstɪnət/", vn: "bướng bỉnh, ngoan cố, cứng đầu không chịu thay đổi ý định (bằng nghĩa với stubborn)", tick: false },
+  { en: "docile (adj) /ˈdaʊsaɪl/ hoặc /ˈdɒsaɪl/", vn: "dễ bảo, ngoan ngoãn, dễ uốn nắn hay phục tùng (người/vật nuôi; danh từ là docility)", tick: false },
+  { en: "compliant (adj) /kəmˈplaɪənt/", vn: "hay chiều theo, tuân thủ đúng quy định/mệnh lệnh (cấu trúc: be compliant with sth; động từ là comply)", tick: false },
+  { en: "vehement (adj) /ˈviːəmənt/", vn: "mãnh liệt, kịch liệt, đầy cảm xúc giận dữ (thường đi với phản đối: vehement opposition/denial)", tick: false },
+  { en: "fervent (adj) /ˈfɜːvənt/", vn: "nồng nhiệt, tha thiết, chứa đựng niềm tin vô cùng mạnh mẽ (Ví dụ: a fervent supporter)", tick: false },
+  { en: "ardent (adj) /ˈɑːdnt/", vn: "hăng hái, sôi nổi, cuồng nhiệt (Ví dụ: an ardent admirer - người ngưỡng mộ cuồng nhiệt)", tick: false },
+  { en: "apathetic (adj) /ˌæpəˈθetɪk/", vn: "thờ ơ, hờ hững, lãnh đạm trước các vấn đề chung (danh từ sự thờ ơ vô cảm là apathy)", tick: false },
+  { en: "nonchalant (adj) /ˈnɒnʃələnt/", vn: "lãnh đạm, vô tư, làm ra vẻ phớt lờ/bình thản không lo nghĩ (dù có thể tình huống đang căng thẳng)", tick: false },
+  { en: "aloof (adj) /əˈluːf/", vn: "xa cách, cô độc, có thái độ giữ khoảng cách với người khác (cấu trúc: giữ mình tách biệt - giữ aloof from sb/sth)", tick: false },
+  { en: "antagonistic (adj) /ænˌtæɡəˈnɪstɪk/", vn: "đối địch, thù địch, luôn chống đối kịch liệt (bẫy giới từ: be antagonistic to/towards sb; danh từ là antagonism)", tick: false },
+  { en: "cordial (adj) /ˈkɔːdiəl/ hoặc /ˈkɔːdʒl/", vn: "thân ái, chân thành, nồng hậu (thường dùng trong bối cảnh giao tế trang trọng: a cordial invitation)", tick: false },
+  { en: "affable (adj) /ˈæfəbl/", vn: "lịch thiệp, dễ gần, niềm nở và dễ chuyện trò (danh từ là affability)", tick: false },
+  { en: "scrupulous (adj) /ˈskruːpjələs/", vn: "cực kỳ tận tâm, tỉ mỉ chu đáo để không sai sót (Ví dụ: scrupulous attention to detail), liêm khiết (đạo đức)", tick: false },
+  { en: "negligent (adj) /ˈneɡlɪdʒənt/", vn: "cẩu thả, lơ là nhiệm vụ, bỏ bê không hoàn thành trách nhiệm (danh từ sự tắc trách là negligence)", tick: false },
+  { en: "lax (adj) /læks/", vn: "lỏng lẻo, không nghiêm chỉnh, không chặt chẽ (kỷ luật, luật pháp, cơ bắp; danh từ tính lỏng lẻo là laxity)", tick: false },
+  { en: "draconian (adj) /drəˈkəʊniən/", vn: "hết sức hà khắc, vô cùng tàn nhẫn và nghiêm khốc (luật lệ, biện pháp xử lý; bắt nguồn từ bạo chúa Draco)", tick: false },
+  { en: "verbose (adj) /vɜːˈbəʊs/", vn: "dài dòng, văn tự, sử dụng quá nhiều từ ngữ không cần thiết (danh từ sự dài dòng là verbosity)", tick: false },
+  { en: "loquacious (adj) /ləˈkweɪʃəs/", vn: "liến thoắng, ba hoa, có xu hướng nói rất nhiều (bằng nghĩa với talkative; danh từ là loquacity)", tick: false },
+  { en: "garrulous (adj) /ˈɡærələs/", vn: "nói nhiều tai hại, nói huyên thuyên về những điều tầm thường không quan trọng (danh từ là garrulity)", tick: false },
+  { en: "taciturn (adj) /ˈtæsɪtɜːn/", vn: "ít nói, lầm lì, có tính khí trầm mặc ít khi chịu mở lời chuyện trò (danh từ là taciturnity)", tick: false },
+  { en: "reticent (adj) /ˈretɪsnt/", vn: "kín tiếng, dè dặt, không muốn chia sẻ thông tin/cảm xúc cá nhân (cấu trúc: be reticent about sth)", tick: false },
+  { en: "esoteric (adj) /ˌesəˈterɪk/", vn: "mang tính nội bộ, thâm sâu, chỉ có một nhóm nhỏ chuyên gia hiểu được (Ví dụ: esoteric knowledge)", tick: false },
+  { en: "recondite (adj) /rɪˈkɒndaɪt/ hoặc /ˈrekəndaɪt/", vn: "mơ hồ, thâm thúy, khó hiểu đối với trí tuệ thông thường (chủ đề khoa học/triết học sâu xa)", tick: false },
+  { en: "manifest (adj/v) /ˈmænɪfest/", vn: "rõ ràng, hiển nhiên trước mắt (adj); biểu lộ, biểu thị rõ ràng ra bên ngoài (v; danh từ là manifestation)", tick: false },
+  { en: "palpable (adj) /ˈpæl pəbl/", vn: "rõ rệt đến mức cảm giác như sờ thấy được (Ví dụ: a palpable tension - bầu không khí căng thẳng rõ rệt)", tick: false },
+  { en: "perennially (adv) /pəˈreniəli/", vn: "vĩnh viễn, trường cửu, lặp đi lặp lại quanh năm suốt tháng (từ gốc tính từ là perennial)", tick: false },
+  { en: "perpetual (adj) /pəˈpetʃuəl/", vn: "liên tục không ngừng, vĩnh viễn, kéo dài suốt đời (Ví dụ: perpetual motion - chuyển động vĩnh cửu)", tick: false },
+  { en: "incessant (adj) /ɪnˈsesnt/", vn: "không ngừng nghỉ, liên miên gây khó chịu (Ví dụ: incessant rain / incessant complaints)", tick: false },
+  { en: "spurious (adj) /ˈspjʊəriəs/", vn: "giả mạo, sai trái, không có cơ sở đúng đắn (lập luận, tài liệu; Ví dụ: spurious arguments)", tick: false },
+  { en: "specious (adj) /ˈspiːʃəs/", vn: "chỉ có vẻ đúng ngoài mặt, ngụy biện, đánh lừa thị giác/trí tuệ (Ví dụ: a specious claim)", tick: false },
+  { en: "fallacious (adj) /fəˈleɪʃəs/", vn: "sai lầm, dựa trên một lập luận ngụy biện/lỗi logic (danh từ ngụy biện lỗi logic là fallacy)", tick: false },
+  { en: "astute (adj) /əˈstjuːt/", vn: "tinh khôn, sắc sảo, có khả năng đánh giá tình huống cực kỳ nhanh và chính xác để trục lợi", tick: false },
+  { en: "shrewd (adj) /ʃruːd/", vn: "khôn ngoan, sắc sảo, nhạy bén (đặc biệt trong kinh doanh hoặc chính trị; Ví dụ: a shrewd businessman)", tick: false },
+  { en: "naive (adj) /naɪˈiːv/", vn: "ngây thơ, khờ khạo, cả tin vì thiếu trải nghiệm sống (danh từ sự ngây thơ khờ khạo là naivety)", tick: false },
+  { en: "gullible (adj) /ˈɡʌləbl/", vn: "nhẹ dạ, cả tin, dễ bị lừa gạt phỉnh phờ (danh từ tính cả tin là gullibility)", tick: false },
+  { en: "ingenious (adj) /ɪnˈdʒiːniəs/", vn: "khéo léo, tài tình, mưu trí (phát minh, giải pháp; tránh nhầm với ingenuous nghĩa là chân chất)", tick: false },
+  { en: "mundane (adj) /mʌnˈdeɪn/", vn: "tầm thường, trần tục, thuộc về cuộc sống tẻ nhạt thường nhật (Ví dụ: mundane chores - công việc vặt hàng ngày)", tick: false },
+  { en: "banal (adj) /bəˈnɑːl/ hoặc /ˈbeɪnl/", vn: "tầm thường, vô vị, sáo rỗng do lặp lại quá nhiều (danh từ sự sáo rỗng vô vị là banality)", tick: false },
+  { en: "trite (adj) /traɪt/", vn: "cũ rích, sáo mòn, không còn giá trị hay chiều sâu vì ai cũng nói rồi (Ví dụ: a trite remark)", tick: false },
+  { en: "hackneyed (adj) /ˈhæknid/", vn: "nhàm chán, lỗi thời, dùng quá nhiều thành lối mòn (ngôn từ, ý tưởng; Ví dụ: hackneyed clichés)", tick: false },
+  { en: "abstruse (adj) /əbˈstruːs/", vn: "khó hiểu, thâm sâu bí hiểm, đòi hỏi tư duy cực cao để tiếp cận (Ví dụ: abstruse философ lý luận)", tick: false },
+  { en: "labyrinthine (adj) /ˌlæbəˈrɪnθaɪn/", vn: "loằng ngoằng, như ma trận, cực kỳ rối rắm phức tạp (hệ thống pháp luật/mê cung; danh từ là labyrinth)", tick: false },
+  { en: "tortuous (adj) /ˈtɔːtʃuəs/", vn: "ngoằn ngoèo, quanh co (đường sá), khúc khuỷu/phức tạp dài dòng (quá trình thương thảo; tránh nhầm với torturous)", tick: false },
+  { en: "embryonic (adj) /ˌembriˈɒnɪk/", vn: "phôi thai, còn trong trứng nước, mới bắt đầu hình thành sơ khai (danh từ phôi thai là embryo)", tick: false },
+  { en: "nascent (adj) /ˈnæsnt/ hoặc /ˈneɪsnt/", vn: "non trẻ, mới chớm nở, đang có triển vọng phát triển (Ví dụ: a nascent industry - ngành công nghiệp non trẻ)", tick: false },
+  { en: "vestigial (adj) /veˈstɪdʒiəl/", vn: "thuộc về vết tích, tàn tích, còn sót lại từ quá khứ nhưng đã tiêu biến chức năng (y học/lịch sử)", tick: false },
+  { en: "inert (adj) /ɪˈnɜːt/", vn: "trơ, bất động, không có phản ứng hóa học (hóa học) hoặc thiếu sinh khí (người; danh từ là inertia)", tick: false },
+  { en: "lethargic (adj) /ləˈθɑːdʒɪk/", vn: "uể oải, ngủ lịm mệt mỏi, thiếu sức sống (do kiệt sức hoặc bệnh tật; danh từ là lethargy)", tick: false },
+  ],
+
+  21: [
+  { en: "boisterous (adj) /ˈbɔɪstərəs/", vn: "náo nhiệt, ồn ào, năng nổ náo động (trẻ em, đám đông, sóng gió cuộn trào)", tick: false },
+  { en: "rowdy (adj) /ˈraʊdi/", vn: "om sòm, mất trật tự, ầm ĩ gây náo loạn (thường có xu hướng bạo lực hoặc thô lỗ)", tick: false },
+  { en: "serene (adj) /səˈriːn/", vn: "thanh bình, tĩnh lặng, phong thái an nhiên tự tại (tâm hồn, bầu trời; danh từ sự thanh bình là serenity)", tick: false },
+  { en: "placid (adj) /ˈplæsɪd/", vn: "bình yên, điềm tĩnh, ít khi bị kích động hay nổi sóng (tính cách, mặt hồ phẳng lặng)", tick: false },
+  { en: "impeccable (adj) /ɪmˈpekəbl/", vn: "hoàn hảo, không một tì vết, đạt đến quy chuẩn cao nhất không thể chê vào đâu được (Ví dụ: impeccable manners)", tick: false },
+  { en: "blemished (adj) /ˈblemɪʃt/", vn: "có tì vết, bị hoen ố, bị làm giảm giá trị do có vết xước/lỗi sai (danh từ khuyết điểm vết ố là blemish)", tick: false },
+  { en: "pristine (adj) /ˈprɪstiːn/", vn: "nguyên sơ, thuần khiết như mới, chưa hề bị con người hay thời gian hủy hoại (Ví dụ: pristine beaches)", tick: false },
+  { en: "untainted (adj) /ʌnˈteɪntɪd/", vn: "không bị vấy bẩn, trong sạch, chưa bị ô nhiễm/thao túng (danh từ vết nhơ là taint)", tick: false },
+  { en: "contaminated (adj) /kənˈtæmɪneɪtɪd/", vn: "bị ô nhiễm, nhiễm độc, nhiễm khuẩn (nguồn nước, thực phẩm; động từ là contaminate)", tick: false },
+  { en: "adulterated (adj) /əˈdʌltəreɪtɪd/", vn: "bị pha tạp, làm giả/làm giảm chất lượng bằng cách trộn tạp chất độc hại (thực phẩm/xăng dầu)", tick: false },
+  { en: "virulent (adj) /ˈvɪrʊlənt/ hoặc /ˈvɪrjələnt/", vn: "độc hại nguy hiểm, có độc tính cực mạnh truyền bệnh nhanh (y học); chứa đầy sự thù hận (lời nói)", tick: false },
+  { en: "hazardous (adj) /ˈhæzədəs/", vn: "nguy hiểm, rủi ro cao gây tai nạn hoặc độc hại (Ví dụ: hazardous waste - chất thải độc hại)", tick: false },
+  { en: "perilous (adj) /ˈperələs/", vn: "hiểm nghèo, đầy rẫy hiểm nguy đe dọa tính mạng (mức độ cao hơn dangerous; danh từ sự hiểm nguy là peril)", tick: false },
+  { en: "precarious (adj) /prɪˈkeəriəs/", vn: "bấp bênh, hiểm nghèo, không ổn định dễ sụp đổ/ngã xuống (vị trí đứng, tình hình tài chính)", tick: false },
+  { en: "versatile (adj) /ˈvɜːsətaɪl/", vn: "linh hoạt, đa năng, có thể làm được nhiều việc hoặc dùng vào nhiều mục đích (danh từ là versatility)", tick: false },
+  { en: "inflexible (adj) /ɪnˈfleksebl/", vn: "cứng nhắc, không linh hoạt, từ chối thay đổi quy chuẩn (trái nghĩa hoàn toàn với flexible)", tick: false },
+  { en: "obdurate (adj) /ˈɒbdjʊrət/", vn: "ngoan cố, cứng lòng, trơ lì từ chối sửa sai hay chịu sự tác động từ lòng trắc ẩn", tick: false },
+  { en: "adamant (adj) /ˈædəmənt/", vn: "kiên quyết, cứng rắn, một mực không chịu thay đổi ý kiến hay nhượng bộ trước áp lực", tick: false },
+  { en: "malleable (adj) /ˈmæliəbl/", vn: "dễ dát mỏng/uốn nắn (kim loại), dễ bị tác động hay thay đổi quan điểm theo người khác (tính cách)", tick: false },
+{ en: "plastic (adj) /ˈplæstɪk/", vn: "dễ uốn nắn, tạo hình (Ví dụ: plastic brain - não bộ có tính linh hoạt), giả tạo/gượng gạo (nụ cười)", tick: false },
+  { en: "dubious (adj) /ˈdjuːbiəs/", vn: "mơ hồ, đáng ngờ, đầy hoài nghi (Ví dụ: a dubious claim; danh từ sự mơ hồ là dubiety)", tick: false },
+  { en: "credulous (adj) /ˈkredjələs/", vn: "nhẹ dạ, cả tin, dễ bị lừa (bằng nghĩa với gullible; danh từ sự cả tin là credulity)", tick: false },
+  { en: "perspicacious (adj) /ˌpɜːspɪˈkeɪʃəs/", vn: "sáng suốt, minh mẫn, có đầu óc nhạy bén nhìn thấu bản chất vấn đề (danh từ là perspicacity)", tick: false },
+  { en: "discerning (adj) /dɪˈsɜːnɪŋ/", vn: "sáng suốt, có gu thẩm mỹ cao, biết chọn lọc tinh tường (Ví dụ: a discerning customer)", tick: false },
+  { en: "ingenuous (adj) /ɪnˈdʒenjuəs/", vn: "chân chất, thật thà, ngây thơ một cách tự nhiên (tuyệt đối tránh nhầm với ingenious là tài tình)", tick: false },
+  { en: "candid (adj) /ˈkændɪd/", vn: "thẳng thắn, bộc trực, ngay thẳng (Ví dụ: a candid discussion; danh từ sự thẳng thắn là candor)", tick: false },
+  { en: "unequivocal (adj) /ˌʌnɪˈkwɪvəkl/", vn: "rõ ràng, dứt khoát, chỉ có một nghĩa duy nhất không thể hiểu lầm (trái nghĩa hoàn toàn với equivocal)", tick: false },
+  { en: "arcane (adj) /ɑːˈkeɪn/", vn: "bí ẩn, kỳ bí, thâm sâu chỉ có số ít người biết được (bằng nghĩa với esoteric)", tick: false },
+  { en: "pedantic (adj) /pɪˈdæntɪk/", vn: "mọt sách, rập khuôn giáo điều, quá chú trọng vào tiểu tiết luật lệ (danh từ người mọt sách là pedant)", tick: false },
+  { en: "erudite (adj) /ˈerʊdaɪt/", vn: "uyên bác, thông thái, có học thức sâu rộng (Ví dụ: an erudite scholar; danh từ là erudition)", tick: false },
+  { en: "knowledgeable (adj) /ˈnɒlɪdʒəbl/", vn: "am hiểu, có kiến thức vững vàng (cấu trúc giới từ: be knowledgeable about sth)", tick: false },
+  { en: "ignorant (adj) /ˈɪɡnərənt/", vn: "ngu muội, thiếu hiểu biết, không có kiến thức (cấu trúc: be ignorant of/about sth; danh từ là ignorance)", tick: false },
+  { en: "illiterate (adj/n) /ɪˈlɪtərət/", vn: "mù chữ, không biết đọc biết viết (adj/n); mù công nghệ/thông tin (Ví dụ: digitally illiterate)", tick: false },
+  { en: "eloquent (adj) /ˈeləkwənt/", vn: "hùng hồn, có tài hùng biện, có sức thuyết phục cao (ngôn từ/người; danh từ là eloquence)", tick: false },
+  { en: "laconic (adj) /ləˈkɒnɪk/", vn: "vắn tắt, súc tích, sử dụng rất ít từ ngữ nhưng đủ ý (Ví dụ: a laconic reply)", tick: false },
+  { en: "pithy (adj) /ˈpɪθi/", vn: "ngắn gọn mà thâm thúy, súc tích và đầy uy lực (châm ngôn/lời khuyên; danh từ phần cốt lõi là pith)", tick: false },
+  { en: "brief (adj/n/v) /briːf/", vn: "ngắn gọn, vắn tắt (adj); bản tóm tắt luận điểm (n); tóm tắt nhiệm vụ cho ai trước khi làm (v)", tick: false },
+  { en: "momentary (adj) /ˈməʊməntri/", vn: "thoáng qua, chốc lát, chỉ kéo dài trong khoảnh khắc (tránh nhầm với momentous là trọng đại)", tick: false },
+  { en: "perennial (adj) /pəˈreniəl/", vn: "bền vững quanh năm, kéo dài mãi mãi, lặp đi lặp lại liên tục (Ví dụ: a perennial problem)", tick: false },
+  { en: "periodic (adj) /ˌpɪəriˈɒdɪk/", vn: "định kỳ, theo chu kỳ đều đặn (Ví dụ: periodic reviews; danh từ bảng tuần hoàn là periodic table)", tick: false },
+  { en: "desultory (adj) /ˈdesəltəri/", vn: "rời rạc, không phương hướng, làm việc tùy hứng không có kế hoạch hệ thống", tick: false },
+  { en: "inadvertent (adj) /ˌɪnədˈvɜːtənt/", vn: "vô tình, không chú ý, do sơ xuất (Ví dụ: an inadvertent error; trạng từ là inadvertently)", tick: false },
+  { en: "unintentional (adj) /ˌʌnɪnˈtenʃənl/", vn: "vô ý, không có chủ đích trước (trái nghĩa hoàn toàn với intentional / deliberate)", tick: false },
+  { en: "fortuitous (adj) /fɔːˈtjuːɪtəs/", vn: "tình cờ, ngẫu nhiên mà lại mang đến may mắn (Ví dụ: a fortuitous meeting)", tick: false },
+  { en: "serendipitous (adj) /ˌserənˈdɪpətəs/", vn: "tình cờ phát hiện ra những điều tốt đẹp một cách đầy bất ngờ (danh từ sự may mắn bất ngờ là serendipity)", tick: false },
+  { en: "catastrophic (adj) /ˌkætəˈstrɒfɪk/", vn: "thảm khốc, gây tai họa nặng nề (thiên tai/hậu quả kinh tế; danh từ thảm họa là catastrophe)", tick: false },
+  { en: "disastrous (adj) /dɪˈzɑːstrəs/", vn: "tai hại, thảm hại, mang lại thất bại ê chề (danh từ thảm họa/tai ương là disaster)", tick: false },
+  { en: "calamitous (adj) /kəˈlæmɪtəs/", vn: "gây tai ương, gây tổn thất cực kỳ nghiêm trọng (danh từ tai ương lớn là calamity)", tick: false },
+  { en: "deleterious (adj) /ˌdeləˈtɪəriəs/", vn: "có hại, độc hại, gây suy giảm chất lượng (Ví dụ: deleterious effects on health)", tick: false },
+  { en: "harmful (adj) /ˈhɑːmfl/", vn: "gây hại, có tác động xấu (cấu trúc giới từ bắt buộc: be harmful to sb/sth; động từ là harm)", tick: false },
+  { en: "salutary (adj) /ˈsæljətri/", vn: "có lợi, bổ ích (đặc biệt là bài học kinh nghiệm rút ra từ một trải nghiệm cay đắng hoặc sai lầm)", tick: false },
+  { en: "wholesome (adj) /ˈhəʊlsəm/", vn: "lành mạnh, tốt cho thể chất (đồ ăn) hoặc tốt cho tinh thần/đạo đức (phim ảnh/sách báo)", tick: false },
+  { en: "noxious (adj) /ˈnɒkʃəs/", vn: "độc hại, có mùi hôi thối hoặc chứa độc chất gây hại cho sinh vật (Ví dụ: noxious gases - khí độc)", tick: false },
+  { en: "infectious (adj) /ɪnˈfekʃəs/", vn: "lây nhiễm, nhiễm trùng qua môi trường/không khí (y học); có tính lan truyền nhanh (tiếng cười/năng lượng)", tick: false },
+  { en: "contagious (adj) /kəmˈteɪdʒəs/", vn: "lây qua tiếp xúc trực tiếp (y học); dễ lan truyền rộng rãi (Ví dụ: contagious enthusiasm)", tick: false },
+  { en: "localized (adj) /ˈləʊkəlaɪzd/", vn: "khu biệt, mang tính cục bộ, giới hạn trong một phạm vi nhỏ (Ví dụ: localized infection; động từ là localize)", tick: false },
+  { en: "rife (adj) /raɪf/", vn: "lan tràn, rộ lên, tràn ngập tệ nạn/tin đồn tiêu cực (cấu trúc đi kèm: be rife with sth)", tick: false },
+  { en: "meager (adj) /ˈmiːɡə(r)/", vn: "nghèo nàn, ít ỏi, gầy còm (Ví dụ: a meager salary - đồng lương ít ỏi)", tick: false },
+  { en: "scanty (adj) /ˈskænti/", vn: "thiếu hụt, hạn hẹp, không đủ dùng (quần áo thiếu vải hoặc số liệu chứng cứ scanty evidence)", tick: false },
+  { en: "deficient (adj) /dɪˈfɪʃnt/", vn: "thiếu hụt, không đủ hàm lượng chất cần thiết (cấu trúc giới từ: be deficient in sth; danh từ là deficiency)", tick: false },
+  { en: "ample (adj) /ˈæmpl/", vn: "dư dả, rộng rãi, nhiều hơn mức cần thiết một chút (Ví dụ: ample time - dư dả thời gian)", tick: false },
+  { en: "copious (adj) /ˈkəʊpiəs/", vn: "phong phú, dồi dào, lượng lớn (thường đi với thông tin, ghi chú: copious notes)", tick: false },
+  { en: "profuse (adj) /prəˈfjuːs/", vn: "nhiều quá mức, thừa thãi (thường đi với đổ mồ hôi profuse sweating hoặc xin lỗi profuse apologies)", tick: false },
+  { en: "lavish (adj/v) /ˈlævɪʃ/", vn: "xa hoa, hoang phí, hào phóng quá mức (adj); ban phát/tiêu xài hoang phí (v)", tick: false },
+  ],
+
+  22: [
+  { en: "exorbitant (adj) /ɪɡˈzɔːbɪtənt/", vn: "cắt cổ, quá cao vô lý vượt khỏi giới hạn thông thường (thường dùng cho giá cả/chi phí/thuế)", tick: false },
+  { en: "excessive (adj) /ɪkˈsesɪv/", vn: "quá đáng, quá mức, thừa mứa gây hại (danh từ sự quá mức là excess; động từ vượt quá là exceed)", tick: false },
+  { en: "temperate (adj) /ˈtempərət/", vn: "ôn hòa (khí hậu), điều độ/có chừng mực (lối sống/hành vi; danh từ sự điều độ là temperance)", tick: false },
+  { en: "extreme (adj/n) /ɪkˈstriːm/", vn: "cực đoan, tột cùng, ở mức tối đa (adj); thái cực đối lập (n; trạng từ extremely dùng cực nhiều)", tick: false },
+  { en: "radical (adj) /ˈrædɪkl/", vn: "triệt để, tận gốc (thay đổi), cấp tiến/đột phá (quan điểm chính trị/tư tưởng)", tick: false },
+  { en: "revolutionary (adj) /ˌrevəˈluːʃənri/", vn: "mang tính cách mạng, bước ngoặt đột phá làm thay đổi hoàn toàn hệ thống (danh từ cuộc cách mạng là revolution)", tick: false },
+  { en: "conservative (adj) /kənˈsɜːvətɪv/", vn: "bảo thủ, thận trọng, muốn duy trì các giá trị truyền thống cũ (danh từ người bảo thủ)", tick: false },
+  { en: "heretical (adj) /həˈretɪkl/", vn: "dị giáo, phản nghịch, đi ngược lại với niềm tin/học thuyết chính thống accepted (danh từ kẻ dị giáo là heretic)", tick: false },
+  { en: "mainstream (adj/n) /ˈmeɪnstriːm/", vn: "chủ lưu, chính thống, thuộc về xu hướng đại chúng đang được số đông chấp nhận", tick: false },
+  { en: "fringe (adj/n) /frɪndʒ/", vn: "rìa, nhóm thiểu số có quan điểm cực đoan/khác biệt hoàn toàn với số đông (Ví dụ: fringe benefits - phúc lợi phụ)", tick: false },
+  { en: "marginal (adj) /ˈmɑːdʒɪnl/", vn: "bên lề, không quan trọng, thứ yếu (Ví dụ: a marginal improvement - sự cải thiện không đáng kể)", tick: false },
+  { en: "indispensable (adj) /ˌɪndɪˈspensəbl/", vn: "không thể thiếu, bắt buộc phải có (cấu trúc giới từ: be indispensable to/for sth)", tick: false },
+  { en: "germane (adj) /dʒɜːˈmeɪn/", vn: "thích hợp, có liên quan chặt chẽ đến chủ đề đang bàn luận (cấu trúc: be germane to sth)", tick: false },
+  { en: "apposite (to) (adj) /ˈæpəzɪt/", vn: "rất thích hợp, đúng lúc, phù hợp hoàn hảo với hoàn cảnh (bẫy cấu trúc giới từ bắt buộc: be apposite to sth)", tick: false },
+  { en: "incongruous (adj) /ɪnˈkɒŋɡruəs/", vn: "không phù hợp, khập khiễng, lạc quẻ trong một hoàn cảnh cụ thể (danh từ sự khập khiễng là incongruity)", tick: false },
+  { en: "standardized (adj) /ˈstændədaɪzd/", vn: "được tiêu chuẩn hóa, chuẩn hóa theo quy chuẩn chung (Ví dụ: standardized tests; động từ là standardize)", tick: false },
+  { en: "deviant (adj/n) /ˈdiːviənt/", vn: "lệch lạc, khác thường so với quy chuẩn xã hội (adj); kẻ có hành vi lệch lạc chuẩn mực (n; động từ là deviate)", tick: false },
+  { en: "normal (adj) /ˈnɔːml/", vn: "bình thường, thông thường, đúng theo quy luật tự nhiên (danh từ chuẩn mực số đông là norm)", tick: false },
+  { en: "typical (adj) /ˈtɪpɪkl/", vn: "điển hình, đặc trưng đại diện cho một nhóm (cấu trúc giới từ: be typical of sb/sth)", tick: false },
+  { en: "prototype (n) /ˈprəʊtətaɪp/", vn: "mẫu đầu tiên, nguyên mẫu sản phẩm (tuy gốc là danh từ nhưng hay dùng bổ nghĩa như tính từ)", tick: false },
+  { en: "exemplary (adj) /ɪɡˈzempləri/", vn: "gương mẫu, mẫu mực, xứng đáng làm gương để người khác noi theo (Ví dụ: exemplary behavior)", tick: false },
+  { en: "paradigm (n) /ˈpærədaɪm/", vn: "mô hình, hệ hình tư tưởng cốt lõi (Ví dụ: paradigm shift - một sự thay đổi mô hình/tư duy toàn diện)", tick: false },
+  { en: "standard (adj/n) /ˈstændəd/", vn: "tiêu chuẩn, thông thường (adj); quy chuẩn, trình độ/mức độ quy định (n)", tick: false },
+  { en: "mercurial (adj) /mɜːˈkjʊəriəl/", vn: "hay thay đổi thất thường, sáng nắng chiều mưa (tâm trạng/tính cách; bắt nguồn từ nguyên tố thủy ngân Mercury)", tick: false },
+  { en: "whimsical (adj) /ˈwɪmzɪkl/", vn: "bất chợt, kỳ quặc một cách ngộ nghĩnh, hay thay đổi theo sở thích nhất thời (danh từ ý nghĩ bất chợt là whim)", tick: false },
+  { en: "code: steadfast (adj) /ˈstedfɑːst/", vn: "kiên định, trước sau như một, vững vàng không lay chuyển (Ví dụ: steadfast loyalty - lòng trung thành kiên định)", tick: false },
+  { en: "resolute (adj) /ˈrezəluːt/", vn: "kiên quyết, quả quyết, quyết tâm đạt được mục đích đến cùng (danh từ sự quyết tâm là resolution)", tick: false },
+  { en: "unwavering (adj) /ʌnˈweɪvərɪŋ/", vn: "vững vàng, không hề lay chuyển/do dự (niềm tin/sự ủng hộ; động từ lay chuyển do dự là waver)", tick: false },
+  { en: "vacillating (adj) /ˈvæsəleɪtɪŋ/", vn: "hay do dự, lưỡng lự, dao động qua lại giữa các lựa chọn (động từ do dự/dao động là vacillate)", tick: false },
+  { en: "undecided (adj) /ˌʌndɪˈsaɪdɪd/", vn: "chưa được quyết định (vấn đề), chưa đưa ra lựa chọn cuối cùng (người; trái nghĩa với decided)", tick: false },
+  { en: "emphatic (adj) /ɪmˈfætɪk/", vn: "mạnh mẽ, dứt khoát, nhấn mạnh để khẳng định (Ví dụ: an emphatic refusal - một sự từ chối dứt khoát)", tick: false },
+  { en: "diffident (adj) /ˈdɪfɪdənt/", vn: "thiếu tự tin, rụt rè nhút nhát vì không tin vào khả năng của bản thân (danh từ sự thiếu tự tin là diffidence)", tick: false },
+  { en: "timid (adj) /ˈtɪmɪd/", vn: "nhút nhát, sợ sệt, dễ hoảng sợ trước tình huống mới (danh từ tính nhút nhát là timidity)", tick: false },
+  { en: "bashful (adj) /ˈbæʃfl/", vn: "bẽn lẽn, hay xấu hổ, e thẹn trước đám đông hoặc người lạ", tick: false },
+  { en: "arrogant (adj) /ˈærəɡənt/", vn: "kiêu ngạo, ngạo mạn, tự phụ coi thường người khác (danh từ sự kiêu ngạo là arrogance)", tick: false },
+  { en: "haughty (adj) /ˈhɔːti/", vn: "kiêu kỳ, ngạo nghễ, tỏ vẻ bề trên khinh khỉnh (danh từ tính kiêu kỳ là haughtiness)", tick: false },
+  { en: "supercilious (adj) /ˌsuːpəˈsɪliəs/", vn: "khinh khỉnh, hợm hĩnh, biểu lộ sự khinh miệt qua ánh mắt/chân mày (danh từ là superciliousness)", tick: false },
+  { en: "patronizing (adj) /ˈpætrənaɪzɪŋ/", vn: "ra vẻ bề trên ban ơn, đối xử với người khác như thể họ kém cỏi/ngốc nghếch hơn mình (động từ là patronize)", tick: false },
+  { en: "humble (adj/v) /ˈhʌmbl/", vn: "khiêm tốn, nhún nhường, thấp kém (vị thế xã hội; adj); hạ bệ/làm cho ai bớt kiêu ngạo (v)", tick: false },
+  { en: "modest (adj) /ˈmɒdɪst/", vn: "khiêm tốn (tính cách), vừa phải/giản dị không phô trương (quy mô/kế hoạch; danh từ là modesty)", tick: false },
+  { en: "flamboyant (adj) /flæmˈbɔɪənt/", vn: "chói lọi, sặc sỡ, lòe loẹt huênh hoang nhằm gây chú ý cực mạnh (quần áo/phong cách)", tick: false },
+  { en: "showy (adj) /ˈʃəʊi/", vn: "phô trương, thích khoe khoang, lòe loẹt bắt mắt nhưng thiếu chiều sâu (động từ là show)", tick: false },
+  { en: "flimsy (adj) /ˈflɪmzi/", vn: "mỏng manh dễ hỏng (bàn ghế/nhà), nông cạn không có sức thuyết phục (lập luận/cớ flimsy excuse)", tick: false },
+  { en: "tenuous (adj) /ˈtenjuəs/", vn: "mong manh, yếu ớt, lỏng lẻo dễ đứt gãy (mối liên hệ/sự kết nối/bằng chứng; danh từ là tenuousness)", tick: false },
+  { en: "unsubstantiated (adj) /ˌʌnsəbˈstænʃieɪtɪd/", vn: "chưa được chứng minh, vô căn cứ (tin đồn/cáo buộc; động từ chứng minh là substantiate)", tick: false },
+  { en: "uncorroborated (adj) /ˌʌnkəˈrɒbəreɪtɪd/", vn: "chưa được chứng thực bằng chứng cứ độc lập (lời khai/lập luận; động từ chứng thực là corroborate)", tick: false },
+  { en: "obligatory (adj) /əˈbəlɪɡətri/", vn: "bắt buộc do luật định hoặc nghĩa vụ cưỡng chế (bằng nghĩa với compulsory / mandatory)", tick: false },
+  { en: "paramount (adj) /ˈpærəmaʊnt/", vn: "tối cao, có tầm quan trọng tối thượng đứng đầu mọi thứ (Ví dụ: of paramount importance)", tick: false },
+  { en: "predominant (adj) /prɪˈdɒmɪnənt/", vn: "chiếm ưu thế, nổi bật nhất, chiếm số lượng áp đảo (động từ thống trị/chiếm ưu thế là predominate)", tick: false },
+  { en: "indigenous (adj) /ɪnˈdɪdʒənəs/", vn: "bản địa, bản xứ, xuất xứ tự nhiên từ một vùng đất (Ví dụ: indigenous peoples - người dân bản địa)", tick: false },
+  { en: "exogenous (adj) /ekˈsɒdʒənəs/", vn: "ngoại sinh, xuất phát từ các yếu tố bên ngoài hệ thống (kinh tế/y học; trái nghĩa hoàn toàn với endogenous)", tick: false },
+  { en: "endogenous (adj) /enˈdɒdʒənəs/", vn: "nội sinh, tự sinh ra từ bên trong cơ thể hoặc bên trong hệ thống kinh tế", tick: false },
+  { en: "autonomous (adj) /ɔːˈtɒnəməs/", vn: "tự trị, tự chủ, có quyền độc lập tự quyết định hành vi (Ví dụ: autonomous region; danh từ là autonomy)", tick: false },
+  { en: "authoritative (adj) /ɔːˈθɒrətətɪv/", vn: "có thẩm quyền, đáng tin cậy tối cao (tài liệu/nguồn tin), hách dịch/quyền uy (phong thái; danh từ là authority)", tick: false },
+  { en: "cumulative (adj) /ˈkjuːmjələtɪv/", vn: "tích lũy, dồn tích, tăng dần theo thời gian do cộng dồn (Ví dụ: cumulative effect - hiệu ứng tích lũy)", tick: false },
+  { en: "formative (adj) /ˈfɔːmətɪv/", vn: "mang tính định hình tính cách/tư duy lâu dài (Ví dụ: in formative years - trong những năm tháng định hình đầu đời)", tick: false },
+  { en: "integral (adj) /ˈɪntɪɡrəl/ hoặc /ɪnˈteɡrəl/", vn: "thiết yếu, không thể tách rời để cấu thành một chỉnh thể (cấu trúc giới từ: be an integral part of sth)", tick: false },
+  { en: "concomitant (adj/n) /kənˈkɒmɪtənt/", vn: "đi kèm, đồng thời xảy ra như một hệ quả phụ (adj); hiện tượng đi kèm phụ (n)", tick: false },
+  { en: "tangential (adj) /tænˈdʒenʃl/", vn: "tiếp tuyến (toán), hời hợt lạc đề, chỉ liên quan gián tiếp ngoài rìa chủ đề chính (danh từ là tangent)", tick: false },
+  { en: "requisite (adj/n) /ˈrekwɪzɪt/", vn: "cần thiết, bắt buộc phải có cho một mục đích cụ thể (adj); điều kiện tiên quyết bắt buộc (n)", tick: false },
+
+  ],
+
+  23: [
+
+  ],
+
+};
+
+const lessonAudios = {
+  1: "audio/lesson1.mp3.wav",
+  2: "audio/lesson2.mp3.mp3",
+  3: "LINK_AUDIO_BAI_3",
+  4: "audio/lesson 4 Vocab.mp3",
+  5: "audio/lesson 5 Vocab.wav",
+  6: "audio/lesson 6 Vocab.mp3",
+  7: "audio/lesson 7 Vocab.wav",
+  8: "audio/lesson 8 Vocab.wav",
+  9: "audio/lesson 9 Vocab.wav",
+  10: "audio/lesson 10 Vocab.wav",
+  11: "audio/lesson 11 Vocab.wav",
+  12: "audio/lesson 11 Vocab.wav",
+  13: "LINK_AUDIO_BAI_3",
+  14: "LINK_AUDIO_BAI_3",
+  15: "LINK_AUDIO_BAI_3",
+
+
+};
+
+let currList = 1,
+    listCopy = [],
+    index = 0;
+
+let totalWords = 0;
+let knownCount = 0;
+
+let reviewMode = "vn-en";
+/********** LOAD LIST **********/
+function loadList(){
+
+  currList = document.getElementById("wordList").value;
+
+  listCopy = [...data[currList]];
+
+  totalWords = listCopy.length;
+
+  knownCount = 0;
+
+  updateCounter();
+
+  renderWords();
+
+  loadExercises();
+
+  setMode(reviewMode);
+
+}
+
+function updateCounter(){
+  document.getElementById("progressCounter").innerText =
+    `Đã biết ${knownCount} / ${totalWords}`;
+}
+function setMode(mode){
+
+   reviewMode = mode;
+
+   document.getElementById("btnVNEN")
+      .style.background =
+      mode==="vn-en"
+      ? "#ffb3ba"
+      : "#a0e7e5";
+
+   document.getElementById("btnENVN")
+      .style.background =
+      mode==="en-vn"
+      ? "#ffb3ba"
+      : "#a0e7e5";
+
+   nextWord();
+
+}
+
+document.getElementById("wordList").onchange = loadList;
+loadList();
+
+function speakWord(text){
+
+  speechSynthesis.cancel();
+
+  let cleanText = text;
+
+  // bỏ phiên âm /.../
+  cleanText = cleanText.split("/")[0];
+
+  // bỏ loại từ (n), (v), (adj), (phr v)...
+  cleanText = cleanText.replace(/\(.*?\)/g,"").trim();
+
+  const utter = new SpeechSynthesisUtterance(cleanText);
+
+  utter.lang = "en-US";
+  utter.rate = 1;
+  utter.pitch = 1;
+  utter.volume = 1;
+
+  speechSynthesis.speak(utter);
+}
+
+/********** RENDER & SORT **********/
+function renderWords(){
+
+  const box = document.getElementById("wordContainer");
+  box.innerHTML = "";
+
+  let sorted = [...data[currList]].sort((a,b)=>b.tick - a.tick);
+
+  sorted.forEach(item=>{
+
+    let realIndex = data[currList].indexOf(item);
+
+    box.innerHTML += `
+      <div class="word-row">
+
+<span class="word-text">
+
+  <span class="en-word">
+    ${item.en}:
+  </span>
+
+  <span class="vn-word">
+    ${item.vn}
+  </span>
+
+  <i class="fa-solid fa-volume-high speaker-icon"
+     onclick="event.stopPropagation();speakWord(\`${item.en}\`)">
+  </i>
+
+</span>
+
+        <input
+          type="checkbox"
+          ${item.tick ? "checked" : ""}
+          onclick="toggleTick(${realIndex})">
+
+      </div>
+    `;
+  });
+
+}
+/********** TICK UPDATE **********/
+function toggleTick(realIndex){
+  data[currList][realIndex].tick = !data[currList][realIndex].tick;
+  renderWords();
+}
+
+/********** REVIEW **********/
+function nextWord(){
+  document.getElementById("answer").innerHTML="";
+  if(listCopy.length===0){
+    document.getElementById("vietWord").innerHTML="🎉 Bạn đã học xong hết!";
+    return;
+  }
+  index=Math.floor(Math.random()*listCopy.length);
+if(reviewMode==="vn-en"){
+
+document.getElementById("vietWord").innerHTML =
+listCopy[index].vn;
+
+}
+else{
+
+document.getElementById("vietWord").innerHTML =
+listCopy[index].en;
+
+}
+}
+
+function know(){
+  firework();
+  knownCount++;
+  listCopy.splice(index,1);
+  updateCounter();
+  nextWord();
+}
+
+function dontKnow(){
+
+if(reviewMode==="vn-en"){
+
+document.getElementById("answer").innerHTML =
+listCopy[index].en;
+
+}
+else{
+
+document.getElementById("answer").innerHTML =
+listCopy[index].vn;
+
+}
+
+}
+/********** EXERCISES **********/
+function loadExercises(){
+  const box=document.getElementById("exercise");
+  box.innerHTML="";
+  exercises[currList].forEach((item,i)=>{
+    box.innerHTML+=`
+    <div style="margin:10px 0;">
+      ${i+1}. ${item.q}
+      <input id="ex${i}">
+      <button onclick="checkEx(${i})">Check</button>
+      <span id="res${i}" class="result"></span>
+    </div>`;
+  });
+}
+
+function checkEx(i){
+  const user = document.getElementById("ex"+i).value.trim().toLowerCase();
+  const ans = exercises[currList][i].a.toLowerCase();
+  const box = document.getElementById("res"+i);
+
+  if(user === ans) {
+    box.innerHTML = "✔ Correct";
+    box.style.color = "#28a745"; // chữ Correct màu xanh lá
+    firework(); // gọi pháo hoa
+  } else {
+    box.innerHTML = "✘ " + exercises[currList][i].a;
+    box.style.color = "#D02752"; // chữ sai màu đỏ
+  }
+}
+
+/********** FIREWORK **********/
+function firework(){
+  for(let i=0;i<25;i++){
+    const c=document.createElement("div");
+    c.className="confetti";
+    c.style.setProperty("--x",(Math.random()-.5)*600+"px");
+    c.style.setProperty("--y",(Math.random()-.5)*600+"px");
+    c.style.backgroundColor=`hsl(${Math.random()*360},90%,60%)`;
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),900);
+  }
+}
+</script>
+
+</body>
+</html>
